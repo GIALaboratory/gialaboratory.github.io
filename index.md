@@ -1,6 +1,5 @@
 ---
 title: GIA Laboratory Developer Documentation
-layout: default
 ---
 
 ![GIA](/static/gia-logo.svg)
