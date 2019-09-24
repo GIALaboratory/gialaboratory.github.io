@@ -1,6 +1,10 @@
-# gialaboratory.github.io
-GIA Laboratory Developer Homepage
+![GIA](/static/gia-logo.svg)
 
-## This is a test
+# GIA Laboratory Developer Documentation
 
-To see if it is working.
+This is the source for https://gialaboratory.github.io
+
+
+
+
+
