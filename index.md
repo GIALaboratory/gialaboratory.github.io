@@ -1,5 +1,6 @@
 ---
 title: GIA Laboratory Developer Documentation
+layout: none
 ---
 
 
