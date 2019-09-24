@@ -1,12 +1,7 @@
 ---
 title: GIA Laboratory Developer Documentation
-layout: none
+layout: default
 ---
-
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<div class="container">
 
 ![GIA](/static/gia-logo.svg)
 # GIA Laboratory Developer Documentation
@@ -32,7 +27,6 @@ Example Applications
 
 Sample Report Numbers
 
-</div>
 
 
 
