@@ -13,12 +13,11 @@ The GIA Report Results API provides programmatic access to results issued on GIA
 
 The API returns links to the PDF facsimile of the report and any other available assets. Depending on the report type, this may include plotting diagrams, proportion diagrams, images, and videos of the item.
 
-Overview <i class="fas fa-external-link-alt"></i>
-
+Product Overview
 
 ### Getting Started
 
-Five Minute Quickstart Guide
+[Quickstart Guide](/report-results/quickstart.html)
 
 API Documentation
 
