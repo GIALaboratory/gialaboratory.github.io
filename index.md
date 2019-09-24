@@ -17,9 +17,11 @@ Product Overview
 
 ### Getting Started
 
-[Quickstart Guide](/report-results/quickstart.html)
+[Quickstart Guide](/report-results/quickstart)
 
 API Documentation
+
+### Additional Resources
 
 Example Applications
 

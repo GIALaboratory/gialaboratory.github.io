@@ -4,7 +4,7 @@ title: Quickstart Guide
 
 ![GIA](/static/gia-logo.svg)
 
-# Quickstart Guide
+# GIA Report Results API Quickstart Guide
 
 Use this guide to get started with the GIA Report Results API. You will use the open-source GraphiQL software to query the API and examine the responses.
 
