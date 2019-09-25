@@ -19,7 +19,7 @@ Product Overview
 
 [Quickstart Guide](/report-results/quickstart)
 
-API Documentation
+[API Documentation](/report-results/docs)
 
 ### Additional Resources
 
