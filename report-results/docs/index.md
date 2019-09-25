@@ -2,8 +2,6 @@
 title: Documentation
 ---
 
-![GIA](/static/gia-logo.svg)
-
 # GIA Report Results API Documentation
 
 ## Introduction
@@ -43,13 +41,49 @@ To handle this, the `results` field contains a [union type](https://graphql.org/
 
 Since the results field may be populated by any of these concrete types, you must use a [conditional fragment](https://graphql.org/learn/queries/#inline-fragments) (such as `... on DiamondGradingReportResults`) to return any fields at all.
 
+```
+{
+  getReport(report_number: "2141438171") {
+    report_date
+    report_number
+    report_type
+    results {
+      ... on DiamondGradingReportResults {
+        shape_and_cutting_style
+        carat_weight
+        color_grade
+        clarity_grade
+      }
+    }
+  }
+}
+```
+
+returns
+
+```
+{
+  "data": {
+    "getReport": {
+      "report_date": "January 01, 2014",
+      "report_number": "2141438171",
+      "report_type": "Diamond Dossier",
+      "results": {
+        "shape_and_cutting_style": "Emerald Cut",
+        "carat_weight": "0.51 carat",
+        "color_grade": "E",
+        "clarity_grade": "VS2"
+      }
+    }
+  }
+}
+```
+
 ### Data Types
 
 Most results fields are [String](https://graphql.org/learn/schema/#scalar-types) types to accomodate the text as it appears on a grading report. For example, `Internally Flawless` clarity grades will be spelled out rather than abbreviated `IF`.
 
-In most cases, the abbreviated versions are also available. These [Enums](https://graphql.org/learn/schema/#enumeration-types) are validated to be one of the allowed values. Look for fields that end with `_code`.
-
-Examples are `report_type_code`, `clarity_grade_code`, `color_grade_code`, among others.
+In most cases, the abbreviated versions are also available. These [Enums](https://graphql.org/learn/schema/#enumeration-types) are validated to be one of the allowed values. Look for fields that end with `_code`. Examples are `report_type_code`, `clarity_grade_code`, `color_grade_code`, among others.
 
 Fields that are concatenated in the results are also available as individual fields. For example, measurements are stated as "minimum diameter - maximum diameter x depth" for round diamonds and "length x width x depth" for fancy shapes. The individual fields are expressed in the `RoundMeasurements` and `FancyMeasurements` types.
 
@@ -74,7 +108,7 @@ GIA has invested heavily in engineering this system for the highest possible per
 
 ### API Plans and Quota Monitoring
 
-Usage of the GIA Report Results API is enabled by a plan. Each plan has a certain number of report requests associated with it. When this quota is depleted, you will no longer be able to retrieve report results. It is important that you track your quota and take action when necessary.
+Usage of the GIA Report Results API is enabled by a plan. Each plan has a number of report requests associated with it. When this quota is depleted, you will no longer be able to retrieve report results. It is important that you track your quota and take action when necessary.
 
 ### API Keys
 
@@ -100,7 +134,7 @@ You may check your remaining quota at any time by using `getQuota`. Checking you
 
 ```
 {
-	getQuota{
+  getQuota{
     remaining
   }
 }
@@ -121,7 +155,7 @@ You can also get your remaining quota with each query to `getReport`.
 }
 ```
 
-Returns
+returns
 
 ```
 {
@@ -148,8 +182,16 @@ The Report Check API is engineered for high availability. You may view our curre
 
 __Important:__ You must subscribe to notifications at [status.gia.edu](https://status.gia.edu). This is the sole method we will use to update you on planned maintenance or unplanned incidents.
 
+## Error Conditions
+
+* Report not found
+* Invalid key
+* Quota limit exceeded
+* Newer report issued
+* Other error
+
 ## Providing Feedback
 
-Your feedback will be extremely helpful in improving the GIA Report Results API in the future. Please let us know of any suggestions, ideas, or bugs that you encounter. You can find us at [https://www.gia.edu/contactus](https://www.gia.edu/contactus).
+Your feedback will be extremely helpful for future improvements to the GIA Report Results API. Please let us know of any suggestions, ideas, or bugs that you encounter. You can find us at [https://www.gia.edu/contactus](https://www.gia.edu/contactus).
 
 If you encounter an error condition in the GIA Report Results API, please include the error code returned in the response.

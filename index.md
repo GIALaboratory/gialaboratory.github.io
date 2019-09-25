@@ -2,7 +2,6 @@
 title: GIA Laboratory Developer Documentation
 ---
 
-![GIA](/static/gia-logo.svg)
 # GIA Laboratory Developer Documentation
 
 On this site you will find documentation for GIA's APIs and other resources.
