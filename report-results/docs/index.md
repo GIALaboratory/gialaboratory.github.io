@@ -89,7 +89,7 @@ Fields that are concatenated in the results are also available as individual fie
 
 #### Asset Links
 
-Links to additional assets are contained in the `links` field. The availability of assets is dependent on the type of report you are querying. If an asset is not available the field will return `null`.
+Links to assets are contained in the `links` field. The availability of assets is dependent on the type of report you are querying. If an asset is not available the field will return `null`.
 
 Assets available are:
 
@@ -112,7 +112,7 @@ Usage of the GIA Report Results API is enabled by a plan. Each plan has a number
 
 ### API Keys
 
-API keys are used to authenticate and authorize requests to the API. A plan may have multiple keys and any key may be revoked without affecting other keys on the plan.
+API keys are used to authenticate and authorize requests to the API. A plan may have multiple keys and you may revoke any key without affecting other keys on the plan.
 
 __Important:__ For your protection, you must securely store these keys and they must not be shared! You are responsible for taking all precautions to safeguard access to the keys.
 
@@ -178,7 +178,7 @@ Rate limiting is applied based on the authorization key. If the Report Check API
 
 ### System Status
 
-The Report Check API is engineered for high availability. You may view our current system status and historical uptime at [status.gia.edu](https://status.gia.edu).
+The GIA Report Results API is engineered for high availability. You may view our current system status and historical uptime at [status.gia.edu](https://status.gia.edu).
 
 __Important:__ You must subscribe to notifications at [status.gia.edu](https://status.gia.edu). This is the sole method we will use to update you on planned maintenance or unplanned incidents.
 
