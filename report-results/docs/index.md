@@ -174,7 +174,7 @@ returns
 
 ### Rate Limits
 
-Rate limiting is applied based on the authorization key. If the Report Check API returns status code `429`, it means that you have sent too many requests. When this happens, check the `Retry-After` header, where you will see a number displayed. This is the number of seconds that you need to wait, before you try your request again.
+Rate limiting is applied based on the authorization key. If the API returns status code `429`, it means that you have sent too many requests. When this happens, check the `Retry-After` header, where you will see a number displayed. This is the number of seconds that you need to wait before you try your request again.
 
 ### System Status
 
@@ -192,6 +192,6 @@ __Important:__ You must subscribe to notifications at [status.gia.edu](https://s
 
 ## Providing Feedback
 
-Your feedback will be extremely helpful for future improvements to the GIA Report Results API. Please let us know of any suggestions, ideas, or bugs that you encounter. You can find us at [https://www.gia.edu/contactus](https://www.gia.edu/contactus).
+Your feedback will be extremely helpful for future improvements to the GIA Report Results API. Please let us know of any suggestions, ideas, or bugs that you encounter. You can find us at [GIA.edu/contactus](https://www.gia.edu/contactus).
 
 If you encounter an error condition in the GIA Report Results API, please include the error code returned in the response.
