@@ -10,7 +10,7 @@ On this site you will find documentation for GIA's APIs and other resources.
 
 The GIA Report Results API enables applications to integrate with GIA's database in order to verify grading information and retrieve assets associated with a report. 
 
-Product Overview
+[Product Overview]
 
 ### Getting Started
 
@@ -18,11 +18,15 @@ Product Overview
 
 [API Documentation](/report-results/docs)
 
+[API Reference]
+
 ### Additional Resources
 
 Example Applications
 
-Sandbox Report Numbers
+Example Queries
+
+[Sandbox Report Numbers](/report-results/sandbox-report-numbers)
 
 
 

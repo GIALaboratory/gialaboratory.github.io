@@ -65,7 +65,7 @@ returns
 {
   "data": {
     "getReport": {
-      "report_date": "January 01, 2014",
+      "report_date": "September 01, 2019",
       "report_number": "2141438171",
       "report_type": "Diamond Dossier",
       "results": {
@@ -87,7 +87,7 @@ In most cases, the abbreviated versions are also available. These [Enums](https:
 
 Fields that are concatenated in the results are also available as individual fields. For example, measurements are stated as "minimum diameter - maximum diameter x depth" for round diamonds and "length x width x depth" for fancy shapes. The individual fields are expressed in the `RoundMeasurements` and `FancyMeasurements` types.
 
-#### Asset Links
+### Asset Links
 
 Links to assets are contained in the `links` field. The availability of assets is dependent on the type of report you are querying. If an asset is not available the field will return `null`.
 
@@ -161,7 +161,7 @@ returns
 {
   "data": {
     "getReport": {
-      "report_date": "January 01, 2014",
+      "report_date": "September 01, 2019",
       "report_number": "2141438171",
       "report_type": "Diamond Dossier",
       "quota": {
@@ -184,14 +184,99 @@ __Important:__ You must subscribe to notifications at [status.gia.edu](https://s
 
 ## Error Conditions
 
-* Report not found
-* Invalid key
-* Quota limit exceeded
-* Newer report issued
-* Other error
+### Report not found
+
+Requesting a report that is unavailable, the API will return `HTTP 200 OK` call and an errors object. The errors object will include a message that the item is unavailable and an error code.
+
+```
+{
+  "data": {
+    "getReport": null
+  },
+  "errors": [
+    {
+      "path": [
+        "getReport"
+      ],
+      "data": null,
+      "errorType": null,
+      "errorInfo": null,
+      "locations": [
+        {
+          "line": 2,
+          "column": 3,
+          "sourceName": null
+        }
+      ],
+      "message": "This report does not exist or is not available through Report Check. For further information, please contact us. Code: c7b893ee-63ba-4e03-be84-83ef13da222f"
+    }
+  ]
+}
+```
+
+| Possible Cause | Solution |
+| --- | ----------- |
+| You are using a sandbox key to access a non-sandbox report number. | Obtain a production key. |
+| The requested report number does not exist. | Check your entries and try again. |
+| The report exists, but has not been returned to the client and is not yet available. | Retry your query after item has been returned to the client. |
+| The report exists, but is unavailable for other reasons. | Contact GIA for further information. |
+
+### Invalid key
+
+An invalid key will return a `HTTP 403 Forbidden` and this body content:
+
+```
+{
+  "message": "Authorization denied."
+}
+```
+
+| Possible Cause | Solution |
+| --- | ----------- |
+| Your key is inactive. | Log in to the developer portal and confirm your key. |
+
+### Quota limit exceeded
+
+Submitting a query that exceeds your quota will return `HTTP 200 OK` and an error response in the body of the message.
+
+```
+{
+  "data": {
+    "getReport": null
+  },
+  "errors": [
+    {
+      "path": [
+        "getReport"
+      ],
+      "data": null,
+      "errorType": null,
+      "errorInfo": null,
+      "locations": [
+        {
+          "line": 2,
+          "column": 3,
+          "sourceName": null
+        }
+      ],
+      "message": "QuotaUsageLimit"
+    }
+  ]
+}
+```
+
+| Possible Cause | Solution |
+| --- | ----------- |
+| Your quota limit has been consumed or has expired. | Add additional lookups through the developer portal. |
+
+### Newer report issued
+
+From time to time, GIA re-examines items and issues new reports on those items. In those cases a query to the original report will be redirected to the newer report. Details will be returned in the `info_message` field.
+
+### Asset Link Expired
 
 ## Providing Feedback
 
 Your feedback will be extremely helpful for future improvements to the GIA Report Results API. Please let us know of any suggestions, ideas, or bugs that you encounter. You can find us at [GIA.edu/contactus](https://www.gia.edu/contactus).
 
-If you encounter an error condition in the GIA Report Results API, please include the error code returned in the response.
+If you encounter an unexpected error condition in the GIA Report Results API, please include the error code returned in the response.
