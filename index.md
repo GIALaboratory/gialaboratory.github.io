@@ -22,11 +22,11 @@ The GIA Report Results API enables applications to integrate with GIA's database
 
 ### Additional Resources
 
-Example Applications
+[Example Applications]
 
-Example Queries
+[Example Queries]
 
-[Sandbox Report Numbers](/report-results/sandbox-reports)
+[Sandbox Reports](/report-results/sandbox-reports)
 
 
 

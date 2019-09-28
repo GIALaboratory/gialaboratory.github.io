@@ -309,6 +309,26 @@ From time to time, GIA re-examines items and issues new reports on those items. 
 
 ### Asset Link Expired
 
+Asset links expire 60 minutes from the time you query the API. Requesting an asset using an expired URL returns `HTTP 403 Forbiddden` and a "Request has Expired" message.
+
+```
+<Error>
+<Code>AccessDenied</Code>
+<Message>Request has expired</Message>
+<Expires>2019-09-28T15:47:27Z</Expires>
+<ServerTime>2019-09-28T16:10:51Z</ServerTime>
+<RequestId>F73DF5DE0563DEE8</RequestId>
+<HostId>
+ADy4EQkt1sui/87CpxtQe5CMmBq8fejXckZiaB5Ui4bjfA21ky7Lp4wGBlw47A87haeruBbu90o=
+</HostId>
+</Error>
+```
+
+| Possible Cause | Solution |
+| --- | ----------- |
+| The asset link has expired. | Query `getReport` to obtain a new asset link. |
+
+
 ## Providing Feedback
 
 Your feedback will be extremely helpful for future improvements to the GIA Report Results API. Please let us know of any suggestions, ideas, or bugs that you encounter. You can find us at [GIA.edu/contactus](https://www.gia.edu/contactus).
