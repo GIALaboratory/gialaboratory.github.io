@@ -2,9 +2,24 @@
 title: Sandbox Reports
 ---
 
-test
+<h1>Sandbox Report Numbers</h1>
 
-{% for sample_report in site.sample_reports %}
-  <h2>{{ sample_report.report_number }} - {{ sample_report.report_type }}</h2>
-  <p>{{ sample_report.content | markdownify }}</p>
-{% endfor %}
+<p>These reports are available for development and testing purposes by using a Sandbox key.</p>
+
+<table>
+  <tr>
+    <th>Report Number</th>
+    <th>Report Type</th>
+    <th>Results Type</th>
+    <th>Notes</th>
+  </tr>
+
+  {% for sample_report in site.sample_reports %}
+  <tr>
+    <td>{{ sample_report.report_number }}</td>
+    <td>{{ sample_report.report_type }}</td>
+    <td>{{ sample_report.results_type }}</td>
+    <td>{{ sample_report.content | markdownify }}</td>
+  </tr>
+  {% endfor %}
+</table>
