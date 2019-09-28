@@ -12,12 +12,12 @@ title: Sandbox Reports
     <th>Report Number</th>
     <th>Report Type</th>
     <th>Results Type</th>
-    <th>Notes</th>
+    <th>Assets</th>
   </tr>
 
   {% for sample_report in site.sample_reports %}
   <tr>
-    <td>{{ sample_report.report_number }}</td>
+    <td><a href="https://www.gia.edu/report-check?reportno={{ sample_report.report_number }}">{{ sample_report.report_number }}</a></td>
     <td>{{ sample_report.report_type }}</td>
     <td>{{ sample_report.results_type }}</td>
     <td>{{ sample_report.content | markdownify }}</td>
