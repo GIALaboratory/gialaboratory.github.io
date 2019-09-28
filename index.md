@@ -26,7 +26,7 @@ Example Applications
 
 Example Queries
 
-[Sandbox Report Numbers](/report-results/sandbox-report-numbers)
+[Sandbox Report Numbers](/report-results/sandbox-reports)
 
 
 
