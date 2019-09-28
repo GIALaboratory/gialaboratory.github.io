@@ -41,6 +41,8 @@ To handle this, the `results` field contains a [union type](https://graphql.org/
 
 Since the results field may be populated by any of these concrete types, you must use a [conditional fragment](https://graphql.org/learn/queries/#inline-fragments) (such as `... on DiamondGradingReportResults`) to return any fields at all.
 
+__Pro Tip__: Use the [__typename](https://graphql.org/learn/queries/#meta-fields) meta field to determine how to handle the data on your client.
+
 ```
 {
   getReport(report_number: "2141438171") {
@@ -49,6 +51,7 @@ Since the results field may be populated by any of these concrete types, you mus
     report_type
     results {
       ... on DiamondGradingReportResults {
+        __typename
         shape_and_cutting_style
         carat_weight
         color_grade
@@ -69,6 +72,7 @@ returns
       "report_number": "2141438171",
       "report_type": "Diamond Dossier",
       "results": {
+        "__typename": "DiamondGradingReportResults",
         "shape_and_cutting_style": "Emerald Cut",
         "carat_weight": "0.51 carat",
         "color_grade": "E",
