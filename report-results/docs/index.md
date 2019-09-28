@@ -221,6 +221,36 @@ Requesting a report that is unavailable, the API will return `HTTP 200 OK` call 
 | The report exists, but has not been returned to the client and is not yet available. | Retry your query after item has been returned to the client. |
 | The report exists, but is unavailable for other reasons. | Contact GIA for further information. |
 
+### Item is Undergoing Service
+
+Items that are undergoing servicing by GIA are unavailable through this API. 
+
+```
+{
+  "data": {
+    "report1": null,
+  },
+  "errors": [
+    {
+      "path": [
+        "report1"
+      ],
+      "data": null,
+      "errorType": null,
+      "errorInfo": null,
+      "locations": [
+        {
+          "line": 3,
+          "column": 3,
+          "sourceName": null
+        }
+      ],
+      "message": "The item with this report number is undergoing service by GIA. Once service is completed and the item is returned, report results will be displayed. Please try your search later."
+    }
+  ]
+}
+```
+
 ### Invalid key
 
 An invalid key will return a `HTTP 403 Forbidden` and this body content:
