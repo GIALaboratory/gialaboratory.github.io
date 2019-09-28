@@ -190,7 +190,7 @@ __Important:__ You must subscribe to notifications at [status.gia.edu](https://s
 
 ### Report not found
 
-Requesting a report that is unavailable, the API will return `HTTP 200 OK` call and an errors object. The errors object will include a message that the item is unavailable and an error code.
+The API will return `HTTP 200 OK` call if the requested report is unavailable. The errors object will include a message that the item is unavailable and an error code.
 
 ```
 {
@@ -227,7 +227,7 @@ Requesting a report that is unavailable, the API will return `HTTP 200 OK` call 
 
 ### Item is Undergoing Service
 
-Items that are undergoing servicing by GIA are unavailable through this API. 
+Items that are currently being serviced by GIA are unavailable through this API. 
 
 ```
 {
