@@ -18,7 +18,7 @@ The GIA Report Results API enables applications to integrate with GIA's database
 
 [API Documentation](/report-results/docs)
 
-[API Reference](/reference)
+[API Reference](/report-results/reference)
 
 ### Additional Resources
 
