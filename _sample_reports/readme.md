@@ -1,6 +1,6 @@
 # Sandbox Reports
 
-This folder contains the sample reports listed in [Sample Reports](gialaboratory.github.io/sample-reports).
+This folder contains the sample reports listed in [Sample Reports](https://gialaboratory.github.io/report-results/sandbox-reports/).
 
 ### Instructions
 
