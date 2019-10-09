@@ -328,6 +328,23 @@ ADy4EQkt1sui/87CpxtQe5CMmBq8fejXckZiaB5Ui4bjfA21ky7Lp4wGBlw47A87haeruBbu90o=
 | --- | ----------- |
 | The asset link has expired. | Query `getReport` to obtain a new asset link. |
 
+### MalformedHttpRequestException
+
+```
+{
+  "errors" : [ {
+    "message" : "Invalid JSON payload in POST request.",
+    "errorType" : "MalformedHttpRequestException"
+  } ]
+}
+```
+
+| Possible Cause | Solution |
+| --- | ----------- |
+| JSON is invalid. | Check for valid JSON. |
+
+If you are sending strings, this can happen due to problems with escaping quotes. Double-check that you are escaping quotes properly for your language.
+
 
 ## Providing Feedback
 

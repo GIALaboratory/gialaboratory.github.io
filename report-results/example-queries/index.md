@@ -6,7 +6,7 @@ title: Example Queries
 
 ## Diamond Results
 
-The most basic results query returns grading results for diamond reports such as Diamond Dossier, Diamond Grading, Colored Diamond Grading, and Diamond Origin reports.
+This query returns grading results for diamond reports such as Diamond Dossier, Diamond Grading, Colored Diamond Grading, and Diamond Origin reports.
 
 
 ```
@@ -157,7 +157,7 @@ response
 
 ## Query Multiple Reports with Fragments
 
-Graphql [fragments](https://graphql.org/learn/queries/#fragments) allow you to create reusable components. With this technique, you can query multiple reports in a single request. 
+Graphql [fragments](https://graphql.org/learn/queries/#fragments) allow you to create reusable components. With this technique, you can query multiple reports in a single request. This query will count as two report lookups against the plan's quota.
 
 ```
 {
@@ -201,7 +201,3 @@ result
   }
 }
 ```
-
-
-
-
