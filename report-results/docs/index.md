@@ -22,6 +22,159 @@ This means you must specify the data you want in the form of a query passed to t
 
 The good news is that most tools provide documentation navigators to help you explore the API. To learn more, try our [Quickstart Guide](/report-results/quickstart).
 
+### Crafting Your Request
+
+To query the GIA Report Results API, you must craft the payload and send it to the endpoint as a `POST` request with the proper headers. Follow these steps to construct an API request.
+
+#### Step 1: Craft a valid query using a GraphQL-aware tool.
+
+Use a tool such as GraphiQL, Insomnia, or xxx to construct, test, and validate your query prior to writing code to call the API from your programming language.
+
+We'll use this example query throughout this section.
+
+TODO: ADD A SCREENSHOT OF GRAPHIQL WITH THE QUERY VARIABLES SET
+
+```
+query ReportQuery($ReportNumber: String!) {
+    getReport(report_number: $ReportNumber){
+        report_number
+        report_date
+        report_type
+        results {
+            __typename
+            ... on DiamondGradingReportResults {
+                shape_and_cutting_style
+                carat_weight
+                clarity_grade
+                color_grade
+            }
+        }
+        quota {
+            remaining
+        }
+    }
+}
+```
+
+Note the use of the `ReportNumber` query variable.
+```
+{
+  "ReportNumber": "2141438171"
+}
+```
+
+
+
+#### Step 2: Construct a GraphQL payload using your languages idioms
+
+The payload you send to the API must conform to GraphQL standards. The best practice is to construct this structure using the features of your language prior to converting to JSON. The details will vary by language, but the process will be similar.
+
+The API expects this structure:
+```
+{
+  "query": "YOUR_QUERY_GOES_HERE", 
+  "variables": { 
+    "YOUR_VARIABLE_NAME_GOES_HERE": "YOUR_VARIABLE_VALUE_GOES_HERE" 
+  } 
+}
+```
+
+You will know the three elements (query, variable name, and value) from Step 1. In our example, the query is from Step 1 above, the variable name is `ReportNumber` and the value is `"2141438171"`.
+
+One way to construct this payload is to use Dictionary elements:
+
+1. Create a dictionary object called `query_variables` of type (`String`, `String`).
+2. Insert an element into `query_variables` with `ReportNumber` as the index and  `"2141438171"` as the value.
+3. Create a second dictionary object called `payload` of type (`String`, `Object`)
+4. Insert an element into `payload` with `query` as the index and the query you drafted in Step 1 as the value.
+5. Insert a second element into `payload` with `variables` as the index and `query_variables` as the value
+
+Please refer to this example in C#
+```
+var query = @"
+query ReportQuery($ReportNumber: String!) {
+    getReport(report_number: $ReportNumber){
+        report_number
+        report_date
+        report_type
+        results {
+            __typename
+            ... on DiamondGradingReportResults {
+                shape_and_cutting_style
+                carat_weight
+                clarity_grade
+                color_grade
+            }
+        }
+        quota {
+            remaining
+        }
+    }
+}
+";
+
+// Set the report number to lookup
+var reportNumber = "2141438171";
+
+// Construct the payload to be POSTed to the graphql server
+var query_variables = new Dictionary<string, string>
+{
+    { "ReportNumber", reportNumber}
+};
+var payload = new Dictionary<string, object>
+{
+    { "query", query },
+    { "variables", query_variables }
+};
+
+```
+
+#### Step 3: Serialize the payload to JSON
+
+Your programming language will have a module for serializing objects to JSON. 
+
+Example in C#: 
+
+```
+// Convert the payload to JSON
+string json = JsonSerializer.Serialize(payload);
+```
+
+> __Tip__: Avoid hand-coding your JSON payload. Use the tools your language provides.
+
+#### Step 4: Construct the HTTP request
+
+Constructing a HTTP request will vary depending on your programming language. However, the steps are the similar: instantiate a HTTP client and set the required headers.
+
+
+On your request, you must set two HTTP headers:
+
+* __Authorization__: Set this to the API Key you received at signup
+* __Content-Type__: Set this to `application/json`
+
+Example in C#: 
+
+```
+var client = new WebClient()
+
+// key contains the API key
+client.Headers.Add(HttpRequestHeader.Authorization, key);
+client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+
+```
+
+> __Tip__: You do not need a specialized GraphQL client to query the API. You can use the HTTP client provided by your programming language.
+
+#### Step 5: POST the HTTP request
+
+You are now ready to send the request to the API.
+
+* HTTP method must be `POST`
+* The address is the URL given when you signed up for the API
+* The body is the JSON you serialized in Step 3
+
+### Parsing the Response
+
 ### Report Results
 
 The GIA Report Results API returns results for nearly all of GIA's reports and services through a single endpoint called `getReport`.
@@ -343,7 +496,7 @@ ADy4EQkt1sui/87CpxtQe5CMmBq8fejXckZiaB5Ui4bjfA21ky7Lp4wGBlw47A87haeruBbu90o=
 | --- | ----------- |
 | JSON is invalid. | Check for valid JSON. |
 
-If you are sending strings, this can happen due to problems with escaping quotes. Double-check that you are escaping quotes properly for your language.
+If you are sending strings, this can happen due to problems with escaping characters. Double-check that you are escaping properly for your language.
 
 
 ## Providing Feedback
