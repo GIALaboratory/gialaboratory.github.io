@@ -24,15 +24,17 @@ The good news is that most tools provide documentation navigators to help you ex
 
 ### Crafting Your Request
 
-To query the GIA Report Results API, you must craft the payload and send it to the endpoint as a `POST` request with the proper headers. Follow these steps to construct an API request.
+To query the GIA Report Results API, you must construct the request body, convert it to JSON, and send it to the endpoint as a POST request with the proper headers. 
 
-#### Step 1: Craft a valid query using a GraphQL-aware tool.
+Follow these steps to construct an API request.
 
-Use a tool such as GraphiQL, Insomnia, or xxx to construct, test, and validate your query prior to writing code to call the API from your programming language.
+##### Step 1: Craft a valid query using a GraphQL-aware tool.
+
+Use a tool such as GraphiQL, Insomnia, or Altair to construct, test, and validate your query prior to writing code. Instructions for GraphiQL are in the [Quickstart Guide](/report-results/quickstart).
 
 We'll use this example query throughout this section.
 
-TODO: ADD A SCREENSHOT OF GRAPHIQL WITH THE QUERY VARIABLES SET
+![Example Query](query_and_var.png)
 
 ```
 query ReportQuery($ReportNumber: String!) {
@@ -63,11 +65,13 @@ Note the use of the `ReportNumber` query variable.
 }
 ```
 
+Be sure this query successfully returns results before proceeding to the next steps.
 
+##### Step 2: Construct a GraphQL request body using your languages idioms
 
-#### Step 2: Construct a GraphQL payload using your languages idioms
+The body you send to the API must conform to [GraphQL standards](https://graphql.org/learn/serving-over-http/#post-request). 
 
-The payload you send to the API must conform to GraphQL standards. The best practice is to construct this structure using the features of your language prior to converting to JSON. The details will vary by language, but the process will be similar.
+The best practice is to construct this structure using the features of your language prior to converting to JSON. The details will vary by language, but the process will be similar.
 
 The API expects this structure:
 ```
@@ -79,18 +83,19 @@ The API expects this structure:
 }
 ```
 
-You will know the three elements (query, variable name, and value) from Step 1. In our example, the query is from Step 1 above, the variable name is `ReportNumber` and the value is `"2141438171"`.
+You know the elements (query, variable name, and value) from Step 1. In our example, the query is displayed above, the variable name is `ReportNumber` and the value is `"2141438171"`.
 
-One way to construct this payload is to use Dictionary elements:
+One way to construct the request body is to use Dictionary elements:
 
 1. Create a dictionary object called `query_variables` of type (`String`, `String`).
 2. Insert an element into `query_variables` with `ReportNumber` as the index and  `"2141438171"` as the value.
-3. Create a second dictionary object called `payload` of type (`String`, `Object`)
-4. Insert an element into `payload` with `query` as the index and the query you drafted in Step 1 as the value.
-5. Insert a second element into `payload` with `variables` as the index and `query_variables` as the value
+3. Create a second dictionary object called `body` of type (`String`, `Object`)
+4. Insert an element into `body` with `query` as the index and the query you drafted in Step 1 as the value.
+5. Insert a second element into `body` with `variables` as the index and `query_variables` as the value
 
-Please refer to this example in C#
 ```
+// Example in C#
+
 var query = @"
 query ReportQuery($ReportNumber: String!) {
     getReport(report_number: $ReportNumber){
@@ -116,12 +121,12 @@ query ReportQuery($ReportNumber: String!) {
 // Set the report number to lookup
 var reportNumber = "2141438171";
 
-// Construct the payload to be POSTed to the graphql server
+// Construct the request body to be POSTed to the graphql server
 var query_variables = new Dictionary<string, string>
 {
     { "ReportNumber", reportNumber}
 };
-var payload = new Dictionary<string, object>
+var body = new Dictionary<string, object>
 {
     { "query", query },
     { "variables", query_variables }
@@ -129,32 +134,32 @@ var payload = new Dictionary<string, object>
 
 ```
 
-#### Step 3: Serialize the payload to JSON
+##### Step 3: Convert the request body object to JSON
 
 Your programming language will have a module for serializing objects to JSON. 
 
-Example in C#: 
-
 ```
-// Convert the payload to JSON
-string json = JsonSerializer.Serialize(payload);
+// Example in C#: 
+
+string json = JsonSerializer.Serialize(body);
 ```
 
-> __Tip__: Avoid hand-coding your JSON payload. Use the tools your language provides.
+> __Tip__: Avoid hand-coding your JSON body. Use the tools your language provides.
 
-#### Step 4: Construct the HTTP request
+##### Step 4: Construct the HTTP request
 
-Constructing a HTTP request will vary depending on your programming language. However, the steps are the similar: instantiate a HTTP client and set the required headers.
-
+Constructing an HTTP request will vary depending on your programming language. However, the steps are the similar: instantiate a HTTP client and set the required headers.
 
 On your request, you must set two HTTP headers:
 
 * __Authorization__: Set this to the API Key you received at signup
 * __Content-Type__: Set this to `application/json`
 
-Example in C#: 
+> __Do not embed API keys directly in code__: API keys that are embedded in code can be accidentally exposed to the public, for example, if you forget to remove the keys from code that you share. Instead of embedding your API keys in your applications, store them in environment variables or in files outside of your application's source tree.
 
 ```
+// Example in C# 
+
 var client = new WebClient()
 
 // key contains the API key
@@ -165,17 +170,25 @@ client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
 
 > __Tip__: You do not need a specialized GraphQL client to query the API. You can use the HTTP client provided by your programming language.
 
-#### Step 5: POST the HTTP request
+##### Step 5: POST the HTTP request
 
 You are now ready to send the request to the API.
 
-* HTTP method must be `POST`
+* HTTP method must be POST
 * The address is the URL given when you signed up for the API
 * The body is the JSON you serialized in Step 3
 
+```
+// Example in C#
+
+// Send the payload as a JSON to the endpoint
+var response = client.UploadString(url, json);
+```
+
+
 ### Parsing the Response
 
-### Report Results
+#### Report Results
 
 The GIA Report Results API returns results for nearly all of GIA's reports and services through a single endpoint called `getReport`.
 
@@ -236,7 +249,7 @@ returns
 }
 ```
 
-### Data Types
+#### Data Types
 
 Most results fields are [String](https://graphql.org/learn/schema/#scalar-types) types to accomodate the text as it appears on a grading report. For example, `Internally Flawless` clarity grades will be spelled out rather than abbreviated `IF`.
 
@@ -244,7 +257,7 @@ In most cases, the abbreviated versions are also available. These [Enums](https:
 
 Fields that are concatenated in the results are also available as individual fields. For example, measurements are stated as "minimum diameter - maximum diameter x depth" for round diamonds and "length x width x depth" for fancy shapes. The individual fields are expressed in the `RoundMeasurements` and `FancyMeasurements` types.
 
-### Asset Links
+#### Asset Links
 
 Links to assets are contained in the `links` field. The availability of assets is dependent on the type of report you are querying. If an asset is not available the field will return `null`.
 
@@ -339,9 +352,9 @@ The GIA Report Results API is engineered for high availability. You may view our
 
 __Important:__ You must subscribe to notifications at [status.gia.edu](https://status.gia.edu). This is the sole method we will use to update you on planned maintenance or unplanned incidents.
 
-## Error Conditions
+### Error Conditions
 
-### Report not found
+#### Report not found
 
 The API will return `HTTP 200 OK` call if the requested report is unavailable. The errors object will include a message that the item is unavailable and an error code.
 
@@ -378,7 +391,7 @@ The API will return `HTTP 200 OK` call if the requested report is unavailable. T
 | The report exists, but has not been returned to the client and is not yet available. | Retry your query after item has been returned to the client. |
 | The report exists, but is unavailable for other reasons. | Contact GIA for further information. |
 
-### Item is Undergoing Service
+#### Item is Undergoing Service
 
 Items that are currently being serviced by GIA are unavailable through this API. 
 
@@ -408,7 +421,7 @@ Items that are currently being serviced by GIA are unavailable through this API.
 }
 ```
 
-### Invalid key
+#### Invalid key
 
 An invalid key will return a `HTTP 403 Forbidden` and this body content:
 
@@ -422,7 +435,7 @@ An invalid key will return a `HTTP 403 Forbidden` and this body content:
 | --- | ----------- |
 | Your key is inactive. | Log in to the developer portal and confirm your key. |
 
-### Quota limit exceeded
+#### Quota limit exceeded
 
 Submitting a query that exceeds your quota will return `HTTP 200 OK` and an error response in the body of the message.
 
@@ -456,11 +469,11 @@ Submitting a query that exceeds your quota will return `HTTP 200 OK` and an erro
 | --- | ----------- |
 | Your quota limit has been consumed or has expired. | Add additional lookups through the developer portal. |
 
-### Newer report issued
+#### Newer report issued
 
 From time to time, GIA re-examines items and issues new reports on those items. In those cases a query to the original report will be redirected to the newer report. Details will be returned in the `info_message` field.
 
-### Asset Link Expired
+#### Asset Link Expired
 
 Asset links expire 60 minutes from the time you query the API. Requesting an asset using an expired URL returns `HTTP 403 Forbiddden` and a "Request has Expired" message.
 
@@ -481,7 +494,7 @@ ADy4EQkt1sui/87CpxtQe5CMmBq8fejXckZiaB5Ui4bjfA21ky7Lp4wGBlw47A87haeruBbu90o=
 | --- | ----------- |
 | The asset link has expired. | Query `getReport` to obtain a new asset link. |
 
-### MalformedHttpRequestException
+#### MalformedHttpRequestException
 
 ```
 {
