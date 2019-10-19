@@ -4,14 +4,14 @@ title: Documentation
 
 # GIA Report Results API Documentation
 
-* TOC
-{:toc}
-
-## Introduction
-
 The GIA Report Results API enables applications to integrate with GIA's database in order to verify grading information and retrieve assets associated with a report. 
 
 This guide provides the background and details for integrators to evaluate our APIs, and to get started writing code against live endpoints in our sandbox or production environments.
+
+## Contents 
+
+* TOC
+{:toc}
 
 ## Concepts
 
