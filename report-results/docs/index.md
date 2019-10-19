@@ -256,7 +256,7 @@ returns
 
 Most results fields are [String](https://graphql.org/learn/schema/#scalar-types) types to accomodate the text as it appears on a grading report. For example, `Internally Flawless` clarity grades will be spelled out rather than abbreviated `IF`.
 
-In most cases, the abbreviated versions are also available. These [Enums](https://graphql.org/learn/schema/#enumeration-types) are validated to be one of the allowed values. Look for fields that end with `_code`. Examples are `report_type_code`, `clarity_grade_code`, `color_grade_code`, among others.
+In most cases, the abbreviated versions are also available. These [Enums](https://graphql.org/learn/schema/#enumeration-types) are validated to be one of the allowed values. Look for fields that end with `_code`. Examples are `report_type_code`, `clarity_grade_code`, and `color_grade_code`.
 
 Fields that are concatenated in the results are also available as individual fields. For example, measurements are stated as "minimum diameter - maximum diameter x depth" for round diamonds and "length x width x depth" for fancy shapes. The individual fields are expressed in the `RoundMeasurements` and `FancyMeasurements` types.
 
