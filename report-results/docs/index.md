@@ -1,9 +1,11 @@
 ---
 title: Documentation
-toc: true
 ---
 
 # GIA Report Results API Documentation
+
+* TOC
+{:toc}
 
 ## Introduction
 

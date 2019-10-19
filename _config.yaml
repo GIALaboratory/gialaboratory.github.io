@@ -1,4 +1,3 @@
 collections:
   - sample_reports
-plugins:
-  - jekyll-toc
+markdown: kramdown
