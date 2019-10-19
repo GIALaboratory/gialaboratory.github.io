@@ -1,2 +1,4 @@
 collections:
   - sample_reports
+plugins:
+  - jekyll-toc
