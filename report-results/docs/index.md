@@ -276,10 +276,17 @@ You are now ready to send the request to the API.
 var response = client.UploadString(url, json);
 ```
 
-
 ### Parsing the Response
 
+The GIA Report Results API returns responses in [JSON](https://www.json.org/). The shape of the JSON response will align with the GraphQL query you submitted to the server.
 
+You will use the tools provided by your programming language to parse the JSON response. 
+
+If you are using a statically-typed language such as Java or C#, you generally have three approaches: 
+
+1.  Deserialize the JSON object into a native class. To follow this path, resources such as [http://json2csharp.com/](http://json2csharp.com/) or [http://www.jsonschema2pojo.org/](http://www.jsonschema2pojo.org/) can ease this transition. However, this can be tricky given the polymorphic nature of the `ReportResults` object. This approach is not discussed further in this document.
+2. Use a third-party framework to parse the JSON and retrieve individual values. These frameworks change often so do your research. Popular frameworks are [Json.NET](https://www.newtonsoft.com/json) and [Jackson](https://github.com/FasterXML/jackson) among others.
+3. Use native JSON document tools to parse and flatten the JSON structure.
 
 ## Platform Overview
 

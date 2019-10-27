@@ -22,15 +22,8 @@ The GIA Report Results API enables applications to integrate with GIA's database
 
 ### Additional Resources
 
-[Example Applications]
+[Example Applications](https://github.com/GIALaboratory/report-results-api-examples)
 
 [Example Queries](/report-results/example-queries)
 
 [Sandbox Reports](/report-results/sandbox-reports)
-
-
-
-
-
-
-
