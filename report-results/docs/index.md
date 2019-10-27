@@ -10,6 +10,7 @@ The GIA Report Results API enables applications to integrate with GIA's database
 This guide provides the background and details for integrators to evaluate our APIs, and to get started writing code against live endpoints in our sandbox or production environments.
 
 ## Contents 
+{:.no_toc}
 
 * TOC
 {:toc}
