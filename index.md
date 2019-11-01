@@ -10,7 +10,9 @@ On this site you will find documentation for GIA's APIs and other resources.
 
 The GIA Report Results API enables applications to integrate with GIA's database in order to verify grading information and retrieve assets associated with a report. 
 
-[Product Overview]
+[Product Overview](https://www.gia.edu/report-results-api)
+
+[What's New](/report-results/whats-new)
 
 ### Getting Started
 
