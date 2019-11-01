@@ -12,7 +12,7 @@ The GIA Report Results API enables applications to integrate with GIA's database
 
 [Product Overview](https://www.gia.edu/report-results-api)
 
-[What's New](/report-results/whats-new)
+[Changelog](/report-results/changelog)
 
 ### Getting Started
 
