@@ -1,3 +1,4 @@
 collections:
-  - sample_reports
+  sample_reports:
+    sort_by: report_number
 markdown: kramdown
