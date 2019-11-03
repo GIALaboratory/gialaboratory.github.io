@@ -4,7 +4,7 @@ title: What's New
 
 # GIA Report Results API Changelog
 
-## 2019-11-04 [Unreleased]
+## 2019-11-04
 
 GIA is excited to announce the general availability of the GIA Report Results API!
 

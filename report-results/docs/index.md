@@ -278,15 +278,24 @@ var response = client.UploadString(url, json);
 
 ### Parsing the Response
 
-The GIA Report Results API returns responses in [JSON](https://www.json.org/). The shape of the JSON response will align with the GraphQL query you submitted to the server.
+#### Overview
 
-You will use the tools provided by your programming language to parse the JSON response. 
+The GIA Report Results API returns responses in [JSON](https://www.json.org/). The shape of the JSON response will align with the GraphQL query you submitted to the server. You will use the tools provided by your programming language to parse the JSON response.
 
-If you are using a statically-typed language such as Java or C#, you generally have three approaches: 
+#### Checking for Errors
 
-1.  Deserialize the JSON object into a native class. To follow this path, resources such as [http://json2csharp.com/](http://json2csharp.com/) or [http://www.jsonschema2pojo.org/](http://www.jsonschema2pojo.org/) can ease this transition. However, this can be tricky given the polymorphic nature of the `ReportResults` object. This approach is not discussed further in this document.
-2. Use a third-party framework to parse the JSON and retrieve individual values. These frameworks change often so do your research. Popular frameworks are [Json.NET](https://www.newtonsoft.com/json) and [Jackson](https://github.com/FasterXML/jackson) among others.
-3. Use native JSON document tools to parse and flatten the JSON structure.
+Error checking the GraphQL response requires attention at several points. Follow this guidance to ensure that you detect and respond to error conditions appropriately.
+
+1. Ensure a successful HTTP request. If you receive an error such as `Unknown Host` or `Request Timed Out` then your request did not properly reach the server. If you receive a response other than `HTTP 200 OK` you have encounted an error and your response will not contain the report results you requested.
+2. Check the GraphQL [errors](https://graphql.org/learn/serving-over-http/#response) field in the response. If the server encountered errors during processing, the `errors` field will be populated with a list of errors encountered. You must check this errors object to determine the cause of the error.
+
+#### Working with the Response
+
+The tools you use depend on the language you are using. With statically-typed languages such as C# and Java, you will need to either (a) deserialize the JSON object into a native class or (b) use a library which allows you to natively work with the JSON document.
+
+Option (a) can be tricky given the polymorphic nature of the `ReportResults` object. This approach is not discussed further in this document.
+
+The C# and Java examples provided by GIA demonstrate one method of deconstructing the JSON document into its various fields. Also recognize that other libraries provide similar functionality and may ease development.
 
 ## Platform Overview
 
@@ -296,11 +305,21 @@ GIA has invested heavily in engineering this system for the highest possible per
 
 Usage of the GIA Report Results API is enabled by a plan. Each plan has a number of report requests associated with it. When this quota is depleted, you will no longer be able to retrieve report results. It is important that you track your quota and take action when necessary.
 
+There are multiple ways to retrieve your quota:
+
+1. Call `getQuota` to retrieve your remaining quota. Calling getQuota does not affect your remaining quota.
+2. Call `getReport` and request the `quota { remaining }` field as part of the response. 
+3. View your quota by signing in to your GIA Report Results API dashboard.
+
+> __Note:__ If you request your quota as part of multiple reports in a single request, the system will calculate your remaining quota within each individual report lookup. In that case, your correct remaining quota will be the minimum of all `remaining` values in the response.
+>
+> Calling `getQuota` alone (that is, as a request separate from any calls to `getReport` will always return the exact number of report lookups remaining.)
+
 ### API Keys
 
 API keys are used to authenticate and authorize requests to the API. A plan may have multiple keys and you may revoke any key without affecting other keys on the plan.
 
-__Important:__ For your protection, you must securely store these keys and they must not be shared! You are responsible for taking all precautions to safeguard access to the keys.
+> __Important:__ For your protection, you must securely store these keys and they must not be shared! You are responsible for taking all precautions to safeguard access to the keys.
 
 ### Sandbox Environment
 
@@ -385,8 +404,8 @@ The API will return `HTTP 200 OK` call if the requested report is unavailable. T
         "getReport"
       ],
       "data": null,
-      "errorType": null,
-      "errorInfo": null,
+      "errorType": "REPORT UNAVAILABLE",
+      "errorInfo": "REPORT NOT FOUND",
       "locations": [
         {
           "line": 2,
@@ -422,8 +441,8 @@ Items that are currently being serviced by GIA are unavailable through this API.
         "report1"
       ],
       "data": null,
-      "errorType": null,
-      "errorInfo": null,
+      "errorInfo": REPORT IN HOUSE
+      "errorType":  REPORT UNAVAILABLE
       "locations": [
         {
           "line": 3,
@@ -466,8 +485,8 @@ Submitting a query that exceeds your quota will return `HTTP 200 OK` and an erro
         "getReport"
       ],
       "data": null,
-      "errorType": null,
-      "errorInfo": null,
+      "errorInfo": PLAN QUOTA MET
+      "errorType":  QUOTA REACHED
       "locations": [
         {
           "line": 2,
@@ -495,14 +514,14 @@ Asset links expire 60 minutes from the time you query the API. Requesting an ass
 
 ```
 <Error>
-<Code>AccessDenied</Code>
-<Message>Request has expired</Message>
-<Expires>2019-09-28T15:47:27Z</Expires>
-<ServerTime>2019-09-28T16:10:51Z</ServerTime>
-<RequestId>F73DF5DE0563DEE8</RequestId>
-<HostId>
-ADy4EQkt1sui/87CpxtQe5CMmBq8fejXckZiaB5Ui4bjfA21ky7Lp4wGBlw47A87haeruBbu90o=
-</HostId>
+  <Code>AccessDenied</Code>
+  <Message>Request has expired</Message>
+  <Expires>2019-09-28T15:47:27Z</Expires>
+  <ServerTime>2019-09-28T16:10:51Z</ServerTime>
+  <RequestId>F73DF5DE0563DEE8</RequestId>
+  <HostId>
+    ADy4EQkt1sui/87CpxtQe5CMmBq8fejXckZiaB5Ui4bjfA21ky7Lp4wGBlw47A87haeruBbu90o=
+  </HostId>
 </Error>
 ```
 
@@ -523,10 +542,9 @@ ADy4EQkt1sui/87CpxtQe5CMmBq8fejXckZiaB5Ui4bjfA21ky7Lp4wGBlw47A87haeruBbu90o=
 
 | Possible Cause | Solution |
 | --- | ----------- |
-| JSON is invalid. | Check for valid JSON. |
+| JSON is invalid. | Ensure the JSON you submit is well-formed. |
 
 If you are sending strings, this can happen due to problems with escaping characters. Double-check that you are escaping properly for your language.
-
 
 ## Providing Feedback
 
