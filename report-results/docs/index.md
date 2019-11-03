@@ -284,10 +284,12 @@ The GIA Report Results API returns responses in [JSON](https://www.json.org/). T
 
 #### Checking for Errors
 
-Error checking the GraphQL response requires attention at several points. Follow this guidance to ensure that you detect and respond to error conditions appropriately.
+Error checking the GraphQL response requires attention at several points. Follow this guidance to ensure that you detect and respond to error conditions.
 
-1. Ensure a successful HTTP request. If you receive an error such as `Unknown Host` or `Request Timed Out` then your request did not properly reach the server. If you receive a response other than `HTTP 200 OK` you have encounted an error and your response will not contain the report results you requested.
+1. Ensure you received a successful HTTP request. If you receive an error such as `Unknown Host` or `Request Timed Out` then your request did not properly reach the server. If you receive a response other than `HTTP 200 OK` you have encounted an error and your response will not contain the report results you requested.
 2. Check the GraphQL [errors](https://graphql.org/learn/serving-over-http/#response) field in the response. If the server encountered errors during processing, the `errors` field will be populated with a list of errors encountered. You must check this errors object to determine the cause of the error.
+
+For more information, see [Error Conditions](#error-conditions).
 
 #### Working with the Response
 
