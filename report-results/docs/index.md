@@ -333,8 +333,6 @@ The sandbox plan will be initially loaded with a number of report lookups. This 
 
 Once your API application is approved by GIA, you will be able to add a production API plan. API keys associated with this plan may access the full set of reports available in GIA's database.
 
-GIA's Report Results API plans are simple and straightforward: you only pay for what you use. When you're ready to query the full set of reports, you select the number of lookups you require and that quota is immediately available for your use. This can be as many or as few lookups as you want. There is no long term contract or commitment.
-
 ### Quota Monitoring
 
 You may check your remaining quota at any time by using `getQuota`. Checking your quota does not affect your remaining quota.
@@ -545,8 +543,7 @@ Asset links expire 60 minutes from the time you query the API. Requesting an ass
 | Possible Cause | Solution |
 | --- | ----------- |
 | JSON is invalid. | Ensure the JSON you submit is well-formed. |
-
-If you are sending strings, this can happen due to problems with escaping characters. Double-check that you are escaping properly for your language.
+| Improper nesting of escape characters. | Avoid using string concatenation and check that you are escaping properly for your language. |
 
 ## Providing Feedback
 
