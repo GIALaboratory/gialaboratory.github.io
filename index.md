@@ -6,7 +6,7 @@ title: GIA Laboratory Developer Documentation
 
 On this site you will find documentation for GIA's APIs and other resources.
 
-## GIA Report Results API <statuspage-widget src="https://status.gia.edu"></statuspage-widget>
+## GIA Report Results API
 
 The GIA Report Results API enables applications to integrate with GIA's database in order to verify grading information and retrieve assets associated with a report. 
 
