@@ -8,7 +8,7 @@ Use this guide to get started with the GIA Report Results API. You will use the 
 
 ## Before you begin
 
-You must obtain a sandbox or production API key by following the onboarding process described in [GIA Developer Resources](https://gia.edu).
+You must obtain a sandbox or production API key by following the onboarding process described in [GIA Report Results API](https://gia.edu/report-results-api).
 
 You will also receive the API endpoint URL, which will be required in step 2.
 
