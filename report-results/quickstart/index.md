@@ -82,7 +82,24 @@ You may check your quota limit at any time by querying `getQuota`. Checking your
 
 _Pro Tip:_ You can also obtain your remaining quota with each `getReport` request.
 
-## Step 6: Explore the API
+## Step 6: Check for updated reports
+
+GIA Report Results API provides a way for you to determine if a report has changed since a given date.  Checking for an updated report does not affect your remaining quota, and there are no limits on the number of times you may perform a check.
+
+You may check for an updated report at any time by querying `isReportUpdated`.  It requires a report number and a date (which must conform to [ISO 8601 standards](http://microformats.org/wiki/ISO8601); the timestamp is unnecessary, only `YYYY-MM-DD` is required). It will return `true` if the report has been updated since the date you've specified, and `false` if the report has not changed.
+
+For example, the query below determines if report number `2141438171` has changed since February 24, 2018.
+
+```
+{
+	isReportUpdated(report_number: "2141438171", report_date: "2018-02-24") {
+	 	report_updated
+    }	
+}
+```
+If report  `2141438171` was changed after February 24, 2018, this query will return `true`; and if it has not changed since that date, it will return `false`.  
+
+## Step 7: Explore the API
 
 One of the great benefits of GraphQL is that the API has a well-defined schema. This means that you can learn about the API from the API itself and most tools will help you with features like auto-complete and documentation navigators.
 

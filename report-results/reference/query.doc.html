@@ -16,7 +16,7 @@
             <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
                 <i class="material-icons">close</i>
             </button>
-                <a href="/" style="display:block;padding:1rem 15%"><img src="/static/gia-logo.svg" /></a>
+                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
             <div class="slds-p-top--small">
                 <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
             </div>
@@ -245,6 +245,11 @@
                 Quota
             </a>
         </li>
+        <li  title="ReportUpdated">
+            <a href="reportupdated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReportUpdated
+            </a>
+        </li>
         <li  title="RoundMeasurements">
             <a href="roundmeasurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 RoundMeasurements
@@ -379,7 +384,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Get the data given by a GIA grading report</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>report_number</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">getReport</span>(<span class="meta">report_number</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="gradingreport.doc.html">GradingReport</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Check your quota, does not consume a report request from your quota</span></span></li><li><span class="tab"><span class="meta">getQuota</span>: <a class="support type" href="quota.doc.html">Quota</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Get the data given by a GIA grading report</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>report_number</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">getReport</span>(<span class="meta">report_number</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="gradingreport.doc.html">GradingReport</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Check your quota, does not consume a report request from your quota</span></span></li><li><span class="tab"><span class="meta">getQuota</span>: <a class="support type" href="quota.doc.html">Quota</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Giving users the ability to find out if a report was changed after a date </span></span></li><li><span class="tab"><span class="comment line">#   provided by the user.</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>report_number</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="comment line">#   <strong>report_date</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">isReportUpdated</span>(<span class="meta">report_number</span>: <a class="support type" href="string.doc.html">String</a>!, <span class="meta">report_date</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="reportupdated.doc.html">ReportUpdated</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
