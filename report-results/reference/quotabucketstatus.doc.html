@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>aws_cognito_user_pools</title>
+    <title>QuotaBucketStatus</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -95,7 +95,7 @@
                 PolishGradeCode
             </a>
         </li>
-        <li  title="QuotaBucketStatus">
+        <li class="slds-is-active" title="QuotaBucketStatus">
             <a href="quotabucketstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 QuotaBucketStatus
             </a>
@@ -320,7 +320,7 @@
                 aws_auth
             </a>
         </li>
-        <li class="slds-is-active" title="aws_cognito_user_pools">
+        <li  title="aws_cognito_user_pools">
             <a href="aws_cognito_user_pools.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 aws_cognito_user_pools
             </a>
@@ -380,9 +380,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak"></p>
-        <h1 class="slds-text-heading--large">aws_cognito_user_pools</h1>
-        <div class="slds-text-body--regular"><p>Tells the service this field/object has access authorized by a Cognito User Pools token.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
+        <h1 class="slds-text-heading--large">QuotaBucketStatus</h1>
+        <div class="slds-text-body--regular"><p>  Valud statuses for buckets.</p>
 </div>
     </div>
 </section>
@@ -394,7 +394,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">directive</span> <span class="keyword operator ts">@aws_cognito_user_pools</span>(<span class="meta">cognito_groups</span>: [<a class="support type" href="string.doc.html">String</a>]) on <span class="keyword operator ts">OBJECT</span> | <span class="keyword operator ts">FIELD_DEFINITION</span></li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">QuotaBucketStatus</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ACTIVE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EXHAUSTED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EXPIRED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">INACTIVE</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -405,7 +405,7 @@
             </a>
             Require by
         </h2>
-        <div class="require-by anyone">This element is not required by anyone</div>
+        <ul class="require-by"><li><a href="quotabucket.doc.html" title="QuotaBucket -   A lookup bucket and it's attributes.">QuotaBucket<em>  A lookup bucket and it's attributes.</em></a><li></ul>
     </div>
 </section>
 <footer>
