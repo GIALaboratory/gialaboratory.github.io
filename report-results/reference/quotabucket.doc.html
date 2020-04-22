@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>aws_cognito_user_pools</title>
+    <title>QuotaBucket</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -250,7 +250,7 @@
                 Quota
             </a>
         </li>
-        <li  title="QuotaBucket">
+        <li class="slds-is-active" title="QuotaBucket">
             <a href="quotabucket.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 QuotaBucket
             </a>
@@ -320,7 +320,7 @@
                 aws_auth
             </a>
         </li>
-        <li class="slds-is-active" title="aws_cognito_user_pools">
+        <li  title="aws_cognito_user_pools">
             <a href="aws_cognito_user_pools.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 aws_cognito_user_pools
             </a>
@@ -380,9 +380,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak"></p>
-        <h1 class="slds-text-heading--large">aws_cognito_user_pools</h1>
-        <div class="slds-text-body--regular"><p>Tells the service this field/object has access authorized by a Cognito User Pools token.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
+        <h1 class="slds-text-heading--large">QuotaBucket</h1>
+        <div class="slds-text-body--regular"><p>  A lookup bucket and it&#39;s attributes.</p>
 </div>
     </div>
 </section>
@@ -394,7 +394,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">directive</span> <span class="keyword operator ts">@aws_cognito_user_pools</span>(<span class="meta">cognito_groups</span>: [<a class="support type" href="string.doc.html">String</a>]) on <span class="keyword operator ts">OBJECT</span> | <span class="keyword operator ts">FIELD_DEFINITION</span></li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">QuotaBucket</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Bucket ID.</span></span></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Initial number of lookups assigned to this bucket.</span></span></li><li><span class="tab"><span class="meta">initial</span>: <a class="support type" href="int.doc.html">Int</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Remaining number of lookups in this bucket.</span></span></li><li><span class="tab"><span class="meta">remaining</span>: <a class="support type" href="int.doc.html">Int</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Date (ISO 8601 format) of the bucket's expiration.</span></span></li><li><span class="tab"><span class="meta">expiration_date</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Bucket status.</span></span></li><li><span class="tab"><span class="meta">status</span>: <a class="support type" href="quotabucketstatus.doc.html">QuotaBucketStatus</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -405,7 +405,7 @@
             </a>
             Require by
         </h2>
-        <div class="require-by anyone">This element is not required by anyone</div>
+        <ul class="require-by"><li><a href="quota.doc.html" title="Quota -   Remaining lookups in total and/or per bucket.">Quota<em>  Remaining lookups in total and/or per bucket.</em></a><li></ul>
     </div>
 </section>
 <footer>

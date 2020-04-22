@@ -95,6 +95,11 @@
                 PolishGradeCode
             </a>
         </li>
+        <li  title="QuotaBucketStatus">
+            <a href="quotabucketstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QuotaBucketStatus
+            </a>
+        </li>
         <li  title="ReportTypeCode">
             <a href="reporttypecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ReportTypeCode
@@ -245,6 +250,16 @@
                 Quota
             </a>
         </li>
+        <li  title="QuotaBucket">
+            <a href="quotabucket.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QuotaBucket
+            </a>
+        </li>
+        <li  title="ReportUpdated">
+            <a href="reportupdated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReportUpdated
+            </a>
+        </li>
         <li  title="RoundMeasurements">
             <a href="roundmeasurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 RoundMeasurements
@@ -367,7 +382,7 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">Links</h1>
-        <div class="slds-text-body--regular"><p>  Links to supplementary files, such as PDFs and images.</p>
+        <div class="slds-text-body--regular"><p>  Links to supplementary files, such as PDFs, images, and videos. Links are temporary and will expire after 60 minutes.</p>
 </div>
     </div>
 </section>
@@ -379,7 +394,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Links</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Report facsimile in PDF format.</span></span></li><li><span class="tab"><span class="meta">pdf</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Graphic profile representation of the diamond's actual proportions.</span></span></li><li><span class="tab"><span class="meta">proportions_diagram</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Plotting diagram with symbols to indicate the type or nature, position, and </span></span></li><li><span class="tab"><span class="comment line">#   the approximate size of a clarity characteristic.</span></span></li><li><span class="tab"><span class="meta">plotting_diagram</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital image of the item.</span></span></li><li><span class="tab"><span class="meta">image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital image of the rough item</span></span></li><li><span class="tab"><span class="meta">rough_image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital video of the rough item.</span></span></li><li><span class="tab"><span class="meta">rough_video</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital image of the polished item.</span></span></li><li><span class="tab"><span class="meta">polished_image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital video of the polished item.</span></span></li><li><span class="tab"><span class="meta">polished_video</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Diamond letter facsimile in PDF format</span></span></li><li><span class="tab"><span class="meta">dtl_pdf_filename</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Diamond letter facsimile in PDF format</span></span></li><li><span class="tab"><span class="meta">dttl_pdf_filename</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Diamond letter facsimile in PDF format</span></span></li><li><span class="tab"><span class="meta">dtlp_pdf_filename</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital image of the item</span></span></li><li><span class="tab"><span class="meta">dtlp_image_filename</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Links</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Report facsimile in PDF format.</span></span></li><li><span class="tab"><span class="meta">pdf</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Graphic profile representation of the diamond's actual proportions.</span></span></li><li><span class="tab"><span class="meta">proportions_diagram</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Plotting diagram with symbols to indicate the type or nature, position, and </span></span></li><li><span class="tab"><span class="comment line">#   the approximate size of a clarity characteristic.</span></span></li><li><span class="tab"><span class="meta">plotting_diagram</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital image of the item.</span></span></li><li><span class="tab"><span class="meta">image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital image of the rough item.</span></span></li><li><span class="tab"><span class="meta">rough_image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital video of the rough item.</span></span></li><li><span class="tab"><span class="meta">rough_video</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital image of the polished item.</span></span></li><li><span class="tab"><span class="meta">polished_image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital video of thhe polished item.</span></span></li><li><span class="tab"><span class="meta">polished_video</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Diamond letter facsimile in PDF format.</span></span></li><li><span class="tab"><span class="meta">dtl_pdf_filename</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Diamond letter facsimile in PDF format.</span></span></li><li><span class="tab"><span class="meta">dttl_pdf_filename</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Diamond letter facsimile in PDF format.</span></span></li><li><span class="tab"><span class="meta">dtlp_pdf_filename</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Digital image of the item.</span></span></li><li><span class="tab"><span class="meta">dtlp_image_filename</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -390,7 +405,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="gradingreport.doc.html" title="GradingReport -   The base grading report object">GradingReport<em>  The base grading report object</em></a><li></ul>
+        <ul class="require-by"><li><a href="gradingreport.doc.html" title="GradingReport -   The base grading report object.">GradingReport<em>  The base grading report object.</em></a><li></ul>
     </div>
 </section>
 <footer>
