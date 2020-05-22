@@ -379,3 +379,261 @@ results
   }
 }
 ```
+
+## Master GraphQL Query
+
+This query returns the full set of results for all available report types as of 5/26/2020
+
+```
+{
+#   
+  report_test1: getReport(report_number: "2141438169"){
+    ...resultFields
+    report_number
+  }
+  
+  report_test2: getReport(report_number: "6204990354"){
+    ...resultFields
+    report_number
+  }
+  
+  report_test3: getReport(report_number: "6204489200"){
+    report_number
+    ...resultFields
+  }
+  
+  report_test4: getReport(report_number: "2141438185"){
+    report_number
+    ...resultFields
+  }
+  
+  isReportUpdated(report_number: "2141438169", report_date: "2019-09-19") {
+        report_updated
+    }
+
+  quota: getQuota {
+    remaining
+     }
+  }
+
+fragment resultFields on GradingReport {
+  report_date
+  report_date_iso
+  report_number
+  report_type
+  report_type_code
+  is_digital
+  is_sleeve
+  info_message
+  quota {
+    remaining
+  }
+  results {
+    __typename
+    ... on IdentificationReportResults {
+      weight
+      measurements
+      shape
+      cutting_style
+      cutting_style_crown
+      cutting_style_pavilion
+      transparency
+      color
+      phenomenon
+      item_description
+      species
+      variety
+      geographic_origin
+      treatment
+      report_comments
+      duplicate_comments
+      treatment_codes {
+        treatment_code
+      }      
+    }
+    ... on DiamondGradingReportResults {
+      shape_and_cutting_style
+      measurements
+      carat_weight
+      color_grade
+      color_origin
+      color_distribution
+      clarity_grade
+      cut_grade
+      polish
+      symmetry
+      fluorescence
+      country_of_origin
+      country_of_origin_code
+      clarity_characteristics
+      key_to_symbols {
+        order
+        characteristic
+        location
+        image
+      }
+      inscriptions
+      diamond_type
+      report_comments
+      duplicate_comments
+      proportions {
+        depth_pct
+        table_pct
+        crown_angle
+        crown_height
+        pavilion_angle
+        pavilion_depth
+        star_length
+        lower_half
+        girdle
+        culet
+      }
+      data {
+        shape {
+          shape_category
+          shape_code
+          shape_group
+          shape_group_code
+        }
+        measurements {
+          ... on FancyMeasurements {
+            length
+            width
+            depth
+          }
+          ... on RoundMeasurements {
+            min_diam
+            max_diam
+            depth
+          }
+        }
+        weight {
+          weight
+          weight_unit
+        }
+        color {
+          color_grade_code
+          color_modifier
+        }
+        clarity
+        cut
+        polish
+        symmetry
+        fluorescence {
+          fluorescence_color
+          fluorescence_intensity
+        }
+        girdle {
+          girdle_condition
+          girdle_pct
+          girdle_size
+        }
+        inscription_graphics {
+          description
+          image
+        }
+      }
+    }
+    ... on LabGrownDiamondGradingReportResults {
+      identification
+      shape_and_cutting_style
+      measurements
+      carat_weight
+      color_grade
+      color_origin
+      color_distribution
+      clarity_grade
+      cut_grade
+      polish
+      symmetry
+      fluorescence
+      key_to_symbols {
+        order
+        characteristic
+        image
+        location
+      }
+      inscriptions
+      report_comments
+      duplicate_comments
+      proportions {
+        depth_pct
+        table_pct
+        crown_angle
+        crown_height
+        pavilion_angle
+        pavilion_depth
+        star_length
+        lower_half
+        girdle
+        culet
+      }
+    }
+    ... on PearlIdentReportResults {
+      report_title
+      item_description
+      weight
+      measurements
+      shape
+      bodycolor
+      overtone
+      identification
+      environment
+      mollusk
+      treatment
+      surface
+      luster
+      quantity
+      drilling
+      matching
+      report_comments
+      duplicate_comments
+    }
+    ... on NarrativeReportResults {
+      report_title
+      description
+      pearl_identification
+      conclusion
+      diamond_type
+      report_comments
+      duplicate_comments
+      country_of_origin_code
+      treatment_codes {
+        treatment_code
+      }   
+      country_of_origin_code
+      inscriptions
+    }
+    
+    ... on MeleeServiceResults {
+      packages {
+        service_results_number
+        issue_date
+        melee_shape
+        diameter
+        total_carat_weight
+        color_range
+        number_of_items
+        material_test_results
+        comments
+      }
+    }
+  }
+  links {
+    pdf
+    proportions_diagram
+    plotting_diagram
+    image
+    rough_image
+    rough_video
+    polished_image
+    polished_video
+    dtl_pdf_filename
+    dttl_pdf_filename
+    dtlp_pdf_filename
+    dtlp_image_filename
+  }
+}
+```
+
+
