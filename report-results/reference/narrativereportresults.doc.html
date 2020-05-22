@@ -65,6 +65,11 @@
                 ClarityGradeCode
             </a>
         </li>
+        <li  title="CountryOfOriginCode">
+            <a href="countryoforigincode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CountryOfOriginCode
+            </a>
+        </li>
         <li  title="CutGradeCode">
             <a href="cutgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CutGradeCode
@@ -90,6 +95,11 @@
                 PolishGradeCode
             </a>
         </li>
+        <li  title="QuotaBucketStatus">
+            <a href="quotabucketstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QuotaBucketStatus
+            </a>
+        </li>
         <li  title="ReportTypeCode">
             <a href="reporttypecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ReportTypeCode
@@ -103,6 +113,11 @@
         <li  title="SymmetryGradeCode">
             <a href="symmetrygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 SymmetryGradeCode
+            </a>
+        </li>
+        <li  title="TreatmentCode">
+            <a href="treatmentcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TreatmentCode
             </a>
         </li>
         <li  title="__DirectiveLocation">
@@ -235,9 +250,24 @@
                 Quota
             </a>
         </li>
+        <li  title="QuotaBucket">
+            <a href="quotabucket.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QuotaBucket
+            </a>
+        </li>
+        <li  title="ReportUpdated">
+            <a href="reportupdated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReportUpdated
+            </a>
+        </li>
         <li  title="RoundMeasurements">
             <a href="roundmeasurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 RoundMeasurements
+            </a>
+        </li>
+        <li  title="TreatmentCodes">
+            <a href="treatmentcodes.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TreatmentCodes
             </a>
         </li>
         <li  title="Weight">
@@ -364,7 +394,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">NarrativeReportResults</span> {</li><li></li><li><span class="tab"><span class="comment line">#     The title of the report</span></span></li><li><span class="tab"><span class="meta">report_title</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     A description of the item</span></span></li><li><span class="tab"><span class="meta">description</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     The identification conclusion</span></span></li><li><span class="tab"><span class="meta">conclusion</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Additional identifying characteristics or features that are not otherwise </span></span></li><li><span class="tab"><span class="comment line">#   represented on the report. If a treatment is detected, such as laser drilling, </span></span></li><li><span class="tab"><span class="comment line">#   it would be described here.</span></span></li><li><span class="tab"><span class="meta">report_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">duplicate_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Any text, symbols, logos, or a unique GIA report number inscribed on the item.</span></span></li><li><span class="tab"><span class="meta">inscriptions</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">NarrativeReportResults</span> {</li><li></li><li><span class="tab"><span class="comment line">#     The title of the report.</span></span></li><li><span class="tab"><span class="meta">report_title</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     A description of the item.</span></span></li><li><span class="tab"><span class="meta">description</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     The identification conclusion.</span></span></li><li><span class="tab"><span class="meta">conclusion</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Additional identifying characteristics or features that are not otherwise </span></span></li><li><span class="tab"><span class="comment line">#   represented on the report. If a treatment is detected, such as laser drilling, </span></span></li><li><span class="tab"><span class="comment line">#   it would be described here.</span></span></li><li><span class="tab"><span class="meta">report_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     This field will show a comment if a duplicate report is printed at a later </span></span></li><li><span class="tab"><span class="comment line">#   date.</span></span></li><li><span class="tab"><span class="meta">duplicate_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Any text, symbols, logos, or a unique GIA report number inscribed on the item.</span></span></li><li><span class="tab"><span class="meta">inscriptions</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Machine readable code indicating the diamond’s country of origin. For GIA use </span></span></li><li><span class="tab"><span class="comment line">#   only.</span></span></li><li><span class="tab"><span class="meta">country_of_origin_code</span>: <a class="support type" href="countryoforigincode.doc.html">CountryOfOriginCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The identification of the item.</span></span></li><li><span class="tab"><span class="meta">pearl_identification</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Machine readable code indicating any identified treatments. For GIA use only.</span></span></li><li><span class="tab"><span class="meta">treatment_codes</span>: [<a class="support type" href="treatmentcodes.doc.html">TreatmentCodes</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#     The category of the diamond based on chemical and physical properties.</span></span></li><li><span class="tab"><span class="meta">diamond_type</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -375,7 +405,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="reportresults.doc.html" title="ReportResults -   The structure of report results varies by the type of report">ReportResults<em>  The structure of report results varies by the type of report</em></a><li></ul>
+        <ul class="require-by"><li><a href="reportresults.doc.html" title="ReportResults -   The structure of report results varies by the type of report.">ReportResults<em>  The structure of report results varies by the type of report.</em></a><li></ul>
     </div>
 </section>
 <footer>

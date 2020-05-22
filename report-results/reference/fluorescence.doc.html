@@ -65,6 +65,11 @@
                 ClarityGradeCode
             </a>
         </li>
+        <li  title="CountryOfOriginCode">
+            <a href="countryoforigincode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CountryOfOriginCode
+            </a>
+        </li>
         <li  title="CutGradeCode">
             <a href="cutgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CutGradeCode
@@ -90,6 +95,11 @@
                 PolishGradeCode
             </a>
         </li>
+        <li  title="QuotaBucketStatus">
+            <a href="quotabucketstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QuotaBucketStatus
+            </a>
+        </li>
         <li  title="ReportTypeCode">
             <a href="reporttypecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ReportTypeCode
@@ -103,6 +113,11 @@
         <li  title="SymmetryGradeCode">
             <a href="symmetrygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 SymmetryGradeCode
+            </a>
+        </li>
+        <li  title="TreatmentCode">
+            <a href="treatmentcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TreatmentCode
             </a>
         </li>
         <li  title="__DirectiveLocation">
@@ -235,9 +250,24 @@
                 Quota
             </a>
         </li>
+        <li  title="QuotaBucket">
+            <a href="quotabucket.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QuotaBucket
+            </a>
+        </li>
+        <li  title="ReportUpdated">
+            <a href="reportupdated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReportUpdated
+            </a>
+        </li>
         <li  title="RoundMeasurements">
             <a href="roundmeasurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 RoundMeasurements
+            </a>
+        </li>
+        <li  title="TreatmentCodes">
+            <a href="treatmentcodes.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TreatmentCodes
             </a>
         </li>
         <li  title="Weight">
@@ -352,7 +382,7 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">Fluorescence</h1>
-        <div class="slds-text-body--regular"><p>  Fluorescence has a color and intensity</p>
+        <div class="slds-text-body--regular"><p>  Fluorescence has a color and intensity.</p>
 </div>
     </div>
 </section>
@@ -364,7 +394,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">Fluorescence</span> {</li><li></li><li><span class="tab"><span class="meta">fluorescence_intensity</span>: <a class="support type" href="fluorescenceintensitycode.doc.html">FluorescenceIntensityCode</a> </span></li><li></li><li><span class="tab"><span class="meta">fluorescence_color</span>: <a class="support type" href="fluorescencecolor.doc.html">FluorescenceColor</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">Fluorescence</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Intensity of fluorescence.</span></span></li><li><span class="tab"><span class="meta">fluorescence_intensity</span>: <a class="support type" href="fluorescenceintensitycode.doc.html">FluorescenceIntensityCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Color of fluorescence.</span></span></li><li><span class="tab"><span class="meta">fluorescence_color</span>: <a class="support type" href="fluorescencecolor.doc.html">FluorescenceColor</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -375,7 +405,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="diamonddata.doc.html" title="DiamondData -   Additional data fields in machine-readable format">DiamondData<em>  Additional data fields in machine-readable format</em></a><li></ul>
+        <ul class="require-by"><li><a href="diamonddata.doc.html" title="DiamondData -   Additional data fields in machine-readable format.">DiamondData<em>  Additional data fields in machine-readable format.</em></a><li></ul>
     </div>
 </section>
 <footer>
