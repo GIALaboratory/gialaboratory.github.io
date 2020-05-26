@@ -1,3 +1,4 @@
 collections:
   - sample_reports
 markdown: kramdown
+highlighter: rouge

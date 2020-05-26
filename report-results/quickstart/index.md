@@ -60,7 +60,8 @@ Leave the `Content-Type` header with value `application/json`
 
 You are now ready to query the API. 
 
-Enter this query into the left-hand side of the Insomnia window and press __Send__
+Enter this query into the left-hand side of the Insomnia window and press __Send__.
+
 ```
 {
   getReport(report_number: "2141438171") {
@@ -82,7 +83,7 @@ Enter this query into the left-hand side of the Insomnia window and press __Send
 
 ![Query](insomnia-query.png)
 
-__Congratulations!__ You are now able to query the GIA Report Results API.
+__Congratulations!__ You successfully queried the GIA Report Results API.
 
 ## Step 5: Check your quota
 
