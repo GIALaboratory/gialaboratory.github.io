@@ -42,7 +42,7 @@ You will then be prompted to give the request a name and choose its HTTP method.
 
 After the request is created, enter the URL you received from GIA following the signup process.
 
-![Insomnia URL](insomnia-url.png)
+![Insomnia URL](insomnia-url.PNG)
 
 ## Step 3: Enter your API key
 
