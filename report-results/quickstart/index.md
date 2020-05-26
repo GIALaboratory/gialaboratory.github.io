@@ -62,7 +62,7 @@ You are now ready to query the API.
 
 Enter this query into the left-hand side of the Insomnia window and press __Send__.
 
-```
+```graphql
 {
   getReport(report_number: "2141438171") {
     report_date
