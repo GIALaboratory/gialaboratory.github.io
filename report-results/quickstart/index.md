@@ -4,45 +4,63 @@ title: Quickstart Guide
 
 # GIA Report Results API Quickstart Guide
 
-Use this guide to get started with the GIA Report Results API. You will use the open-source GraphiQL software to query the API and examine the responses.
+Use this guide to get started with the GIA Report Results API. 
+
+You will use the free and open-source Insomnia application to explore and query the API.
 
 ## Before you begin
 
-You must obtain a sandbox or production API key by following the onboarding process described in [GIA Report Results API](https://gia.edu/report-results-api).
+You will need:
 
-You will also receive the API endpoint URL, which will be required in step 2.
+- Your production or sandbox API key
+- The API endpoint URL
 
-## Step 1: Download and install GraphiQL
+Obtain your API key and URL by following the onboarding process described in [GIA Report Results API](https://gia.edu/report-results-api).
 
-GraphiQL is an application that will allow you to explore and query the fields available in the API.
+## Step 1: Download and install Insomnia Core
 
-Download the latest version for your OS from the [GitHub Releases](https://github.com/skevy/graphiql-app/releases) page.
+Visit [https://insomnia.rest](https://insomnia.rest) and download __Insomnia Core__ for your operating system.
 
-![GraphiQL](graphiql.png)
+![Download Insomnia Core](insomnia-download.png)
 
-## Step 2: Enter your API endpoint
+After downloading the installer, double click the file to install the Insomnia. Now, open the application and get ready to create your first HTTP request.
 
-Enter the endpoint given to you when you obtained your API key and set the method to __POST__.
+## Step 2: Create a GraphQL Request
 
-![Endpoint](endpoint.png)
+To create your first request, click the plus icon at the top of the sidebar and select New Request. 
+
+![Insomnia New Request](insomnia-new-request.png)
+
+You will then be prompted to give the request a name and choose its HTTP method.
+
+1. Enter __GIA Report Results__ into the __Name__ field
+2. Choose __POST__ 
+3. Choose __GraphQL__
+4. Click __Create__
+
+![Insomnia New Request Dialog](insomnia-new-request-dialog.png)
+
+After the request is created, enter the URL you received from GIA following the signup process.
+
+![Insomnia URL](insomnia-url.png)
 
 ## Step 3: Enter your API key
 
 You will need to add an HTTP Header `Authorization` with your key as the value.
 
-1. Click __Edit HTTP Headers__
-2. Click __+ Add Header__
-3. Enter `Authorization` under __Header Name__
-4. Enter your API key under __Header Value__
+1. Click __Header__
+2. Enter `Authorization` as the __Header__
+3. Enter your API key as the __Value__
 
-![Header](header.png)
+![Insomnia Authorization](insomnia-authorization.png)
+
+Leave the `Content-Type` header with value `application/json`
 
 ## Step 4: Query the API
 
 You are now ready to query the API. 
 
-Enter this query into the left-hand side of the GraphiQL window and press the execute query icon.
-
+Enter this query into the left-hand side of the Insomnia window and press __Send__
 ```
 {
   getReport(report_number: "2141438171") {
@@ -62,7 +80,7 @@ Enter this query into the left-hand side of the GraphiQL window and press the ex
 }
 ```
 
-![Query](query.png)
+![Query](insomnia-query.png)
 
 __Congratulations!__ You are now able to query the GIA Report Results API.
 
@@ -82,13 +100,12 @@ You may check your quota limit at any time by querying `getQuota`. Checking your
 
 _Pro Tip:_ You can also obtain your remaining quota with each `getReport` request.
 
-## Step 6: Explore the API
+## Step 6: Explore the API (Bonus!)
 
 One of the great benefits of GraphQL is that the API has a well-defined schema. This means that you can learn about the API from the API itself and most tools will help you with features like auto-complete and documentation navigators.
 
-In GraphiQL, click the __Docs__ icon to expand the documentation pane and begin exploring.
+In Insomnia, click the __Schema__ icon and __Show Documentation__.
 
-![Explore](explore.gif)
+![Show Schema](insomnia-show-schema.png)
 
-
-
+The documentation panel will open, allowing you to expore the API and its fields.
