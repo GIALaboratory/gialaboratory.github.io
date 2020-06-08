@@ -8,7 +8,7 @@ title: What's New
 
 #### Added
 
-- [isReportUpdated](https://gialaboratory.github.io/report-results/reference/reportupdated.doc.html) allows you to determine whether a report has been updated after a given date and time. See [Checking for Stale Reports](https://gialaboratory.github.io/report-results/docs/#checking-for-stale-reports) for details.
+- [isReportUpdated](https://gialaboratory.github.io/report-results/reference/reportupdated.doc.html) allows you to determine whether a report has been updated after a given date and time. See [Checking for Stale Reports](https://gialaboratory.github.io/report-results/docs/#checking-for-stale-reports) for details. Calling `isReportUpdated` does not incur a quota lookup.
 - [Quota](https://gialaboratory.github.io/report-results/reference/quota.doc.html) now returns an array of [Quota Buckets](https://gialaboratory.github.io/report-results/reference/quotabucket.doc.html). This gives information for each of your lookups purchased, the number of lookups remaining, and the expiration date of the purchase. For more information, please see [Quota Monitoring](https://gialaboratory.github.io/report-results/docs/#quota-monitoring) in the API Documentation.
 - Tips for migrating from the legacy Report Check API have been added to the [API Documentation](https://gialaboratory.github.io/report-results/docs/#migrating-from-the-legacy-report-check-api) page. Short codes for [culet size](https://gialaboratory.github.io/report-results/docs/#culet-size), [girdle thickness](https://gialaboratory.github.io/report-results/docs/#girdle-thickness), and [girdle condition](https://gialaboratory.github.io/report-results/docs/#girdle-condition) are listed.
 
