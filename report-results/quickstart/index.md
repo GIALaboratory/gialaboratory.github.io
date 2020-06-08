@@ -91,7 +91,7 @@ GIA Report Results API usage is controlled by quotas. When your quota reaches ze
 
 You may check your quota limit at any time by querying `getQuota`. Checking your quota does not affect your remaining quota.
 
-```
+```graphql
 {
   getQuota{
     remaining
