@@ -111,6 +111,34 @@ Assets available are:
 
 The links returned by the GIA Report Results API are active for 60 minutes from the API call. If you attempt to access the asset after this period, you will receive an error response.
 
+#### Checking for Stale Reports
+
+Since GIA Grading Reports can be updated after issuance, it is necessary to periodically review the status of any reports that are cached in your systems.
+
+Passing a report number and date to `isReportUpdated` in order to determine whether or not a report has been updated. If the response is `false`, there is no need for you to query `GetReport` for updated data.
+
+Calling `isReportUpdated` does not incur a lookup.
+
+```graphql
+{
+  isReportUpdated(report_number: "6203489265", report_date: "2020-01-01") {
+    report_updated
+  }
+}
+```
+
+returns
+
+```json
+{
+  "data": {
+    "isReportUpdated": {
+      "report_updated": false,
+    }
+  }
+}
+```
+
 ## Connecting to the API
 
 ### Crafting Your Request
@@ -372,6 +400,46 @@ returns
       "quota": {
         "remaining": 967
       }
+    }
+  }
+}
+```
+
+#### Quota Buckets
+
+Each purchase of lookups added to your API plan will create a new "quota bucket". You may now query all quota buckets for the initial amount of lookups, the number remaining, and the expiration date of the bucket.
+
+```graphql
+{
+  getQuota {
+    remaining
+    buckets {
+      id
+      initial
+      remaining
+      expiration_date
+      status
+    }
+  }
+}
+```
+
+returns
+
+```json
+{
+  "data": {
+    "getQuota": {
+      "remaining": 1284,
+      "buckets": [
+        {
+          "id": "2e35ceaf-7957-4b7b-94b8-8253df37d08e",
+          "initial": 5000,
+          "remaining": 1284,
+          "expiration_date": "2021-02-04T15:19:00Z",
+          "status": "ACTIVE"
+        }
+      ]
     }
   }
 }
