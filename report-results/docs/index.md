@@ -387,6 +387,57 @@ The GIA Report Results API is engineered for high availability. You may view our
 
 __Important:__ You must subscribe to notifications at [status.gia.edu](https://status.gia.edu). This is the sole method we will use to update you on planned maintenance or unplanned incidents.
 
+### Migrating from the Legacy Report Check API
+
+GIA has made some minor changes to the way fields are coded in the new API.  In most cases, we have provided both the old and new fields. However, we have not yet made culet and girdle short codes available via the API.
+
+Example:
+
+| Field | Legacy Report Check API | Report Results API |
+|-------|-------------------------|--------------------|
+| Culet | VSM | Very Small |
+| Girdle | STK to THK, F | Slightly Thick to Thick, Faceted |
+
+We plan to enhance the API with the short codes `culet_size`, `girdle_min`, `girdle_max`, and `girdle_condition` at a later date. In the meantime, please use these lookup tables to map the necessary short codes.
+
+#### Culet Size 
+
+|     Meaning            |     Code    |
+|------------------------|-------------|
+|     None               |     NON     |
+|     Very Small         |     VSM     |
+|     Small              |     SML     |
+|     Medium             |     MED     |
+|     Slightly Large     |     SLG     |
+|     Large              |     LGE     |
+|     Very Large         |     VLG     |
+|     Extremely Large    |     ELG     |
+|     Not Applicable     |     N/A     |
+
+#### Girdle Thickness
+
+|     Meaning            |     Code    |
+|------------------------|-------------|
+|     Extremely Thin     |     ETN     |
+|     Very Thin          |     VTN     |
+|     Thin               |     THN     |
+|     Medium             |     MED     |
+|     Slightly Thick     |     STK     |
+|     Thick              |     THK     |
+|     Very Thick         |     VTK     |
+|     Extremely Thick    |     ETK     |
+|     Not Applicable     |     N/A     |
+
+#### Girdle Condition
+
+|     Meaning            |     Code    |
+|------------------------|-------------|
+|     Faceted            |     F       |
+|     Polished           |     P       |
+|     Bruted             |     B       |
+|     Lasered            |     L       |
+|     Not Applicable     |     N/A     |
+
 ### Error Conditions
 
 #### Report not found
