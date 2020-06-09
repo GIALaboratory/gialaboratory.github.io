@@ -5,9 +5,7 @@ title: Documentation
 # GIA Report Results API Documentation
 {:.no_toc}
 
-The GIA Report Results API enables applications to integrate with GIA's database in order to verify grading information and retrieve assets associated with a report. 
-
-This guide provides the background and details for integrators to evaluate our APIs, and to get started writing code against live endpoints in our sandbox or production environments.
+The GIA Report Results API enables applications to integrate with GIA's database to verify grading information and retrieve assets associated with a report. 
 
 ## Contents 
 {:.no_toc}
@@ -17,38 +15,36 @@ This guide provides the background and details for integrators to evaluate our A
 
 ## Concepts
 
-While the API's premise is simple: submit a report number and obtain the report's results, there are details to be aware of. Be sure to read this document carefully.
+Read this guide for details on how to query a report number and parse the response.
 
 #### GraphQL
 
-The GIA Report Results API is built using [GraphQL](https://graphql.org/). GraphQL is a query language supported by all major programming languages. The benefit of GraphQL is that you can request only the data you need, and that data is returned in a single response.
+The GIA Report Results API uses [GraphQL](https://graphql.org/). GraphQL is a query language supported by all major programming languages.
 
-This means you must specify the data you want in the form of a query passed to the API.
-
-The good news is that most tools provide documentation navigators to help you explore the API. To learn more, try our [Quickstart Guide](/report-results/quickstart).
+GraphQL tools provide documentation navigators to help you explore the API. To learn more, try our [Quickstart Guide](/report-results/quickstart).
 
 #### Report Results
 
-The GIA Report Results API returns results for nearly all of GIA's reports and services through a single endpoint called `getReport`.
+The GIA Report Results API returns results for GIA's reports and services through an endpoint called `getReport`.
 
 A call to `getReport` returns a `GradingReport` with fields common to all reports. These include report number, report date, and report type.
 
-However, different report types naturally have different fields in their results. For example, a diamond report has different results than a sapphire report. 
+Different report types have distinct fields in their results. For example, a diamond report has different attributes than a sapphire report. 
 
-To handle this, the `results` field contains a [union type](https://graphql.org/learn/schema/#union-types) called `ReportResults` that will return one of the following concrete types: 
+The `results` field contains a [union type](https://graphql.org/learn/schema/#union-types) called `ReportResults` that returns one of the following concrete types: 
 
-* `DiamondGradingReportResults` for grading services on natural diamonds, such as Diamond Dossier, Diamond Grading, and Colored Diamond Grading reports.
-* `PearlIdentReportResults` for Pearl Identification and Pearl Identification and Classification reports.
-* `LabGrownDiamondGradingReportResults` for Lab-Grown (formerly Synthetic) diamond reports.
-* `IdentificationReportResults` for reports on colored stones such as sapphire, ruby, tourmaline, and others.
+* `DiamondGradingReportResults` for natural diamond reports, such as Diamond Dossier, Diamond Grading, and Colored Diamond Grading reports.
+* `PearlIdentReportResults` for pearl reports.
+* `LabGrownDiamondGradingReportResults` for lab-grown diamond reports.
+* `IdentificationReportResults` for colored stones reports.
 * `MeleeServiceResults` for results on the Melee Analysis service.
-* `NarrativeReportResults` for results that do not fit in the other formats.
+* `NarrativeReportResults` for results that do not apply to the other formats.
 
-Since the results field may be populated by any of these concrete types, you must use a [conditional fragment](https://graphql.org/learn/queries/#inline-fragments) (such as `... on DiamondGradingReportResults`) to return any fields at all.
+Use a [conditional fragment](https://graphql.org/learn/queries/#inline-fragments) (such as `... on DiamondGradingReportResults`) to access these fields.
 
 __Pro Tip__: Use the [__typename](https://graphql.org/learn/queries/#meta-fields) meta field to determine how to handle the data on your client.
 
-```
+```graphql
 {
   getReport(report_number: "2141438171") {
     report_date
@@ -69,7 +65,7 @@ __Pro Tip__: Use the [__typename](https://graphql.org/learn/queries/#meta-fields
 
 returns
 
-```
+```json
 {
   "data": {
     "getReport": {
@@ -90,32 +86,25 @@ returns
 
 #### Data Types
 
-Most results fields are [String](https://graphql.org/learn/schema/#scalar-types) types to accomodate the text as it appears on a grading report. For example, `Internally Flawless` clarity grades will be spelled out rather than abbreviated `IF`.
+Most results fields are [String](https://graphql.org/learn/schema/#scalar-types) types to accommodate the text as it appears on a grading report. For example, `Internally Flawless` clarity grades will be spelled out rather than abbreviated `IF`.
 
-In most cases, the abbreviated versions are also available. These [Enums](https://graphql.org/learn/schema/#enumeration-types) are validated to be one of the allowed values. Look for fields that end with `_code`. Examples are `report_type_code`, `clarity_grade_code`, and `color_grade_code`.
+In most cases, abbreviated versions are also available. These [Enums](https://graphql.org/learn/schema/#enumeration-types) return one of the allowed values. Look for fields that end with `_code`. Examples are `report_type_code`, `clarity_grade_code`, and `color_grade_code`.
 
-Fields that are concatenated in the results are also available as individual fields. For example, measurements are stated as "minimum diameter - maximum diameter x depth" for round diamonds and "length x width x depth" for fancy shapes. The individual fields are expressed in the `RoundMeasurements` and `FancyMeasurements` types.
+Concatenated fields are also available individually. For example, measurements for round diamonds are `minimum diameter - maximum diameter x depth`. The numerical fields arise in the `RoundMeasurements` type.
 
 #### Asset Links
 
-Links to assets are contained in the `links` field. The availability of assets is dependent on the type of report you are querying. If an asset is not available the field will return `null`.
+The [`links`](https://gialaboratory.github.io/report-results/reference/links.doc.html) field holds links to supplementary assets. 
 
-Assets available are:
+The availability of assets depends on the report type and other factors. Fields are `null` if an asset is not available.
 
-* __PDF Facsimile__ A PDF representation of the grading report. Available for most, but not all, report types.
-* __Proportions Diagram__ The diagram representing the proportions of the diamond. Available on diamond reports such as the Diamond Dossier and Diamond Grading Report.
-* __Plotting Diagram__  The diagram representing clarity characteristics. Available for full grading reports such as the Diamond Grading Report.
-* __Image__ Any photograph of the image that is printed on the report. Available for most colored stones and pearl reports and some colored diamond reports.
-* __Rough Image and Video__ Image and video taken during rough analysis. Available for the Diamond Origin and Colored Diamond Origin Reports.
-* __Polished Image and Video__ Image and video taken after diamond is matched to the rough and issued an origin report. Available for the Diamond Origin and Colored Diamond Origin reports.
-
-The links returned by the GIA Report Results API are active for 60 minutes from the API call. If you attempt to access the asset after this period, you will receive an error response.
+Links are active for 60 minutes from the API call. The API returns an error if you attempt to access assets after this period.
 
 #### Checking for Stale Reports
 
-Since GIA Grading Reports can be updated after issuance, it is necessary to periodically review the status of any reports that are cached in your systems.
+Periodically review the status of any reports cached in your systems to avoid presenting outdated information.
 
-Passing a report number and date to `isReportUpdated` in order to determine whether or not a report has been updated. If the response is `false`, there is no need for you to query `GetReport` for updated data.
+Pass a report number and date to `isReportUpdated` to determine whether the report was updated after that date. There is no need for you to query `GetReport` for updated data if the response is `false`.
 
 Calling `isReportUpdated` does not incur a lookup.
 
@@ -143,19 +132,15 @@ returns
 
 ### Crafting Your Request
 
-To query the GIA Report Results API, you must construct the request body, convert it to JSON, and send it to the endpoint as a POST request with the proper headers. 
-
-Follow these steps to construct an API request.
+Construct the request body and convert it to JSON before sending it to the endpoint as a `POST` request with the proper headers. 
 
 ##### Step 1: Craft a valid query using a GraphQL-aware tool.
 
-Use a tool such as GraphiQL, Insomnia, or Altair to construct, test, and validate your query prior to writing code. Instructions for GraphiQL are in the [Quickstart Guide](/report-results/quickstart).
+Use a tool such as Insomnia to validate your query. Instructions are in the [Quickstart Guide](/report-results/quickstart).
 
 We'll use this example query throughout this section.
 
-![Example Query](query_and_var.png)
-
-```
+```graphql
 query ReportQuery($ReportNumber: String!) {
     getReport(report_number: $ReportNumber){
         report_number
@@ -178,22 +163,22 @@ query ReportQuery($ReportNumber: String!) {
 ```
 
 Note the use of the `ReportNumber` query variable.
-```
+```json
 {
   "ReportNumber": "2141438171"
 }
 ```
 
-Be sure this query successfully returns results before proceeding to the next steps.
+Be sure your query is successful before proceeding to the next step.
 
-##### Step 2: Construct a GraphQL request body using your languages idioms
+##### Step 2: Construct a GraphQL request body using your language's idioms
 
 The body you send to the API must conform to [GraphQL standards](https://graphql.org/learn/serving-over-http/#post-request). 
 
-The best practice is to construct this structure using the features of your language prior to converting to JSON. The details will vary by language, but the process will be similar.
+The best practice is to construct this structure using the features of your language before converting it to JSON.
 
 The API expects this structure:
-```
+```json
 {
   "query": "YOUR_QUERY_GOES_HERE", 
   "variables": { 
@@ -202,7 +187,7 @@ The API expects this structure:
 }
 ```
 
-You know the elements (query, variable name, and value) from Step 1. In our example, the query is displayed above, the variable name is `ReportNumber` and the value is `"2141438171"`.
+You know the elements (query, variable name, and value) from Step 1. In the example above, `ReportNumber` is the variable, and `"2141438171"` is the value.
 
 One way to construct the request body is to use Dictionary elements:
 
@@ -212,7 +197,7 @@ One way to construct the request body is to use Dictionary elements:
 4. Insert an element into `body` with `query` as the index and the query you drafted in Step 1 as the value.
 5. Insert a second element into `body` with `variables` as the index and `query_variables` as the value
 
-```
+```csharp
 // Example in C#
 
 var query = @"
@@ -255,9 +240,9 @@ var body = new Dictionary<string, object>
 
 ##### Step 3: Convert the request body object to JSON
 
-Your programming language will have a module for serializing objects to JSON. 
+Your programming language has a library for serializing objects to JSON. 
 
-```
+```csharp
 // Example in C#: 
 
 string json = JsonSerializer.Serialize(body);
@@ -267,16 +252,14 @@ string json = JsonSerializer.Serialize(body);
 
 ##### Step 4: Construct the HTTP request
 
-Constructing an HTTP request will vary depending on your programming language. However, the steps are the similar: instantiate a HTTP client and set the required headers.
-
-On your request, you must set two HTTP headers:
+The API requires two HTTP headers:
 
 * __Authorization__: Set this to the API Key you received at signup
 * __Content-Type__: Set this to `application/json`
 
-> __Do not embed API keys directly in code__: API keys that are embedded in code can be accidentally exposed to the public, for example, if you forget to remove the keys from code that you share. Instead of embedding your API keys in your applications, store them in environment variables or in files outside of your application's source tree.
+> __Do not embed API keys directly in code__: Embedded API keys can be accidentally exposed. Store API keys in environment variables or files outside of your application's source tree.
 
-```
+```csharp
 // Example in C# 
 
 var client = new WebClient()
@@ -297,7 +280,7 @@ You are now ready to send the request to the API.
 * The address is the URL given when you signed up for the API
 * The body is the JSON you serialized in Step 3
 
-```
+```csharp
 // Example in C#
 
 // Send the payload as a JSON to the endpoint
@@ -308,64 +291,66 @@ var response = client.UploadString(url, json);
 
 #### Overview
 
-The GIA Report Results API returns responses in [JSON](https://www.json.org/). The shape of the JSON response will align with the GraphQL query you submitted to the server. You will use the tools provided by your programming language to parse the JSON response.
+The GIA Report Results API returns responses in [JSON](https://www.json.org/). The shape of the JSON response aligns with the GraphQL query you submitted.
 
 #### Checking for Errors
 
-Error checking the GraphQL response requires attention at several points. Follow this guidance to ensure that you detect and respond to error conditions.
+Error checking the GraphQL response requires attention at several points. 
 
-1. Ensure you received a successful HTTP request. If you receive an error such as `Unknown Host` or `Request Timed Out` then your request did not properly reach the server. If you receive a response other than `HTTP 200 OK` you have encounted an error and your response will not contain the report results you requested.
-2. Check the GraphQL [errors](https://graphql.org/learn/serving-over-http/#response) field in the response. If the server encountered errors during processing, the `errors` field will be populated with a list of errors encountered. You must check this errors object to determine the cause of the error.
+1. Ensure you received an `HTTP 200 OK` response.
+2. Check the GraphQL [errors](https://graphql.org/learn/serving-over-http/#response) field for any other problems.  
 
 For more information, see [Error Conditions](#error-conditions).
 
 #### Working with the Response
 
-The tools you use depend on the language you are using. With statically-typed languages such as C# and Java, you will need to either (a) deserialize the JSON object into a native class or (b) use a library which allows you to natively work with the JSON document.
+The tools you use depend on the language you are using. With statically-typed languages such as C# and Java, you will either (a) deserialize the JSON object into a native class or (b) use a library that allows you to work with the JSON document natively.
 
 Option (a) can be tricky given the polymorphic nature of the `ReportResults` object. This approach is not discussed further in this document.
 
-The C# and Java examples provided by GIA demonstrate one method of deconstructing the JSON document into its various fields. Also recognize that other libraries provide similar functionality and may ease development.
-
 ## Platform Overview
 
-GIA has invested heavily in engineering this system for the highest possible performance, security, and availability. This section contains details you need to know in order to reliably and securely connect to the API.
+GIA has engineered this system for the utmost performance, security, and availability. This section contains details for connecting to the API reliably and securely.
 
 ### API Plans and Quota Monitoring
 
-Usage of the GIA Report Results API is enabled by a plan. Each plan has a number of report requests associated with it. When this quota is depleted, you will no longer be able to retrieve report results. It is important that you track your quota and take action when necessary.
+A plan enables lookups in the GIA Report Results API. 
+
+Each plan has report lookups associated with it. You will no longer be able to retrieve report results when this quota runs out. Track your quota and take action when necessary.
 
 There are multiple ways to retrieve your quota:
 
-1. Call `getQuota` to retrieve your remaining quota. Calling getQuota does not affect your remaining quota.
+1. Call `getQuota` to get your remaining allowance. Calling getQuota does not affect your remaining quota.
 2. Call `getReport` and request the `quota { remaining }` field as part of the response. 
 3. View your quota by signing in to your GIA Report Results API dashboard.
 
-> __Note:__ If you request your quota as part of multiple reports in a single request, the system will calculate your remaining quota within each individual report lookup. In that case, your correct remaining quota will be the minimum of all `remaining` values in the response.
+> __Note:__ The system calculates your quota within each report lookup. If you request multiple reports in a single request, the quota remaining may be misleading. The precise quota remaining is the minimum of all `remaining` values in the response.
 >
-> Calling `getQuota` alone (that is, as a request separate from any calls to `getReport` will always return the exact number of report lookups remaining.)
+> Calling `getQuota` alone (that is, as a request separate from any calls to `getReport`) will always return the exact number of report lookups remaining.
 
 ### API Keys
 
-API keys are used to authenticate and authorize requests to the API. A plan may have multiple keys and you may revoke any key without affecting other keys on the plan.
+API keys authenticate and authorize requests to the API. A plan may have multiple API keys. You may revoke any key without affecting other keys on the plan.
 
-> __Important:__ For your protection, you must securely store these keys and they must not be shared! You are responsible for taking all precautions to safeguard access to the keys.
+> __Important:__ Securely store these keys and do not share them! You are responsible for taking all precautions to safeguard access to the keys.
 
 ### Sandbox Environment
 
-Once you apply for API access, you will be issued a sandbox plan and an associated key. This key can be used to access a limited set of reports that represent the variety of results you can expect from the API. 
+GIA will issue you a sandbox plan and associated key as soon as your API application is submitted. This key can access a limited set of reports that represent the variety of results you can expect from the API. 
 
-The sandbox plan will be initially loaded with a number of report lookups. This will allow you to view your quota usage as you develop your application. If you require additional quota on your sandbox plan, we will be happy to assist. There is no charge to add quota to your sandbox API plan.
+See [Sandbox Reports](https://gialaboratory.github.io/report-results/sandbox-reports/) for a list of reports available under the sandbox plan.
+
+There is no charge to add lookups to your sandbox API plan. Please contact us for assistance.
 
 ### Moving to Production
 
-Once your API application is approved by GIA, you will be able to add a production API plan. API keys associated with this plan may access the full set of reports available in GIA's database.
+You will be able to add a production API plain once GIA approves your application. API keys associated with this plan may access the full set of reports available in GIA's database.
 
 ### Quota Monitoring
 
-You may check your remaining quota at any time by using `getQuota`. Checking your quota does not affect your remaining quota.
+Check your remaining quota by using `getQuota`. Checking your quota does not affect your remaining quota.
 
-```
+```graphql
 {
   getQuota{
     remaining
@@ -375,7 +360,7 @@ You may check your remaining quota at any time by using `getQuota`. Checking you
 
 You can also get your remaining quota with each query to `getReport`.
 
-```
+```graphql
 {
   getReport(report_number: "2141438171") {
     report_date
@@ -390,7 +375,7 @@ You can also get your remaining quota with each query to `getReport`.
 
 returns
 
-```
+```json
 {
   "data": {
     "getReport": {
@@ -407,7 +392,7 @@ returns
 
 #### Quota Buckets
 
-Each purchase of lookups added to your API plan will create a new "quota bucket". You may now query all quota buckets for the initial amount of lookups, the number remaining, and the expiration date of the bucket.
+Each purchase of lookups in your API plan will create a new "quota bucket". You may query all quota buckets for the initial allocation, the lookups remaining, and the expiration date of the bucket.
 
 ```graphql
 {
@@ -447,17 +432,19 @@ returns
 
 ### Rate Limits
 
-Rate limiting is applied based on the authorization key. If the API returns status code `429`, it means that you have sent too many requests. When this happens, check the `Retry-After` header, where you will see a number displayed. This is the number of seconds that you need to wait before you try your request again.
+Rate limiting is applied based on the authorization key. You have sent too many requests if the API returns status code `429`. Check the `Retry-After` header for the number of seconds to wait before resending your request.
 
 ### System Status
 
 The GIA Report Results API is engineered for high availability. You may view our current system status and historical uptime at [status.gia.edu](https://status.gia.edu).
 
-__Important:__ You must subscribe to notifications at [status.gia.edu](https://status.gia.edu). This is the sole method we will use to update you on planned maintenance or unplanned incidents.
+__Important:__ Subscribe to notifications at [status.gia.edu](https://status.gia.edu). These notifications are the method we will use to update you on planned maintenance or unplanned incidents.
 
 ### Migrating from the Legacy Report Check API
 
-GIA has made some minor changes to the way fields are coded in the new API.  In most cases, we have provided both the old and new fields. However, we have not yet made culet and girdle short codes available via the API.
+Some fields are coded differently in this API. In most cases, we have provided both the old and new fields. 
+
+However, we have not yet made culet and girdle short codes available via the API.
 
 Example:
 
@@ -466,7 +453,7 @@ Example:
 | Culet | VSM | Very Small |
 | Girdle | STK to THK, F | Slightly Thick to Thick, Faceted |
 
-We plan to enhance the API with the short codes `culet_size`, `girdle_min`, `girdle_max`, and `girdle_condition` at a later date. In the meantime, please use these lookup tables to map the necessary short codes.
+GIA plans to enhance the API with the short codes `culet_size`, `girdle_min`, `girdle_max`, and `girdle_condition` at a later date. In the meantime, please use these lookup tables to map the necessary short codes.
 
 #### Culet Size 
 
@@ -510,9 +497,9 @@ We plan to enhance the API with the short codes `culet_size`, `girdle_min`, `gir
 
 #### Report not found
 
-The API will return `HTTP 200 OK` call if the requested report is unavailable. The errors object will include a message that the item is unavailable and an error code.
+The API returns an `HTTP 200 OK` response if the report is unavailable. The `errors` object includes a message and an error code.
 
-```
+```json
 {
   "data": {
     "getReport": null
@@ -542,14 +529,14 @@ The API will return `HTTP 200 OK` call if the requested report is unavailable. T
 | --- | ----------- |
 | You are using a sandbox key to access a non-sandbox report number. | Obtain a production key. |
 | The requested report number does not exist. | Check your entries and try again. |
-| The report exists, but has not been returned to the client and is not yet available. | Retry your query after item has been returned to the client. |
-| The report exists, but is unavailable for other reasons. | Contact GIA for further information. |
+| The report exists, but has not been returned to the client and is not yet available. | Retry your query after the item is returned to the client. |
+| The report exists but is unavailable for other reasons. | Contact GIA for further information. |
 
 #### Item is Undergoing Service
 
 Items that are currently being serviced by GIA are unavailable through this API. 
 
-```
+```json
 {
   "data": {
     "report1": null,
@@ -577,9 +564,9 @@ Items that are currently being serviced by GIA are unavailable through this API.
 
 #### Invalid key
 
-An invalid key will return a `HTTP 403 Forbidden` and this body content:
+An invalid key returns an `HTTP 403 Forbidden` response and this body content:
 
-```
+```json
 {
   "message": "Authorization denied."
 }
@@ -591,9 +578,9 @@ An invalid key will return a `HTTP 403 Forbidden` and this body content:
 
 #### Quota limit exceeded
 
-Submitting a query that exceeds your quota will return `HTTP 200 OK` and an error response in the body of the message.
+Queries that exceed the plan's quota return an `HTTP 200 OK` response. Details appear in the `errors` object.
 
-```
+```json
 {
   "data": {
     "getReport": null
@@ -625,13 +612,13 @@ Submitting a query that exceeds your quota will return `HTTP 200 OK` and an erro
 
 #### Newer report issued
 
-From time to time, GIA re-examines items and issues new reports on those items. In those cases a query to the original report will be redirected to the newer report. Details will be returned in the `info_message` field.
+From time to time, GIA re-examines items and issues updated reports. In those cases, queries for the original report redirect to the current report. A note appears in the `info_message` field.
 
 #### Asset Link Expired
 
-Asset links expire 60 minutes from the time you query the API. Requesting an asset using an expired URL returns `HTTP 403 Forbiddden` and a "Request has Expired" message.
+Asset links expire 60 minutes from the time you query the API. Requesting an asset using an expired URL returns `HTTP 403 Forbidden` and a "Request has Expired" message.
 
-```
+```html
 <Error>
   <Code>AccessDenied</Code>
   <Message>Request has expired</Message>
@@ -650,7 +637,7 @@ Asset links expire 60 minutes from the time you query the API. Requesting an ass
 
 #### MalformedHttpRequestException
 
-```
+```json
 {
   "errors" : [ {
     "message" : "Invalid JSON payload in POST request.",
@@ -666,6 +653,6 @@ Asset links expire 60 minutes from the time you query the API. Requesting an ass
 
 ## Providing Feedback
 
-Your feedback will be extremely helpful for future improvements to the GIA Report Results API. Please let us know of any suggestions, ideas, or bugs that you encounter. You can find us at [GIA.edu/contactus](https://www.gia.edu/contactus).
+Your feedback drives improvements to the GIA Report Results API. Please let us know of any suggestions, ideas, or bugs that you encounter. You can find us at [GIA.edu/contactus](https://www.gia.edu/contactus).
 
 If you encounter an unexpected error condition in the GIA Report Results API, please include the error code returned in the response.
