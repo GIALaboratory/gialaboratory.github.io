@@ -379,3 +379,9 @@ results
   }
 }
 ```
+
+## Master Query
+
+```graphql
+{% include_relative master_query.graphql %}
+```

@@ -27,9 +27,7 @@ GraphQL tools provide documentation navigators to help you explore the API. To l
 
 The GIA Report Results API returns results for GIA's reports and services through an endpoint called `getReport`.
 
-A call to `getReport` returns a `GradingReport` with fields common to all reports. These include report number, report date, and report type.
-
-Different report types have distinct fields in their results. For example, a diamond report has different attributes than a sapphire report. 
+A call to `getReport` returns a `GradingReport` with fields common to all reports. These include report number, report date, and report type. Different report types have distinct fields in their results. For example, a diamond report has different attributes than a sapphire report. 
 
 The `results` field contains a [union type](https://graphql.org/learn/schema/#union-types) called `ReportResults` that returns one of the following concrete types: 
 
