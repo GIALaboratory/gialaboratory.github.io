@@ -70,6 +70,11 @@
                 CountryOfOriginCode
             </a>
         </li>
+        <li  title="CuletCode">
+            <a href="culetcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CuletCode
+            </a>
+        </li>
         <li  title="CutGradeCode">
             <a href="cutgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CutGradeCode
@@ -90,6 +95,16 @@
                 FluorescenceIntensityCode
             </a>
         </li>
+        <li  title="GirdleConditionCode">
+            <a href="girdleconditioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GirdleConditionCode
+            </a>
+        </li>
+        <li  title="GirdleSizeCode">
+            <a href="girdlesizecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GirdleSizeCode
+            </a>
+        </li>
         <li  title="PolishGradeCode">
             <a href="polishgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 PolishGradeCode
@@ -108,6 +123,16 @@
         <li  title="ShapeCategory">
             <a href="shapecategory.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ShapeCategory
+            </a>
+        </li>
+        <li  title="ShapeCode">
+            <a href="shapecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ShapeCode
+            </a>
+        </li>
+        <li  title="ShapeGroupCode">
+            <a href="shapegroupcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ShapeGroupCode
             </a>
         </li>
         <li  title="SymmetryGradeCode">
@@ -153,6 +178,11 @@
         <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
+            </a>
+        </li>
+        <li  title="Culet">
+            <a href="culet.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Culet
             </a>
         </li>
         <li  title="DiamondData">
@@ -393,7 +423,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">M2MRoughData</span> {</li><li></li><li><span class="tab"><span class="meta">rough_image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">rough_video</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">polished_image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">polished_video</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">country_of_origin</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">M2MRoughData</span> {</li><li></li><li><span class="tab"><span class="meta">rough_control_no</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">rough_report_no</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">mine_company</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">mine_name</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">rough_image_file_name</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">rough_video_file_name</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">m2m_image_file_name</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">m2m_video_file_name</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">secondary_image_file_name</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">rough_image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">rough_video</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">polished_image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">polished_video</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">country_of_origin</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -404,7 +434,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="diamondgradingreportresults.doc.html" title="DiamondGradingReportResults -   Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.">DiamondGradingReportResults<em>  Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.</em></a><li></ul>
+        <ul class="require-by"><li><a href="diamondgradingreportresults.doc.html" title="DiamondGradingReportResults -   Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.">DiamondGradingReportResults<em>  Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.</em></a><li><li><a href="identificationreportresults.doc.html" title="IdentificationReportResults -   The tabular report format is used on most gem identification reports.">IdentificationReportResults<em>  The tabular report format is used on most gem identification reports.</em></a><li></ul>
     </div>
 </section>
 <footer>

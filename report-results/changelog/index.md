@@ -4,6 +4,21 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2020-08-26
+
+#### Added
+
+- The enum `culet_code` provides [abbreviations](https://gialaboratory.github.io/report-results/reference/culetcode.doc.html) for culet condition
+
+- The enums`girdle_condition_code` and `girdle_size_code` provide [abbreviations](https://gialaboratory.github.io/report-results/reference/girdle.doc.html) for girdle condition and size.
+
+#### Changed
+
+- A more informative error message is returned when a client queries for a non-Sandbox report using a Sandbox API key.
+- The fields `shape_code` and `shape_group_code` have been changed from strings to enums. See [ShapeCode](https://gialaboratory.github.io/report-results/reference/shapecode.doc.html) and [ShapeGroupCode](https://gialaboratory.github.io/report-results/reference/shapegroupcode.doc.html).
+- The argument `report_date` on [isReportUpdated](https://gialaboratory.github.io/report-results/reference/reportupdated.doc.html) has been renamed `date`.
+
+
 ## 2020-06-08
 
 #### Added

@@ -70,6 +70,11 @@
                 CountryOfOriginCode
             </a>
         </li>
+        <li  title="CuletCode">
+            <a href="culetcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CuletCode
+            </a>
+        </li>
         <li  title="CutGradeCode">
             <a href="cutgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CutGradeCode
@@ -90,6 +95,16 @@
                 FluorescenceIntensityCode
             </a>
         </li>
+        <li  title="GirdleConditionCode">
+            <a href="girdleconditioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GirdleConditionCode
+            </a>
+        </li>
+        <li  title="GirdleSizeCode">
+            <a href="girdlesizecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GirdleSizeCode
+            </a>
+        </li>
         <li  title="PolishGradeCode">
             <a href="polishgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 PolishGradeCode
@@ -108,6 +123,16 @@
         <li  title="ShapeCategory">
             <a href="shapecategory.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ShapeCategory
+            </a>
+        </li>
+        <li  title="ShapeCode">
+            <a href="shapecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ShapeCode
+            </a>
+        </li>
+        <li  title="ShapeGroupCode">
+            <a href="shapegroupcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ShapeGroupCode
             </a>
         </li>
         <li  title="SymmetryGradeCode">
@@ -153,6 +178,11 @@
         <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
+            </a>
+        </li>
+        <li  title="Culet">
+            <a href="culet.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Culet
             </a>
         </li>
         <li  title="DiamondData">
@@ -394,7 +424,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Girdle</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle_condition</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Girdle thickness (mm) as a percentage of average diameter X 100.</span></span></li><li><span class="tab"><span class="meta">girdle_pct</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Text description of girdle size.</span></span></li><li><span class="tab"><span class="meta">girdle_size</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Girdle</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle_condition</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Machine-readable code representing girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle_condition_code</span>: <a class="support type" href="girdleconditioncode.doc.html">GirdleConditionCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Girdle thickness (mm) as a percentage of average diameter X 100.</span></span></li><li><span class="tab"><span class="meta">girdle_pct</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Text description of girdle size.</span></span></li><li><span class="tab"><span class="meta">girdle_size</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Machine-readable code representing girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle_size_code</span>: <a class="support type" href="girdlesizecode.doc.html">GirdleSizeCode</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>

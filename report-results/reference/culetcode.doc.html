@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>DiamondProportions</title>
+    <title>CuletCode</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -70,7 +70,7 @@
                 CountryOfOriginCode
             </a>
         </li>
-        <li  title="CuletCode">
+        <li class="slds-is-active" title="CuletCode">
             <a href="culetcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CuletCode
             </a>
@@ -195,7 +195,7 @@
                 DiamondGradingReportResults
             </a>
         </li>
-        <li class="slds-is-active" title="DiamondProportions">
+        <li  title="DiamondProportions">
             <a href="diamondproportions.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 DiamondProportions
             </a>
@@ -410,9 +410,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">DiamondProportions</h1>
-        <div class="slds-text-body--regular"><p>  Parameters available on the proportion diagram if any.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
+        <h1 class="slds-text-heading--large">CuletCode</h1>
+        <div class="slds-text-body--regular"><p>  Culet size codes.</p>
 </div>
     </div>
 </section>
@@ -424,7 +424,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">DiamondProportions</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Table-to-culet depth, expressed as a percentage of average girdle diameter for </span></span></li><li><span class="tab"><span class="comment line">#   round shapes or width for fancy shapes.</span></span></li><li><span class="tab"><span class="meta">depth_pct</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Table size expressed as a percentage of a round brilliant's average girdle </span></span></li><li><span class="tab"><span class="comment line">#   diameter for round shapes or width for fancy shapes.</span></span></li><li><span class="tab"><span class="meta">table_pct</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     The average of the angles of the bezel facet planes relative to the table </span></span></li><li><span class="tab"><span class="comment line">#   planes. Available for RBC only.</span></span></li><li><span class="tab"><span class="meta">crown_angle</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Measurement from the table plane to the intersection of the bezel facet with </span></span></li><li><span class="tab"><span class="comment line">#   the girdle. Available for RBC only.</span></span></li><li><span class="tab"><span class="meta">crown_height</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Average of the angles formed by the pavilion main facet planes and the girdle </span></span></li><li><span class="tab"><span class="comment line">#   plane. Available for RBC only.</span></span></li><li><span class="tab"><span class="meta">pavilion_angle</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Measured from the girdle to the culet, then expressed as a percentage of </span></span></li><li><span class="tab"><span class="comment line">#   average girdle diameter. Available for RBC only.</span></span></li><li><span class="tab"><span class="meta">pavilion_depth</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Length of star facets expressed as a percentage of the total distance between </span></span></li><li><span class="tab"><span class="comment line">#   the girdle and the edge of the table facet. Available for RBC only.</span></span></li><li><span class="tab"><span class="meta">star_length</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Length of lower-half facets expressed as a percentage of the total distance </span></span></li><li><span class="tab"><span class="comment line">#   between the girdle and the culet. Available for RBC only.</span></span></li><li><span class="tab"><span class="meta">lower_half</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Thickness of the intersection of the crown and pavilion which defines the </span></span></li><li><span class="tab"><span class="comment line">#   perimeter of the diamond.</span></span></li><li><span class="tab"><span class="meta">girdle</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle_condition</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Girdle thickness (mm) as a percentage of average diameter X 100.</span></span></li><li><span class="tab"><span class="meta">girdle_pct</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Text description of girdle size.</span></span></li><li><span class="tab"><span class="meta">girdle_size</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Size of the facet at the tip of a gemstone relative to the average diameter </span></span></li><li><span class="tab"><span class="comment line">#   for round shapes or width for fancy shapes.</span></span></li><li><span class="tab"><span class="meta">culet</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">CuletCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NON</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VSM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SML</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SLG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VLG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ELG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NA</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -435,7 +435,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="diamondgradingreportresults.doc.html" title="DiamondGradingReportResults -   Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.">DiamondGradingReportResults<em>  Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.</em></a><li><li><a href="labgrowndiamondgradingreportresults.doc.html" title="LabGrownDiamondGradingReportResults -   Results for grading reports on synthetic diamonds.">LabGrownDiamondGradingReportResults<em>  Results for grading reports on synthetic diamonds.</em></a><li></ul>
+        <ul class="require-by"><li><a href="culet.doc.html" title="Culet -   Contains machine-readable abbreviations for culet.">Culet<em>  Contains machine-readable abbreviations for culet.</em></a><li></ul>
     </div>
 </section>
 <footer>
