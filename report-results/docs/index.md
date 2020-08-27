@@ -440,9 +440,7 @@ __Important:__ Subscribe to notifications at [status.gia.edu](https://status.gia
 
 ### Migrating from the Legacy Report Check API
 
-Some fields are coded differently in this API. In most cases, we have provided both the old and new fields. 
-
-However, we have not yet made culet and girdle short codes available via the API.
+Some fields are coded differently in this API. In most cases, we have provided both the abbreviated and full text fields. 
 
 Example:
 
@@ -450,8 +448,6 @@ Example:
 |-------|-------------------------|--------------------|
 | Culet | VSM | Very Small |
 | Girdle | STK to THK, F | Slightly Thick to Thick, Faceted |
-
-GIA plans to enhance the API with the short codes `culet_size`, `girdle_min`, `girdle_max`, and `girdle_condition` at a later date. In the meantime, please use these lookup tables to map the necessary short codes.
 
 #### Culet Size 
 
@@ -525,10 +521,43 @@ The API returns an `HTTP 200 OK` response if the report is unavailable. The `err
 
 | Possible Cause | Solution |
 | --- | ----------- |
-| You are using a sandbox key to access a non-sandbox report number. | Obtain a production key. |
 | The requested report number does not exist. | Check your entries and try again. |
 | The report exists, but has not been returned to the client and is not yet available. | Retry your query after the item is returned to the client. |
 | The report exists but is unavailable for other reasons. | Contact GIA for further information. |
+
+#### Report Not Found - Forbidden
+
+If you attempt to query a non-sandbox report with a sandbox key, you will receive an error message.
+
+```json
+{
+  "data": {
+    "getReport": null
+  },
+  "errors": [
+    {
+      "path": [
+        "getReport"
+      ],
+      "data": null,
+      "errorType": "REPORT NOT FOUND",
+      "errorInfo": "FORBIDDEN",
+      "locations": [
+        {
+          "line": 2,
+          "column": 3,
+          "sourceName": null
+        }
+      ],
+      "message": "This API key does not have permission to access this report. If this is a sandbox API key, please obtain a production API key and retry your request."
+    }
+  ]
+}
+```
+
+| Possible Cause | Solution |
+| --- | ----------- |
+| You are using a sandbox key to access a non-sandbox report number. | Obtain a production key. |
 
 #### Item is Undergoing Service
 
@@ -559,6 +588,10 @@ Items that are currently being serviced by GIA are unavailable through this API.
   ]
 }
 ```
+
+| Possible Cause | Solution |
+| --- | ----------- |
+| The item is being serviced by GIA. | Wait until the item has been completed and returned to the client. |
 
 #### Invalid key
 
@@ -608,9 +641,13 @@ Queries that exceed the plan's quota return an `HTTP 200 OK` response. Details a
 | --- | ----------- |
 | Your quota limit has been consumed or has expired. | Add additional lookups through the developer portal. |
 
-#### Newer report issued
+#### Report Number Returned Does Not Match Report Number Requested
 
 From time to time, GIA re-examines items and issues updated reports. In those cases, queries for the original report redirect to the current report. A note appears in the `info_message` field.
+
+| Possible Cause | Solution |
+| --- | ----------- |
+| A newer report has been issued to replace the original report number. | The current report number is the most accurate data GIA has for this item. |
 
 #### Asset Link Expired
 

@@ -189,8 +189,13 @@ fragment DiamondGradingDataFields on DiamondData {
   }
   girdle {
     girdle_condition
+    girdle_condition_code
     girdle_pct
     girdle_size
+    girdle_size_code
+  }
+  culet {
+    culet_code
   }
   
 }

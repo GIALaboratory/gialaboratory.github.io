@@ -8,18 +8,15 @@ title: What's New
 
 #### Added
 
-- A more informative error message is returned when a client queries for a non-Sandbox report using a Sandbox API key.
-- A new object has been added to [DiamondData](https://gialaboratory.github.io/report-results/reference/diamonddata.doc.html) called [Culet](https://gialaboratory.github.io/report-results/reference/culet.doc.html), containing one field called  `culet_code`. `culet_code` is a machine-readable abbreviation for `culet` in [DiamondProportions](https://gialaboratory.github.io/report-results/reference/diamondproportions.doc.html). `culet_code` is an enumeration defined in [CuletCode](https://gialaboratory.github.io/report-results/reference/culetcode.doc.html).
-- Two new fields have been added to [Girdle](https://gialaboratory.github.io/report-results/reference/girdle.doc.html): `girdle_condition_code` and `girdle_size_code`.  Both are machine-readable abbreviations for the  [Girdle](https://gialaboratory.github.io/report-results/reference/girdle.doc.html) fields `girdle_condition` and `girdle_size` respectively.  Both are enumerations: `girdle_condition_code` is defined in [GirdleConditionCode](https://gialaboratory.github.io/report-results/reference/girdleconditioncode.doc.html) and `girdle_size_code` is defined in [GirdleSizeCode](https://gialaboratory.github.io/report-results/reference/girdle.doc.html).
+- The enum `culet_code` provides [abbreviations](https://gialaboratory.github.io/report-results/reference/culetcode.doc.html) for culet condition
 
+- The enums`girdle_condition_code` and `girdle_size_code` provide [abbreviations](https://gialaboratory.github.io/report-results/reference/girdle.doc.html) for girdle condition and size.
 
 #### Changed
 
-- [isReportUpdated](https://gialaboratory.github.io/report-results/reference/reportupdated.doc.html) renamed argument `report_date`  to `date`. The purpose of this field in the `isReportUpdated` remains the same; to provide the date from which to begin looking for changes to a report.  
-
-#### Fixed
-
-- The fields `shape_code` and `shape_group_code` in the [DiamondShape](https://gialaboratory.github.io/report-results/reference/diamondshape.doc.html) object are now enumerations, [ShapeCode](https://gialaboratory.github.io/report-results/reference/shapecode.doc.html) and [ShapeGroupCode](https://gialaboratory.github.io/report-results/reference/shapegroupcode.doc.html) respectively.
+- A more informative error message is returned when a client queries for a non-Sandbox report using a Sandbox API key.
+- The fields `shape_code` and `shape_group_code` have been changed from strings to enums. See [ShapeCode](https://gialaboratory.github.io/report-results/reference/shapecode.doc.html) and [ShapeGroupCode](https://gialaboratory.github.io/report-results/reference/shapegroupcode.doc.html).
+- The argument `report_date` on [isReportUpdated](https://gialaboratory.github.io/report-results/reference/reportupdated.doc.html) has been renamed `date`.
 
 
 ## 2020-06-08
