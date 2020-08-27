@@ -19,7 +19,7 @@ title: What's New
 
 #### Fixed
 
-- The fields `shape_code` and `shape_group_code` in the [DiamondShape](https://gialaboratory.github.io/report-results/reference/diamondshape.doc.html) object are now enumerations, [ShapeCode](https://) and [ShapeGroupCode](https://) respectively.
+- The fields `shape_code` and `shape_group_code` in the [DiamondShape](https://gialaboratory.github.io/report-results/reference/diamondshape.doc.html) object are now enumerations, [ShapeCode](https://gialaboratory.github.io/report-results/reference/shapecode.doc.html) and [ShapeGroupCode](https://gialaboratory.github.io/report-results/reference/shapegroupcode.doc.html) respectively.
 
 
 ## 2020-06-08
