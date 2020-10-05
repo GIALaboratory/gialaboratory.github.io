@@ -424,7 +424,891 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:56px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ShapeCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">A</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">AB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">B</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BAT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BCRSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BIRD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BOAT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BOWL</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BRSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BRX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BSSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BTOB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BULL</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">BUT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CAT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CCRRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CCSB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CHMNM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CIRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CLUB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CLVR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRHX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CROSS</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRSS</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRSSSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRSSX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CRX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CSMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CSPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CSSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CSX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTPMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTPP</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTPSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTPX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTRMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTRPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTRSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CTRX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DHRSE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DHSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DLPN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DLPNDR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DOG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DOLL</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DUCK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EAGLE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EIGHT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ELPHT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FACE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FBD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FISH</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FLM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FLMMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FLWR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">GUN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">H</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HMN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HRSE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HXB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HXC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HXDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HXMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HXPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HXRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HXSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">HXX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">INXC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ISC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">KB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">KDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">KSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">KX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LEAF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LIPS</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHMN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHXB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHXMC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHXPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHXRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHXSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MHXX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MKB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MKMC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MKNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MKPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MKSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MKX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MMC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MMDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MMSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MMX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOCB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOCS</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOCSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOCX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOHSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOU</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOUSE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MOX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPTB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPTSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPTX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MPX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MRB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MRDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MRHB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MRMC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MRNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MRPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MRSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSHB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSHDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSHLD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSHMX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSHNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSHPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSHRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSHSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSHX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSSN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MSX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTPB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTPP</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTPSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTPX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTRB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTRDC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTRRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTRSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTRX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MTSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NA</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NSMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OCB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OCMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OCPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OCSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OCX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ODRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OEB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OMPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ONC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ORC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OTH</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">P</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PTMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PTSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PTX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">R</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RBC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCKT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCRB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCRHX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCRMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCRPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCRSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCRX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCSB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCSMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCSSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCSX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCTMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCTSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RCTX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">REDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RH</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RHMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RHPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RHSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RMBC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RTRMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SDRC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SEM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SERB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SHB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SHSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SHX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SNC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SSB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">STAR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TAPBA</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TPMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TPPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TPSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TREE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRIX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRMB</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRSC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TS</span></span></li><li>}</li></ul></code>
+		<code class="highlight">
+		   <ul class="code" style="padding-left:56px">
+			  <li><span class="keyword operator ts">enum</span> <span class="identifier">ShapeCode</span> {</li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"A Shape Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">A</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Apple Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">AB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Briolette"</span></span></li>
+			  <li><span class="tab"><span class="meta">B</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Bat Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">BAT</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Bent Top Cut-Cornered Rectangular Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">BCRSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Bird Novelty Cut, Bird Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">BIRD</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Boat Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">BOAT</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Bowling Pin Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">BOWL</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Blocked Round"</span></span></li>
+			  <li><span class="tab"><span class="meta">BR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Bent Top Rectangular Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">BRSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Buff Top Round Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">BRX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Bent Top Square Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">BSSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Bent Top Oval Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">BTOB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Bull Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">BULL</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Butterfly Modified Brilliant, Butterfly Rose Cut, Butterfly Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">BUT</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cat Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CAT</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cushion Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Rectangular Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CCRRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Square Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CCSB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cushion Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Half-Moon Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CHMNM</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Circular Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CIRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Club Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CLUB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Clover Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CLVR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cushion Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cushion Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cushion Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Rectangular Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cushion Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Rhomboid Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRHX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Rectangular Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Rectangular Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Cross Brilliant, Round-Sided Cross Brilliant, Round-Sided Cross Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CROSS</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Rectangular Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Rectangular Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Rectangular Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cross Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRSS</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cross Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRSSSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cross Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRSSX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Rectangular Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CRX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cushion Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Square Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CSMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Square Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CSPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Square Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CSSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Square Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CSX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Trapezoid Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Triangular Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Trapezoid Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTPMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Trapezoid Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTPP</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Trapezoid Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTPSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Trapezoid Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTPX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Triangular Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTRMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Triangular Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTRPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Triangular Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTRSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cut-Cornered Triangular Mixed Cut, Cut-Cornered Triangular Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">CTRX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Cushion Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">CX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Decagonal Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">DB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Double Horse Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">DHRSE</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Double Heart Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">DHSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Dolphin Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">DLPN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Dolphin Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">DLPNDR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Decagonal Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">DMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Dog Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">DOG</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Doll Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">DOLL</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Duck Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">DUCK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Eagle Brilliant, Eagle Novelty Cut, Eagle Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">EAGLE</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Eight Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">EIGHT</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Elephant Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">ELPHT</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Emerald Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">EM</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Face Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">FACE</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Faceted Bead"</span></span></li>
+			  <li><span class="tab"><span class="meta">FBD</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Fish Modified Brilliant, Fish Novelty Cut, Fish Step Cut, Fish Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">FISH</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Flame Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">FLM</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Flame Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">FLMMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Flower Brilliant, Flower Modified Brilliant, Flower Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">FLWR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Faceted Octahedron"</span></span></li>
+			  <li><span class="tab"><span class="meta">FO</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Gun Step Cut, Gun Modified Brilliant, Gun Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">GUN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"H Shape Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">H</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Heart Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">HB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Heart Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Heart Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">HMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Half-Moon Mixed Cut, Half-Moon Step Cut, Half-Moon Portrait Cut, Half-Moon Modified Brilliant, Half-Moon Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">HMN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Heart Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Heart Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Heart Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Horse Modified Brilliant, Horse Portrait Cut, Horse Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HRSE</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Heart Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Heart Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Hexagonal Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">HXB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Hexoctahedral Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HXC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Hexagonal Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HXDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Hexagonal Modified Brilliant, Horse Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">HXMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Hexagonal Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HXPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Hexagonal Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HXRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Hexagonal Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HXSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Hexagonal Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">HXX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"India Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">INXC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Israel Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">ISC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Kite Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">KB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Kite Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">KDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Kite Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">KSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Kite Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">KX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Lozenge Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">LB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Leaf Mixed Cut, Leaf Rose Cut, Leaf Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">LEAF</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Lips Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">LIPS</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Lozenge Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">LMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Lozenge Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">LPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Lozenge Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">LSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Lozenge Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">LX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Marquise Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Marquise Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Heart Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Heart Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Half-Moon Brilliant, Modified Half-Moon Step Cut, Modified Half-Moon Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHMN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Heart Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Heart Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Heart Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Heart Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Heart Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Hexagonal Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHXB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Hexagonal Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHXMC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Hexagonal Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHXPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Hexagonal Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHXRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Hexagonal Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHXSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Hexagonal Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MHXX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Kite Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MKB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Kite Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MKMC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Kite Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MKNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Kite Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MKPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Kite Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MKSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Kite Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MKX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Lozenge Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MLB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Maple Leaf Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MLMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Lozenge Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MLNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Lozenge Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MLPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Lozenge Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MLRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Lozenge Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MLSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Lozenge Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MLX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Marquise Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Marquise Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MMC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Marquise Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MMDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Marquise Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MMSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Marquise Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MMX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Marquise Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Oval Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Octahedron Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Octagonal Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOCB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Octagonal Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOCS</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Octagonal Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOCSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Octagonal Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOCX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Octahedral Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOHSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Oval Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Mouse Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOU</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Mouse Rose Cut, Mouse Character Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOUSE</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Oval Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MOX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pear Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Marquise Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pear Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pear Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pear Portrait Cut, Modified Pentagonal Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pear Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pear Step Cut, Modified Pentagonal Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pentagonal Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPTB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pentagonal Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPTSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pentagonal Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPTX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Pear Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MPX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Rectangular Brilliant, Modified Round Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MRB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Marquise Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Rectangular Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MRDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Rhomboid Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MRHB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Rectangular Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MRMC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Round Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MRNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Round Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MRPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Rectangular Step Cut, Modified Round Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MRSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Brilliant, Modified Square Brilliant, Modified Star Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Marquise Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Square Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Brilliant, Modified Shield Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSHB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSHDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSHLD</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSHMX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSHNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSHPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSHRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSHSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSHX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Shield Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Square Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Seven-Sided Novelty"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSSN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Square Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MSX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Triangular Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Triangular Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Trapezoid Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTPB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Triangular Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Trapezoid Portrait"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTPP</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Trapezoid Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTPSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Trapezoid Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTPX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Triangular Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTRB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Triangular Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTRDC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Triangular Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTRRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Triangular Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTRSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Triangular Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTRX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Triangular Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">MTSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Not Applicable"</span></span></li>
+			  <li><span class="tab"><span class="meta">NA</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Nine-Sided Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">NSMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Oval Brilliant, Oval Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">OB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Octagonal Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">OCB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Octagonal Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">OCMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Octagonal Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">OCPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Octagonal Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">OCSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Octagonal Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">OCX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Oval Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">ODRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Old European Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">OEB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Old Mine Brilliant, Oval Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">OMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Oval Modified Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">OMPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Oval Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">ONC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Oval Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">OPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Oval Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">ORC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Oval Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">OSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Arrow Novelty Cut, Buddha Rose Cut, Buddha Modified Brilliant, Buddha Brilliant, Novelty Brilliant, Novelty Cut, Novelty Portrait Cut, Novelty Mixed Cut, Novelty Modified Brilliant, Novelty Modified Brilliant Cut, Novelty Step Cut, Novelty Rose Cut, Novelty Double Rose Cut, Faceted Cube, Flower Modified Brilliant, Ganesha Modified Brilliant, One Mixed Cut, Rabbit Step Cut, Turtle Rose Cut, Other"</span></span></li>
+			  <li><span class="tab"><span class="meta">OTH</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Oval Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">OX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"P Shape Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">P</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pear Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">PB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pear Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">PDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Partially Faceted Cushion"</span></span></li>
+			  <li><span class="tab"><span class="meta">PFC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Partially Faceted Round"</span></span></li>
+			  <li><span class="tab"><span class="meta">PFR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pear Modified Brilliant, Pear Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">PMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pear Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">PNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pear Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">PPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pear Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">PRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pear Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">PSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pentagonal Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">PTMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pentagonal Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">PTSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pentagonal Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">PTX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Pear Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">PX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"R Shape Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">R</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RBC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Racket Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCKT</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Rectangular Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCRB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Rhomboid Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCRHX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Rectangular Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCRMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Rectangular Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCRPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Rectangular Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCRSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Rectangular Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCRX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Square Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCSB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Square Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCSMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Square Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCSSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Square Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCSX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round Cornered Triangular Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCTMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Triangular Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCTSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Triangular Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RCTX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rectangular Double Rose Cut, Round Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rectangular Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">REDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">""</span></span></li>
+			  <li><span class="tab"><span class="meta">RH</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rhomboid Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RHMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rhomboid Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RHPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rhomboid Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RHSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rectangular Modified Brilliant, Round Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">""</span></span></li>
+			  <li><span class="tab"><span class="meta">RMBC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rectangular Novelty Cut, Round Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rectangular Portrait Cut, Round Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rectangular Step Cut, Round Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Round-Cornered Triangular Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">RTRMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Rectangular Mixed Cut, Round Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">RX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">""</span></span></li>
+			  <li><span class="tab"><span class="meta">SB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Square Double Rose Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">SDRC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Square Emerald Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">SEM</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Scalloped Edge Round Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">SERB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Shield Modified Brilliant, Shield Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">SHB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Shield Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">SHSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Shield Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">SHX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Square Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">SMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Square Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">SNC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Square Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">SPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Seven-Sided Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">SSB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Square Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">SSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Modified Star Brilliant, Star Modified Brilliant, Star Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">STAR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Square Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">SX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Tapered Baguette"</span></span></li>
+			  <li><span class="tab"><span class="meta">TAPBA</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Tetrahedral Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">THC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Trapezoid Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">TPMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Trapezoid Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">TPPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Trapezoid Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">TPSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Triangular Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">TRB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Tree Novelty Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">TREE</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Triangular Mixed Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">TRIX</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Triangular Modified Brilliant"</span></span></li>
+			  <li><span class="tab"><span class="meta">TRMB</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Triangular Portrait Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">TRPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"Triangular Step Cut"</span></span></li>
+			  <li><span class="tab"><span class="meta">TRSC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="meta">"TEST SHAPE"</span></span></li>
+			  <li><span class="tab"><span class="meta">TS</span></span></li>
+			  <li>}</li>
+		   </ul>
+		</code>        
     </div>
 </section>
 <section>
