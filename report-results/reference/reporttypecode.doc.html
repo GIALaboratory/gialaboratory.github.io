@@ -424,7 +424,141 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ReportTypeCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">AL</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ALO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ALOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CCR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CDOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DER</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ER</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ID</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IDTO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IDTT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGCD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGCI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGDG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGDOSS</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ROTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SCD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SCI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SDG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TR</span></span></li><li>}</li></ul></code>
+		<code class="highlight">
+		   <ul class="code" style="padding-left:42px">
+			  <li><span class="keyword operator ts">enum</span> <span class="identifier">ReportTypeCode</span> {</li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Alexandrite Report</span></span></li>
+			  <li><span class="tab"><span class="meta">AL</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Alexandrite Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">ALO</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Alexandrite Origin & Traceability Report</span></span></li>
+			  <li><span class="tab"><span class="meta">ALOTR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Cat's Eye Chrysoberyl Report</span></span></li>
+			  <li><span class="tab"><span class="meta">CCR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Colored Diamond Grading Report</span></span></li>
+			  <li><span class="tab"><span class="meta">CD</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Colored Diamond Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">CDOR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Colored Diamond Identification and Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">CI</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Cultured Pearl Classification Report</span></span></li>
+			  <li><span class="tab"><span class="meta">CPC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Diamond Dossier Report</span></span></li>
+			  <li><span class="tab"><span class="meta">DD</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Diamond Dossier with Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">DDO</span></span></li>
+			  <li><span class="tab"></span></li>			  
+			  <li><span class="tab"><span class="comment line"># Diamond eReport, Diamond e-Report</span></span></li>
+			  <li><span class="tab"><span class="meta">DER</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Diamond Grading Report</span></span></li>
+			  <li><span class="tab"><span class="meta">DG</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Diamond Grading with Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">DOR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Emerald Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">EO</span></span></li>
+			  <li><span class="tab"></span></li>			  
+			  <li><span class="tab"><span class="comment line"># Emerald Origin & Traceability Report</span></span></li>
+			  <li><span class="tab"><span class="meta">EOTR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Emerald Report</span></span></li>
+			  <li><span class="tab"><span class="meta">ER</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Diamond Focus Report</span></span></li>
+			  <li><span class="tab"><span class="meta">FC</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Identification Report</span></span></li>
+			  <li><span class="tab"><span class="meta">ID</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Identification & Origin Report, Identification Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">IDTO</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Identification Origin & Traceability Report</span></span></li>
+			  <li><span class="tab"><span class="meta">IDTT</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Jade Report</span></span></li>
+			  <li><span class="tab"><span class="meta">JR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Laboratory-Grown Colored Diamond Grading Report, Laboratory-Grown Colored Diamond Report</span></span></li>
+			  <li><span class="tab"><span class="meta">LGCD</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Laboratory-Grown Colored Diamond Report - Color Identification</span></span></li>
+			  <li><span class="tab"><span class="meta">LGCI</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Laboratory-Grown Diamond Grading Report, Laboratory-Grown Diamond Report</span></span></li>
+			  <li><span class="tab"><span class="meta">LGDG</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Laboratory-Grown Diamond Report - Dossier</span></span></li>
+			  <li><span class="tab"><span class="meta">LGDOSS</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Melee Analysis Service</span></span></li>
+			  <li><span class="tab"><span class="meta">MLE</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Pearl Identification and Classification Report</span></span></li>
+			  <li><span class="tab"><span class="meta">PG</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Pearl Identification Report, Pearl Classification Report</span></span></li>
+			  <li><span class="tab"><span class="meta">PI</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Ruby Report</span></span></li>
+			  <li><span class="tab"><span class="meta">RG</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Ruby Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">RO</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Ruby Origin & Traceability Report</span></span></li>
+			  <li><span class="tab"><span class="meta">ROTR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Sapphire Report</span></span></li>
+			  <li><span class="tab"><span class="meta">SG</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Sapphire Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">SO</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Sapphire Origin & Traceability Report</span></span></li>
+			  <li><span class="tab"><span class="meta">SOTR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Sapphire Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">SPOR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Sapphire Origin & Traceability Report</span></span></li>
+			  <li><span class="tab"><span class="meta">SPOTR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Spinel Report</span></span></li>
+			  <li><span class="tab"><span class="meta">SPR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Synthetic Colored Diamond Grading Report</span></span></li>
+			  <li><span class="tab"><span class="meta">SCD</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Synthetic Diamond Identification Report</span></span></li>
+			  <li><span class="tab"><span class="meta">SCI</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Synthetic Diamond Grading Report</span></span></li>
+			  <li><span class="tab"><span class="meta">SDG</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Tourmaline Origin Report</span></span></li>
+			  <li><span class="tab"><span class="meta">TOR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Tourmaline Origin & Traceability Report</span></span></li>
+			  <li><span class="tab"><span class="meta">TOTR</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Tourmaline Report</span></span></li>
+			  <li><span class="tab"><span class="meta">TR</span></span></li>
+			  <li>}</li>
+		   </ul>
+		</code>
     </div>
 </section>
 <section>

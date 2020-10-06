@@ -424,7 +424,123 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">GirdleSizeCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ETN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VTN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">STK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VTK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ETK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NA</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ETN_TO_ETK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ETN_TO_MED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ETN_TO_STK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ETN_TO_THK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ETN_TO_THN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ETN_TO_VTK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ETN_TO_VTN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MED_TO_ETK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MED_TO_STK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MED_TO_THK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MED_TO_VTK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">STK_TO_ETN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">STK_TO_THK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">STK_TO_VTK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THK_TO_ETK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THK_TO_VTK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THN_TO_ETK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THN_TO_MED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THN_TO_STK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THN_TO_THK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">THN_TO_VTK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VTK_TO_ETK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VTN_TO_ETK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VTN_TO_MED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VTN_TO_STK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VTN_TO_THK</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VTN_TO_THN</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VTN_TO_VTK</span></span></li><li>}</li></ul></code>
+		<code class="highlight">
+		   <ul class="code" style="padding-left:42px">
+			  <li><span class="keyword operator ts">enum</span> <span class="identifier">GirdleSizeCode</span> {</li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Extremely Thin</span></span></li>
+			  <li><span class="tab"><span class="meta">ETN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Very Thin</span></span></li>
+			  <li><span class="tab"><span class="meta">VTN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Thin</span></span></li>
+			  <li><span class="tab"><span class="meta">THN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Medium</span></span></li>
+			  <li><span class="tab"><span class="meta">MED</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Slightly Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">STK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">THK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Very Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">VTK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Extremely Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">ETK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Not Applicable</span></span></li>
+			  <li><span class="tab"><span class="meta">NA</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Extremely Thin to Extremely Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">ETN_TO_ETK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Extremely Thin to Medium</span></span></li>
+			  <li><span class="tab"><span class="meta">ETN_TO_MED</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Extremely Thin to Slightly Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">ETN_TO_STK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Extremely Thin to Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">ETN_TO_THK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Extremely Thin to Thin</span></span></li>
+			  <li><span class="tab"><span class="meta">ETN_TO_THN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Extremely Thin to Very Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">ETN_TO_VTK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Extremely Thin to Very Thin</span></span></li>
+			  <li><span class="tab"><span class="meta">ETN_TO_VTN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Medium to Extremely Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">MED_TO_ETK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Medium to Slightly Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">MED_TO_STK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Medium to Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">MED_TO_THK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Medium to Very Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">MED_TO_VTK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Slightly Thick to Extremely Thin</span></span></li>
+			  <li><span class="tab"><span class="meta">STK_TO_ETN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Slightly Thick to Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">STK_TO_THK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Slightly Thick to Very Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">STK_TO_VTK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Thick to Extremely Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">THK_TO_ETK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Thick to Very Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">THK_TO_VTK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Thin to Extremely Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">THN_TO_ETK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Thin to Medium</span></span></li>
+			  <li><span class="tab"><span class="meta">THN_TO_MED</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Thin to Slightly Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">THN_TO_STK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Thin to Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">THN_TO_THK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Thin to Very Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">THN_TO_VTK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Very Thick to Extremely Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">VTK_TO_ETK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Very Thin to Extremely Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">VTN_TO_ETK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Very Thin to Medium</span></span></li>
+			  <li><span class="tab"><span class="meta">VTN_TO_MED</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Very Thin to Slightly Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">VTN_TO_STK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Very Thin to Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">VTN_TO_THK</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Very Thin to Thin</span></span></li>
+			  <li><span class="tab"><span class="meta">VTN_TO_THN</span></span></li>
+			  <li><span class="tab"></span></li>
+			  <li><span class="tab"><span class="comment line"># Very Thin to Very Thick</span></span></li>
+			  <li><span class="tab"><span class="meta">VTN_TO_VTK</span></span></li>
+			  <li>}</li>
+		   </ul>
+		</code>
     </div>
 </section>
 <section>
