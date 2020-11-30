@@ -16,7 +16,7 @@
             <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
                 <i class="material-icons">close</i>
             </button>
-                <a href="/" style="display:block;padding:1rem 15%"><img src="/static/gia-logo.svg" /></a>
+                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
             <div class="slds-p-top--small">
                 <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
             </div>
@@ -63,6 +63,16 @@
         <li  title="ClarityGradeCode">
             <a href="claritygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityGradeCode
+            </a>
+        </li>
+        <li  title="ColorDistributionCode">
+            <a href="colordistributioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorDistributionCode
+            </a>
+        </li>
+        <li  title="ColoredDiamondColorGradeCode">
+            <a href="coloreddiamondcolorgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColoredDiamondColorGradeCode
             </a>
         </li>
         <li  title="CountryOfOriginCode">
@@ -160,6 +170,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Unions</h4>
     <ul>
+        <li  title="ColorGrade">
+            <a href="colorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorGrade
+            </a>
+        </li>
         <li  title="Measurements">
             <a href="measurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Measurements
@@ -175,6 +190,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
+        <li  title="CDColorGrade">
+            <a href="cdcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CDColorGrade
+            </a>
+        </li>
         <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
@@ -340,46 +360,6 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
     <ul>
-        <li  title="aws_api_key">
-            <a href="aws_api_key.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_api_key
-            </a>
-        </li>
-        <li  title="aws_auth">
-            <a href="aws_auth.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_auth
-            </a>
-        </li>
-        <li  title="aws_cognito_user_pools">
-            <a href="aws_cognito_user_pools.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_cognito_user_pools
-            </a>
-        </li>
-        <li  title="aws_iam">
-            <a href="aws_iam.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_iam
-            </a>
-        </li>
-        <li  title="aws_oidc">
-            <a href="aws_oidc.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_oidc
-            </a>
-        </li>
-        <li  title="aws_publish">
-            <a href="aws_publish.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_publish
-            </a>
-        </li>
-        <li  title="aws_subscribe">
-            <a href="aws_subscribe.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_subscribe
-            </a>
-        </li>
-        <li  title="defer">
-            <a href="defer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                defer
-            </a>
-        </li>
         <li  title="deprecated">
             <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 deprecated
@@ -412,7 +392,7 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">PearlIdentReportResults</h1>
-        <div class="slds-text-body--regular"><p>  Pearl Identification Tabular Format report.</p>
+        <div class="slds-text-body--regular"><p>Pearl Identification Tabular Format report.</p>
 </div>
     </div>
 </section>
@@ -424,7 +404,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">PearlIdentReportResults</span> {</li><li></li><li><span class="tab"><span class="comment line">#     This is based on the current report format as of 10/20/2018. This does not </span></span></li><li><span class="tab"><span class="comment line">#   include quanitity or drilling. The title of the report.</span></span></li><li><span class="tab"><span class="meta">report_title</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of the pearls, mounted jewelry and additional information.</span></span></li><li><span class="tab"><span class="meta">item_description</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Weight of the pearls being identified In grams for mounted or strung pearls. </span></span></li><li><span class="tab"><span class="comment line">#   In carats for cultured loose pearls. Or in carats and grains for natural loose </span></span></li><li><span class="tab"><span class="comment line">#   pearls.</span></span></li><li><span class="tab"><span class="meta">weight</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     In millimeters. Diameter measurement for round or spherical shapes. Length x </span></span></li><li><span class="tab"><span class="comment line">#   width x depth for other shapes. For multiple pearls, a range of measurements </span></span></li><li><span class="tab"><span class="comment line">#   from maximum to minimum is listed.</span></span></li><li><span class="tab"><span class="meta">measurements</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Describes the shape of the pearls being identified.</span></span></li><li><span class="tab"><span class="meta">shape</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Describes the overall color of the pearl.</span></span></li><li><span class="tab"><span class="meta">bodycolor</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Any single noticeable translucent color that overlies the bodycolor. Includes </span></span></li><li><span class="tab"><span class="comment line">#   orient - multiple overlying colors or a form of iridescence that appears to be </span></span></li><li><span class="tab"><span class="comment line">#   on or just below the surface. Not all pearls display overtone or orient.</span></span></li><li><span class="tab"><span class="meta">overtone</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Identifies the pearls including bead cultured, non-bead cultured or natural.</span></span></li><li><span class="tab"><span class="meta">identification</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Environment in which the pearl was created: freshwater or saltwater.</span></span></li><li><span class="tab"><span class="meta">environment</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The genus and species of the source mollusk.</span></span></li><li><span class="tab"><span class="meta">mollusk</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The number of pearls being identified.</span></span></li><li><span class="tab"><span class="meta">quantity</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The surface condition of the item.</span></span></li><li><span class="tab"><span class="meta">surface</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Light reflected from the surface of the pearl.</span></span></li><li><span class="tab"><span class="meta">luster</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The uniformity of pearls in strands, or multiple pearls in a piece of jewelry.</span></span></li><li><span class="tab"><span class="meta">matching</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Description for the quality of the nacre surrounding the pearl.</span></span></li><li><span class="tab"><span class="meta">nacre</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Describes if pearls are drilled, partially drilled or undrilled.</span></span></li><li><span class="tab"><span class="meta">drilling</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Indicates any detectable treatments.</span></span></li><li><span class="tab"><span class="meta">treatment</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Additional identifying characteristics or features that are not otherwise </span></span></li><li><span class="tab"><span class="comment line">#   represented on the report.</span></span></li><li><span class="tab"><span class="meta">report_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     This field will show a comment if a duplicate report is printed at a later </span></span></li><li><span class="tab"><span class="comment line">#   date.</span></span></li><li><span class="tab"><span class="meta">duplicate_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">PearlIdentReportResults</span> {</li><li></li><li><span class="tab"><span class="comment line">#   This is based on the current report format as of 10/20/2018. This does not </span></span></li><li><span class="tab"><span class="comment line">#   include quanitity or drilling. The title of the report.</span></span></li><li><span class="tab"><span class="meta">report_title</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Description of the pearls, mounted jewelry and additional information.</span></span></li><li><span class="tab"><span class="meta">item_description</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Weight of the pearls being identified In grams for mounted or strung pearls. In </span></span></li><li><span class="tab"><span class="comment line">#   carats for cultured loose pearls. Or in carats and grains for natural loose </span></span></li><li><span class="tab"><span class="comment line">#   pearls.</span></span></li><li><span class="tab"><span class="meta">weight</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   In millimeters. Diameter measurement for round or spherical shapes. Length x </span></span></li><li><span class="tab"><span class="comment line">#   width x depth for other shapes. For multiple pearls, a range of measurements </span></span></li><li><span class="tab"><span class="comment line">#   from maximum to minimum is listed.</span></span></li><li><span class="tab"><span class="meta">measurements</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Describes the shape of the pearls being identified.</span></span></li><li><span class="tab"><span class="meta">shape</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Describes the overall color of the pearl.</span></span></li><li><span class="tab"><span class="meta">bodycolor</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Any single noticeable translucent color that overlies the bodycolor. Includes </span></span></li><li><span class="tab"><span class="comment line">#   orient - multiple overlying colors or a form of iridescence that appears to be </span></span></li><li><span class="tab"><span class="comment line">#   on or just below the surface. Not all pearls display overtone or orient.</span></span></li><li><span class="tab"><span class="meta">overtone</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Identifies the pearls including bead cultured, non-bead cultured or natural.</span></span></li><li><span class="tab"><span class="meta">identification</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Environment in which the pearl was created: freshwater or saltwater.</span></span></li><li><span class="tab"><span class="meta">environment</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The genus and species of the source mollusk.</span></span></li><li><span class="tab"><span class="meta">mollusk</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The number of pearls being identified.</span></span></li><li><span class="tab"><span class="meta">quantity</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The surface condition of the item.</span></span></li><li><span class="tab"><span class="meta">surface</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Light reflected from the surface of the pearl.</span></span></li><li><span class="tab"><span class="meta">luster</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The uniformity of pearls in strands, or multiple pearls in a piece of jewelry.</span></span></li><li><span class="tab"><span class="meta">matching</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Description for the quality of the nacre surrounding the pearl.</span></span></li><li><span class="tab"><span class="meta">nacre</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Describes if pearls are drilled, partially drilled or undrilled.</span></span></li><li><span class="tab"><span class="meta">drilling</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Indicates any detectable treatments.</span></span></li><li><span class="tab"><span class="meta">treatment</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Additional identifying characteristics or features that are not otherwise </span></span></li><li><span class="tab"><span class="comment line">#   represented on the report.</span></span></li><li><span class="tab"><span class="meta">report_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   This field will show a comment if a duplicate report is printed at a later date.</span></span></li><li><span class="tab"><span class="meta">duplicate_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -435,7 +415,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="reportresults.doc.html" title="ReportResults -   The structure of report results varies by the type of report.">ReportResults<em>  The structure of report results varies by the type of report.</em></a><li></ul>
+        <ul class="require-by"><li><a href="reportresults.doc.html" title="ReportResults - The structure of report results varies by the type of report.">ReportResults<em>The structure of report results varies by the type of report.</em></a><li></ul>
     </div>
 </section>
 <footer>

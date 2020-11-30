@@ -16,7 +16,7 @@
             <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
                 <i class="material-icons">close</i>
             </button>
-                <a href="/" style="display:block;padding:1rem 15%"><img src="/static/gia-logo.svg" /></a>
+                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
             <div class="slds-p-top--small">
                 <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
             </div>
@@ -63,6 +63,16 @@
         <li  title="ClarityGradeCode">
             <a href="claritygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityGradeCode
+            </a>
+        </li>
+        <li  title="ColorDistributionCode">
+            <a href="colordistributioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorDistributionCode
+            </a>
+        </li>
+        <li  title="ColoredDiamondColorGradeCode">
+            <a href="coloreddiamondcolorgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColoredDiamondColorGradeCode
             </a>
         </li>
         <li  title="CountryOfOriginCode">
@@ -160,6 +170,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Unions</h4>
     <ul>
+        <li  title="ColorGrade">
+            <a href="colorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorGrade
+            </a>
+        </li>
         <li  title="Measurements">
             <a href="measurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Measurements
@@ -175,6 +190,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
+        <li  title="CDColorGrade">
+            <a href="cdcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CDColorGrade
+            </a>
+        </li>
         <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
@@ -340,46 +360,6 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
     <ul>
-        <li  title="aws_api_key">
-            <a href="aws_api_key.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_api_key
-            </a>
-        </li>
-        <li  title="aws_auth">
-            <a href="aws_auth.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_auth
-            </a>
-        </li>
-        <li  title="aws_cognito_user_pools">
-            <a href="aws_cognito_user_pools.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_cognito_user_pools
-            </a>
-        </li>
-        <li  title="aws_iam">
-            <a href="aws_iam.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_iam
-            </a>
-        </li>
-        <li  title="aws_oidc">
-            <a href="aws_oidc.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_oidc
-            </a>
-        </li>
-        <li  title="aws_publish">
-            <a href="aws_publish.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_publish
-            </a>
-        </li>
-        <li  title="aws_subscribe">
-            <a href="aws_subscribe.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_subscribe
-            </a>
-        </li>
-        <li  title="defer">
-            <a href="defer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                defer
-            </a>
-        </li>
         <li  title="deprecated">
             <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 deprecated
@@ -412,7 +392,7 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">Query</h1>
-        <div class="slds-text-body--regular"><p>  Query your grading report.</p>
+        <div class="slds-text-body--regular"><p>Query your grading report.</p>
 </div>
     </div>
 </section>
@@ -424,7 +404,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Get the data given by a GIA grading report.</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>report_number</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">getReport</span>(<span class="meta">report_number</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="gradingreport.doc.html">GradingReport</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Check your quota, does not consume a report request from your quota.</span></span></li><li><span class="tab"><span class="meta">getQuota</span>: <a class="support type" href="quota.doc.html">Quota</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Giving users the ability to find out if a report was changed after a date </span></span></li><li><span class="tab"><span class="comment line">#   provided by the user.   Date must be in ISO8601 date format.  NOTE the attribute </span></span></li><li><span class="tab"><span class="comment line">#   representing the report's date has been RENAMED. Old name: report_date. New </span></span></li><li><span class="tab"><span class="comment line">#   name: date.</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>report_number</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="comment line">#   <strong>date</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">isReportUpdated</span>(<span class="meta">report_number</span>: <a class="support type" href="string.doc.html">String</a>!, <span class="meta">date</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="reportupdated.doc.html">ReportUpdated</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Get the data given by a GIA grading report.</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>report_number</strong>: </span></span></li><li><span class="tab"><span class="meta">getReport</span>(<span class="meta">report_number</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="gradingreport.doc.html">GradingReport</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Check your quota, does not consume a report request from your quota.</span></span></li><li><span class="tab"><span class="meta">getQuota</span>: <a class="support type" href="quota.doc.html">Quota</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Giving users the ability to find out if a report was changed after a date </span></span></li><li><span class="tab"><span class="comment line">#   provided by the user.   Date must be in ISO8601 date format.  NOTE the attribute </span></span></li><li><span class="tab"><span class="comment line">#   representing the report's date has been RENAMED. Old name: report_date. New </span></span></li><li><span class="tab"><span class="comment line">#   name: date.</span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>report_number</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>date</strong>: </span></span></li><li><span class="tab"><span class="meta">isReportUpdated</span>(<span class="meta">report_number</span>: <a class="support type" href="string.doc.html">String</a>!, <span class="meta">date</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="reportupdated.doc.html">ReportUpdated</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>

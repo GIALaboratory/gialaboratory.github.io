@@ -16,7 +16,7 @@
             <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
                 <i class="material-icons">close</i>
             </button>
-                <a href="/" style="display:block;padding:1rem 15%"><img src="/static/gia-logo.svg" /></a>
+                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
             <div class="slds-p-top--small">
                 <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
             </div>
@@ -63,6 +63,16 @@
         <li  title="ClarityGradeCode">
             <a href="claritygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityGradeCode
+            </a>
+        </li>
+        <li  title="ColorDistributionCode">
+            <a href="colordistributioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorDistributionCode
+            </a>
+        </li>
+        <li  title="ColoredDiamondColorGradeCode">
+            <a href="coloreddiamondcolorgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColoredDiamondColorGradeCode
             </a>
         </li>
         <li  title="CountryOfOriginCode">
@@ -160,6 +170,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Unions</h4>
     <ul>
+        <li  title="ColorGrade">
+            <a href="colorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorGrade
+            </a>
+        </li>
         <li  title="Measurements">
             <a href="measurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Measurements
@@ -175,6 +190,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
+        <li  title="CDColorGrade">
+            <a href="cdcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CDColorGrade
+            </a>
+        </li>
         <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
@@ -340,46 +360,6 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
     <ul>
-        <li  title="aws_api_key">
-            <a href="aws_api_key.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_api_key
-            </a>
-        </li>
-        <li  title="aws_auth">
-            <a href="aws_auth.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_auth
-            </a>
-        </li>
-        <li  title="aws_cognito_user_pools">
-            <a href="aws_cognito_user_pools.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_cognito_user_pools
-            </a>
-        </li>
-        <li  title="aws_iam">
-            <a href="aws_iam.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_iam
-            </a>
-        </li>
-        <li  title="aws_oidc">
-            <a href="aws_oidc.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_oidc
-            </a>
-        </li>
-        <li  title="aws_publish">
-            <a href="aws_publish.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_publish
-            </a>
-        </li>
-        <li  title="aws_subscribe">
-            <a href="aws_subscribe.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_subscribe
-            </a>
-        </li>
-        <li  title="defer">
-            <a href="defer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                defer
-            </a>
-        </li>
         <li  title="deprecated">
             <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 deprecated
@@ -412,7 +392,7 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
         <h1 class="slds-text-heading--large">__DirectiveLocation</h1>
-        <div class="slds-text-body--regular"><p>An enum describing valid locations where a directive can be placed</p>
+        <div class="slds-text-body--regular"><p>A Directive can be adjacent to many parts of the GraphQL language, a __DirectiveLocation describes one such possible adjacencies.</p>
 </div>
     </div>
 </section>
@@ -424,7 +404,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">__DirectiveLocation</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on queries.</span></span></li><li><span class="tab"><span class="meta">QUERY</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on mutations.</span></span></li><li><span class="tab"><span class="meta">MUTATION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on fields.</span></span></li><li><span class="tab"><span class="meta">FIELD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on fragment definitions.</span></span></li><li><span class="tab"><span class="meta">FRAGMENT_DEFINITION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on fragment spreads.</span></span></li><li><span class="tab"><span class="meta">FRAGMENT_SPREAD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on inline fragments.</span></span></li><li><span class="tab"><span class="meta">INLINE_FRAGMENT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on a schema SDL definition.</span></span></li><li><span class="tab"><span class="meta">SCHEMA</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on a scalar SDL definition.</span></span></li><li><span class="tab"><span class="meta">SCALAR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on an object SDL definition.</span></span></li><li><span class="tab"><span class="meta">OBJECT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on a field SDL definition.</span></span></li><li><span class="tab"><span class="meta">FIELD_DEFINITION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on a field argument SDL definition.</span></span></li><li><span class="tab"><span class="meta">ARGUMENT_DEFINITION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on an interface SDL definition.</span></span></li><li><span class="tab"><span class="meta">INTERFACE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on an union SDL definition.</span></span></li><li><span class="tab"><span class="meta">UNION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on an enum SDL definition.</span></span></li><li><span class="tab"><span class="meta">ENUM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on an enum value SDL definition.</span></span></li><li><span class="tab"><span class="meta">ENUM_VALUE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on an input object SDL definition.</span></span></li><li><span class="tab"><span class="meta">INPUT_OBJECT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Indicates the directive is valid on an input object field SDL definition.</span></span></li><li><span class="tab"><span class="meta">INPUT_FIELD_DEFINITION</span></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">__DirectiveLocation</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a query operation.</span></span></li><li><span class="tab"><span class="meta">QUERY</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a mutation operation.</span></span></li><li><span class="tab"><span class="meta">MUTATION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a subscription operation.</span></span></li><li><span class="tab"><span class="meta">SUBSCRIPTION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a field.</span></span></li><li><span class="tab"><span class="meta">FIELD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a fragment definition.</span></span></li><li><span class="tab"><span class="meta">FRAGMENT_DEFINITION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a fragment spread.</span></span></li><li><span class="tab"><span class="meta">FRAGMENT_SPREAD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to an inline fragment.</span></span></li><li><span class="tab"><span class="meta">INLINE_FRAGMENT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a schema definition.</span></span></li><li><span class="tab"><span class="meta">SCHEMA</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a scalar definition.</span></span></li><li><span class="tab"><span class="meta">SCALAR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to an object type definition.</span></span></li><li><span class="tab"><span class="meta">OBJECT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a field definition.</span></span></li><li><span class="tab"><span class="meta">FIELD_DEFINITION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to an argument definition.</span></span></li><li><span class="tab"><span class="meta">ARGUMENT_DEFINITION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to an interface definition.</span></span></li><li><span class="tab"><span class="meta">INTERFACE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to a union definition.</span></span></li><li><span class="tab"><span class="meta">UNION</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to an enum definition.</span></span></li><li><span class="tab"><span class="meta">ENUM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to an enum value definition.</span></span></li><li><span class="tab"><span class="meta">ENUM_VALUE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to an input object type definition.</span></span></li><li><span class="tab"><span class="meta">INPUT_OBJECT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Location adjacent to an input object field definition.</span></span></li><li><span class="tab"><span class="meta">INPUT_FIELD_DEFINITION</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -435,7 +415,11 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="directive.spec.html" title="__Directive - ">__Directive<em>null</em></a><li></ul>
+        <ul class="require-by"><li><a href="directive.spec.html" title="__Directive - A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
+
+In some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.">__Directive<em>A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
+
+In some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.</em></a><li></ul>
     </div>
 </section>
 <footer>

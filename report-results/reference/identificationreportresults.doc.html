@@ -16,7 +16,7 @@
             <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
                 <i class="material-icons">close</i>
             </button>
-                <a href="/" style="display:block;padding:1rem 15%"><img src="/static/gia-logo.svg" /></a>
+                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
             <div class="slds-p-top--small">
                 <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
             </div>
@@ -63,6 +63,16 @@
         <li  title="ClarityGradeCode">
             <a href="claritygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityGradeCode
+            </a>
+        </li>
+        <li  title="ColorDistributionCode">
+            <a href="colordistributioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorDistributionCode
+            </a>
+        </li>
+        <li  title="ColoredDiamondColorGradeCode">
+            <a href="coloreddiamondcolorgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColoredDiamondColorGradeCode
             </a>
         </li>
         <li  title="CountryOfOriginCode">
@@ -160,6 +170,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Unions</h4>
     <ul>
+        <li  title="ColorGrade">
+            <a href="colorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorGrade
+            </a>
+        </li>
         <li  title="Measurements">
             <a href="measurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Measurements
@@ -175,6 +190,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
+        <li  title="CDColorGrade">
+            <a href="cdcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CDColorGrade
+            </a>
+        </li>
         <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
@@ -340,46 +360,6 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
     <ul>
-        <li  title="aws_api_key">
-            <a href="aws_api_key.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_api_key
-            </a>
-        </li>
-        <li  title="aws_auth">
-            <a href="aws_auth.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_auth
-            </a>
-        </li>
-        <li  title="aws_cognito_user_pools">
-            <a href="aws_cognito_user_pools.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_cognito_user_pools
-            </a>
-        </li>
-        <li  title="aws_iam">
-            <a href="aws_iam.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_iam
-            </a>
-        </li>
-        <li  title="aws_oidc">
-            <a href="aws_oidc.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_oidc
-            </a>
-        </li>
-        <li  title="aws_publish">
-            <a href="aws_publish.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_publish
-            </a>
-        </li>
-        <li  title="aws_subscribe">
-            <a href="aws_subscribe.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_subscribe
-            </a>
-        </li>
-        <li  title="defer">
-            <a href="defer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                defer
-            </a>
-        </li>
         <li  title="deprecated">
             <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 deprecated
@@ -412,7 +392,7 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">IdentificationReportResults</h1>
-        <div class="slds-text-body--regular"><p>  The tabular report format is used on most gem identification reports.</p>
+        <div class="slds-text-body--regular"><p>The tabular report format is used on most gem identification reports.</p>
 </div>
     </div>
 </section>
@@ -424,7 +404,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">IdentificationReportResults</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Weight given in carats, grams, or kilograms. If given in carats, recorded to </span></span></li><li><span class="tab"><span class="comment line">#   the nearest hundredth of a carat. One carat is equal to 1/5 of a gram.</span></span></li><li><span class="tab"><span class="meta">weight</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Gemstone dimensions listed as 'minimum diameter – maximum diameter x depth' </span></span></li><li><span class="tab"><span class="comment line">#   for round diamonds and 'length x width x depth' for fancy-shaped gemstones.</span></span></li><li><span class="tab"><span class="meta">measurements</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of the outline of the gemstone.</span></span></li><li><span class="tab"><span class="meta">shape</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of the outline of the gemstone.</span></span></li><li><span class="tab"><span class="meta">cutting_style</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of the outline for the crown portion of the gemstone.</span></span></li><li><span class="tab"><span class="meta">cutting_style_crown</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of the outline for the pavilion portion of the gemstone.</span></span></li><li><span class="tab"><span class="meta">cutting_style_pavilion</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of the degree to which the gemstone allows light to pass through </span></span></li><li><span class="tab"><span class="comment line">#   it.</span></span></li><li><span class="tab"><span class="meta">transparency</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     General description of the color.</span></span></li><li><span class="tab"><span class="meta">color</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of the mounted item and additional information.</span></span></li><li><span class="tab"><span class="meta">item_description</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Gem category based on chemical composition and crystal structure.</span></span></li><li><span class="tab"><span class="meta">species</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The gemstone’s geographic origin.</span></span></li><li><span class="tab"><span class="meta">geographic_origin</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Classification system which relates the geological environment in which a </span></span></li><li><span class="tab"><span class="comment line">#   stone was formed to the stone's features and properties.</span></span></li><li><span class="tab"><span class="meta">source_type</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The gemstone's locality.</span></span></li><li><span class="tab"><span class="meta">gem_locality_information_title</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of gemstone’s locality information.</span></span></li><li><span class="tab"><span class="meta">gem_locality_information</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Sub-category of species, based on color, transparency, and/or phenomenon.</span></span></li><li><span class="tab"><span class="meta">variety</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of the optical effect displayed by the gemstone.</span></span></li><li><span class="tab"><span class="meta">phenomenon</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Treatments identified.</span></span></li><li><span class="tab"><span class="meta">treatment</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Machine readable code indicating any identified treatments. For GIA use only.</span></span></li><li><span class="tab"><span class="meta">treatment_codes</span>: [<a class="support type" href="treatmentcodes.doc.html">TreatmentCodes</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#     Additional identifying characteristics or features that are not otherwise </span></span></li><li><span class="tab"><span class="comment line">#   represented on the report.</span></span></li><li><span class="tab"><span class="meta">report_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     This field will show a comment if a duplicate report is printed at a later </span></span></li><li><span class="tab"><span class="comment line">#   date.</span></span></li><li><span class="tab"><span class="meta">duplicate_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     M2M data and media.</span></span></li><li><span class="tab"><span class="meta">m2m_rough_data</span>: <a class="support type" href="m2mroughdata.doc.html">M2MRoughData</a> <span class="keyword operator ts">@deprecated</span>( reason: <span class="string">"M2M no longer supported." </span> )</span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">IdentificationReportResults</span> {</li><li></li><li><span class="tab"><span class="comment line">#   Weight given in carats, grams, or kilograms. If given in carats, recorded to the </span></span></li><li><span class="tab"><span class="comment line">#   nearest hundredth of a carat. One carat is equal to 1/5 of a gram.</span></span></li><li><span class="tab"><span class="meta">weight</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Gemstone dimensions listed as 'minimum diameter – maximum diameter x depth' for </span></span></li><li><span class="tab"><span class="comment line">#   round diamonds and 'length x width x depth' for fancy-shaped gemstones.</span></span></li><li><span class="tab"><span class="meta">measurements</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Description of the outline of the gemstone.</span></span></li><li><span class="tab"><span class="meta">shape</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Description of the outline of the gemstone.</span></span></li><li><span class="tab"><span class="meta">cutting_style</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Description of the outline for the crown portion of the gemstone.</span></span></li><li><span class="tab"><span class="meta">cutting_style_crown</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Description of the outline for the pavilion portion of the gemstone.</span></span></li><li><span class="tab"><span class="meta">cutting_style_pavilion</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Description of the degree to which the gemstone allows light to pass through it.</span></span></li><li><span class="tab"><span class="meta">transparency</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   General description of the color.</span></span></li><li><span class="tab"><span class="meta">color</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Description of the mounted item and additional information.</span></span></li><li><span class="tab"><span class="meta">item_description</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Gem category based on chemical composition and crystal structure.</span></span></li><li><span class="tab"><span class="meta">species</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The gemstone’s geographic origin.</span></span></li><li><span class="tab"><span class="meta">geographic_origin</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Classification system which relates the geological environment in which a stone </span></span></li><li><span class="tab"><span class="comment line">#   was formed to the stone's features and properties.</span></span></li><li><span class="tab"><span class="meta">source_type</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The gemstone's locality.</span></span></li><li><span class="tab"><span class="meta">gem_locality_information_title</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Description of gemstone’s locality information.</span></span></li><li><span class="tab"><span class="meta">gem_locality_information</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Sub-category of species, based on color, transparency, and/or phenomenon.</span></span></li><li><span class="tab"><span class="meta">variety</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Description of the optical effect displayed by the gemstone.</span></span></li><li><span class="tab"><span class="meta">phenomenon</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Treatments identified.</span></span></li><li><span class="tab"><span class="meta">treatment</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Machine readable code indicating any identified treatments. For GIA use only.</span></span></li><li><span class="tab"><span class="meta">treatment_codes</span>: [<a class="support type" href="treatmentcodes.doc.html">TreatmentCodes</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#   Additional identifying characteristics or features that are not otherwise </span></span></li><li><span class="tab"><span class="comment line">#   represented on the report.</span></span></li><li><span class="tab"><span class="meta">report_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   This field will show a comment if a duplicate report is printed at a later date.</span></span></li><li><span class="tab"><span class="meta">duplicate_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   M2M data and media.</span></span></li><li><span class="tab"><span class="meta">m2m_rough_data</span>: <a class="support type" href="m2mroughdata.doc.html">M2MRoughData</a> <span class="keyword operator ts">@deprecated</span>( reason: <span class="string">"M2M no longer supported." </span> )</span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -435,7 +415,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="reportresults.doc.html" title="ReportResults -   The structure of report results varies by the type of report.">ReportResults<em>  The structure of report results varies by the type of report.</em></a><li></ul>
+        <ul class="require-by"><li><a href="reportresults.doc.html" title="ReportResults - The structure of report results varies by the type of report.">ReportResults<em>The structure of report results varies by the type of report.</em></a><li></ul>
     </div>
 </section>
 <footer>

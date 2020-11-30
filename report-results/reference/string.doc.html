@@ -16,7 +16,7 @@
             <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
                 <i class="material-icons">close</i>
             </button>
-                <a href="/" style="display:block;padding:1rem 15%"><img src="/static/gia-logo.svg" /></a>
+                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
             <div class="slds-p-top--small">
                 <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
             </div>
@@ -63,6 +63,16 @@
         <li  title="ClarityGradeCode">
             <a href="claritygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityGradeCode
+            </a>
+        </li>
+        <li  title="ColorDistributionCode">
+            <a href="colordistributioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorDistributionCode
+            </a>
+        </li>
+        <li  title="ColoredDiamondColorGradeCode">
+            <a href="coloreddiamondcolorgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColoredDiamondColorGradeCode
             </a>
         </li>
         <li  title="CountryOfOriginCode">
@@ -160,6 +170,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Unions</h4>
     <ul>
+        <li  title="ColorGrade">
+            <a href="colorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorGrade
+            </a>
+        </li>
         <li  title="Measurements">
             <a href="measurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Measurements
@@ -175,6 +190,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
+        <li  title="CDColorGrade">
+            <a href="cdcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CDColorGrade
+            </a>
+        </li>
         <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
@@ -340,46 +360,6 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
     <ul>
-        <li  title="aws_api_key">
-            <a href="aws_api_key.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_api_key
-            </a>
-        </li>
-        <li  title="aws_auth">
-            <a href="aws_auth.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_auth
-            </a>
-        </li>
-        <li  title="aws_cognito_user_pools">
-            <a href="aws_cognito_user_pools.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_cognito_user_pools
-            </a>
-        </li>
-        <li  title="aws_iam">
-            <a href="aws_iam.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_iam
-            </a>
-        </li>
-        <li  title="aws_oidc">
-            <a href="aws_oidc.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_oidc
-            </a>
-        </li>
-        <li  title="aws_publish">
-            <a href="aws_publish.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_publish
-            </a>
-        </li>
-        <li  title="aws_subscribe">
-            <a href="aws_subscribe.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                aws_subscribe
-            </a>
-        </li>
-        <li  title="defer">
-            <a href="defer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                defer
-            </a>
-        </li>
         <li  title="deprecated">
             <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 deprecated
@@ -412,7 +392,7 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">SCALAR</p>
         <h1 class="slds-text-heading--large">String</h1>
-        <div class="slds-text-body--regular"><p>Built-in String</p>
+        <div class="slds-text-body--regular"><p>The <code>String</code> scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.</p>
 </div>
     </div>
 </section>
@@ -435,7 +415,15 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="claritycharacteristic.doc.html" title="ClarityCharacteristic -   A clarity characteristic listed in the key to symbols.">ClarityCharacteristic<em>  A clarity characteristic listed in the key to symbols.</em></a><li><li><a href="diamondgradingreportresults.doc.html" title="DiamondGradingReportResults -   Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.">DiamondGradingReportResults<em>  Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.</em></a><li><li><a href="diamondproportions.doc.html" title="DiamondProportions -   Parameters available on the proportion diagram if any.">DiamondProportions<em>  Parameters available on the proportion diagram if any.</em></a><li><li><a href="diamondshape.doc.html" title="DiamondShape -   The diamond shape details.">DiamondShape<em>  The diamond shape details.</em></a><li><li><a href="dzcolorgrade.doc.html" title="DZColorGrade -   Fields on the D-Z scale.">DZColorGrade<em>  Fields on the D-Z scale.</em></a><li><li><a href="girdle.doc.html" title="Girdle -   Thickness of the intersection of the crown and pavilion which defines the perimeter of the diamond.">Girdle<em>  Thickness of the intersection of the crown and pavilion which defines the perimeter of the diamond.</em></a><li><li><a href="gradingreport.doc.html" title="GradingReport -   The base grading report object.">GradingReport<em>  The base grading report object.</em></a><li><li><a href="identificationreportresults.doc.html" title="IdentificationReportResults -   The tabular report format is used on most gem identification reports.">IdentificationReportResults<em>  The tabular report format is used on most gem identification reports.</em></a><li><li><a href="inscriptiongraphic.doc.html" title="InscriptionGraphic -   Inscription graphics.">InscriptionGraphic<em>  Inscription graphics.</em></a><li><li><a href="labgrowndiamondgradingreportresults.doc.html" title="LabGrownDiamondGradingReportResults -   Results for grading reports on synthetic diamonds.">LabGrownDiamondGradingReportResults<em>  Results for grading reports on synthetic diamonds.</em></a><li><li><a href="links.doc.html" title="Links -   Links to supplementary files, such as PDFs, images, and videos. Links are temporary and will expire after 60 minutes.">Links<em>  Links to supplementary files, such as PDFs, images, and videos. Links are temporary and will expire after 60 minutes.</em></a><li><li><a href="m2mroughdata.doc.html" title="M2MRoughData - ">M2MRoughData<em>null</em></a><li><li><a href="meleeservicepackage.doc.html" title="MeleeServicePackage -   The GIA Melee Analysis Service separates natural, untreated diamonds from simulants, synthetic and HPHT treated natural diamonds, and sorts the screened diamonds by color range.">MeleeServicePackage<em>  The GIA Melee Analysis Service separates natural, untreated diamonds from simulants, synthetic and HPHT treated natural diamonds, and sorts the screened diamonds by color range.</em></a><li><li><a href="narrativereportresults.doc.html" title="NarrativeReportResults -   The narrative report format is used on some gem identification reports.">NarrativeReportResults<em>  The narrative report format is used on some gem identification reports.</em></a><li><li><a href="pearlidentreportresults.doc.html" title="PearlIdentReportResults -   Pearl Identification Tabular Format report.">PearlIdentReportResults<em>  Pearl Identification Tabular Format report.</em></a><li><li><a href="query.doc.html" title="Query -   Query your grading report.">Query<em>  Query your grading report.</em></a><li><li><a href="quotabucket.doc.html" title="QuotaBucket -   A lookup bucket and it's attributes.">QuotaBucket<em>  A lookup bucket and it's attributes.</em></a><li><li><a href="reportupdated.doc.html" title="ReportUpdated -   Indicates if a report has been updated, and if so, the date of the update.">ReportUpdated<em>  Indicates if a report has been updated, and if so, the date of the update.</em></a><li><li><a href="weight.doc.html" title="Weight -   Weight of the item.">Weight<em>  Weight of the item.</em></a><li><li><a href="directive.spec.html" title="__Directive - ">__Directive<em>null</em></a><li><li><a href="enumvalue.spec.html" title="__EnumValue - ">__EnumValue<em>null</em></a><li><li><a href="field.spec.html" title="__Field - ">__Field<em>null</em></a><li><li><a href="inputvalue.spec.html" title="__InputValue - ">__InputValue<em>null</em></a><li><li><a href="type.spec.html" title="__Type - ">__Type<em>null</em></a><li></ul>
+        <ul class="require-by"><li><a href="cdcolorgrade.doc.html" title="CDColorGrade - Colored diamond grading fields">CDColorGrade<em>Colored diamond grading fields</em></a><li><li><a href="claritycharacteristic.doc.html" title="ClarityCharacteristic - A clarity characteristic listed in the key to symbols.">ClarityCharacteristic<em>A clarity characteristic listed in the key to symbols.</em></a><li><li><a href="diamondgradingreportresults.doc.html" title="DiamondGradingReportResults - Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.">DiamondGradingReportResults<em>Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.</em></a><li><li><a href="diamondproportions.doc.html" title="DiamondProportions - Parameters available on the proportion diagram if any.">DiamondProportions<em>Parameters available on the proportion diagram if any.</em></a><li><li><a href="diamondshape.doc.html" title="DiamondShape - The diamond shape details.">DiamondShape<em>The diamond shape details.</em></a><li><li><a href="dzcolorgrade.doc.html" title="DZColorGrade - Fields on the D-Z scale.">DZColorGrade<em>Fields on the D-Z scale.</em></a><li><li><a href="girdle.doc.html" title="Girdle - Thickness of the intersection of the crown and pavilion which defines the perimeter of the diamond.">Girdle<em>Thickness of the intersection of the crown and pavilion which defines the perimeter of the diamond.</em></a><li><li><a href="gradingreport.doc.html" title="GradingReport - The base grading report object.">GradingReport<em>The base grading report object.</em></a><li><li><a href="identificationreportresults.doc.html" title="IdentificationReportResults - The tabular report format is used on most gem identification reports.">IdentificationReportResults<em>The tabular report format is used on most gem identification reports.</em></a><li><li><a href="inscriptiongraphic.doc.html" title="InscriptionGraphic - Inscription graphics.">InscriptionGraphic<em>Inscription graphics.</em></a><li><li><a href="labgrowndiamondgradingreportresults.doc.html" title="LabGrownDiamondGradingReportResults - Results for grading reports on synthetic diamonds.">LabGrownDiamondGradingReportResults<em>Results for grading reports on synthetic diamonds.</em></a><li><li><a href="links.doc.html" title="Links - Links to supplementary files, such as PDFs, images, and videos. Links are temporary and will expire after 60 minutes.">Links<em>Links to supplementary files, such as PDFs, images, and videos. Links are temporary and will expire after 60 minutes.</em></a><li><li><a href="m2mroughdata.doc.html" title="M2MRoughData - ">M2MRoughData<em></em></a><li><li><a href="meleeservicepackage.doc.html" title="MeleeServicePackage - The GIA Melee Analysis Service separates natural, untreated diamonds from simulants, synthetic and HPHT treated natural diamonds, and sorts the screened diamonds by color range.">MeleeServicePackage<em>The GIA Melee Analysis Service separates natural, untreated diamonds from simulants, synthetic and HPHT treated natural diamonds, and sorts the screened diamonds by color range.</em></a><li><li><a href="narrativereportresults.doc.html" title="NarrativeReportResults - The narrative report format is used on some gem identification reports.">NarrativeReportResults<em>The narrative report format is used on some gem identification reports.</em></a><li><li><a href="pearlidentreportresults.doc.html" title="PearlIdentReportResults - Pearl Identification Tabular Format report.">PearlIdentReportResults<em>Pearl Identification Tabular Format report.</em></a><li><li><a href="query.doc.html" title="Query - Query your grading report.">Query<em>Query your grading report.</em></a><li><li><a href="quotabucket.doc.html" title="QuotaBucket - A lookup bucket and it's attributes.">QuotaBucket<em>A lookup bucket and it's attributes.</em></a><li><li><a href="reportupdated.doc.html" title="ReportUpdated - Indicates if a report has been updated, and if so, the date of the update.">ReportUpdated<em>Indicates if a report has been updated, and if so, the date of the update.</em></a><li><li><a href="weight.doc.html" title="Weight - Weight of the item.">Weight<em>Weight of the item.</em></a><li><li><a href="directive.spec.html" title="__Directive - A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
+
+In some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.">__Directive<em>A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
+
+In some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.</em></a><li><li><a href="enumvalue.spec.html" title="__EnumValue - One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.">__EnumValue<em>One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.</em></a><li><li><a href="field.spec.html" title="__Field - Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.">__Field<em>Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.</em></a><li><li><a href="inputvalue.spec.html" title="__InputValue - Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.">__InputValue<em>Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.</em></a><li><li><a href="type.spec.html" title="__Type - The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.
+
+Depending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.">__Type<em>The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.
+
+Depending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.</em></a><li></ul>
     </div>
 </section>
 <footer>
