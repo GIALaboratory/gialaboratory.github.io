@@ -440,7 +440,7 @@ __Important:__ Subscribe to notifications at [status.gia.edu](https://status.gia
 
 ### Migrating from the Legacy Report Check API
 
-Some fields are coded differently in this API. In most cases, we have provided both the abbreviated and full text fields. 
+Some fields are coded differently in this API. In most cases, we have provided both the abbreviated and full text fields.
 
 Example:
 
@@ -448,44 +448,6 @@ Example:
 |-------|-------------------------|--------------------|
 | Culet | VSM | Very Small |
 | Girdle | STK to THK, F | Slightly Thick to Thick, Faceted |
-
-#### Culet Size 
-
-|     Meaning            |     Code    |
-|------------------------|-------------|
-|     None               |     NON     |
-|     Very Small         |     VSM     |
-|     Small              |     SML     |
-|     Medium             |     MED     |
-|     Slightly Large     |     SLG     |
-|     Large              |     LGE     |
-|     Very Large         |     VLG     |
-|     Extremely Large    |     ELG     |
-|     Not Applicable     |     N/A     |
-
-#### Girdle Thickness
-
-|     Meaning            |     Code    |
-|------------------------|-------------|
-|     Extremely Thin     |     ETN     |
-|     Very Thin          |     VTN     |
-|     Thin               |     THN     |
-|     Medium             |     MED     |
-|     Slightly Thick     |     STK     |
-|     Thick              |     THK     |
-|     Very Thick         |     VTK     |
-|     Extremely Thick    |     ETK     |
-|     Not Applicable     |     N/A     |
-
-#### Girdle Condition
-
-|     Meaning            |     Code    |
-|------------------------|-------------|
-|     Faceted            |     F       |
-|     Polished           |     P       |
-|     Bruted             |     B       |
-|     Lasered            |     L       |
-|     Not Applicable     |     N/A     |
 
 ### Error Conditions
 
