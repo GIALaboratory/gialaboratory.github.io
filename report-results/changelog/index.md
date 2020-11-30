@@ -8,23 +8,13 @@ title: What's New
 
 #### Added
 
-- The object `ColorGrade` replaces the existing `Color` object.
-  
-  - `ColorGrade` is a `union` between the existing `DZColorGrade` object and the new `CDColorGrade` object.
-- The object `CDColorGrade` has been added to support colored diamond grades.
-  - Contains three new fields which can be referenced [here.](https://gialaboratory.github.io/report-results/reference/cdcolorgrade.doc.html)
-  - The enum `ColoredDiamondColorGradeCode` provides [abbreviations](https://gialaboratory.github.io/report-results/reference/coloreddiamondcolorgradecode.doc.html) for colored diamond grades.
-- The enum `ColorDistributionCode`  provides [abbreviations](https://gialaboratory.github.io/report-results/reference/colordistributioncode.doc.html) for color distribution.
-- A new GraphQL query to retrieve a list of previously received (queried) reports that have since been updated to avoid unnecessary report queries.  Full documentation can be found in the "[Checking for Stale Reports](https://gialaboratory.github.io/report-results/docs/#checking-for-stale-reports)" section of the [API documentation](https://gialaboratory.github.io/report-results/docs/).
-
-#### Changed
-
-- Updates to various configurable settings have reduced latency both when querying a report, and when downloading a file from an embedded link.
-- Various updates to improve performance, exception handling, accurate report linking, and other functions.
+- Colored diamond color grades are now available as individual fields. See [CDColorGrade](https://gialaboratory.github.io/report-results/reference/cdcolorgrade.doc.html) for more information.
+- You can now receive updates on any report for 18 months from the time of your original lookup. See [Checking for Stale Reports](https://gialaboratory.github.io/report-results/docs/#checking-for-stale-reports) for  implementation details.
+- Various performance improvements and bug fixes.
 
 #### Deprecated
 
-- `color` has been deprecated and the union `color_grades` should be used instead.  The fields in `color` can be found in `DZColorGrade`
+- The `color` field of [DiamondData](https://gialaboratory.github.io/report-results/reference/diamonddata.doc.html) has been deprecated. Use `color_grades` instead. 
 
 ## 2020-08-26
 
