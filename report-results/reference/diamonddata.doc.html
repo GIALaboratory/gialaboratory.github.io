@@ -16,7 +16,7 @@
             <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
                 <i class="material-icons">close</i>
             </button>
-                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
+                <a href="/" style="display:block;padding:1rem 15%"><img src="/static/gia-logo.svg" /></a>
             <div class="slds-p-top--small">
                 <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
             </div>
@@ -28,6 +28,11 @@
         <li  title="Query">
             <a href="query.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Query
+            </a>
+        </li>
+        <li  title="Mutation">
+            <a href="mutation.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Mutation
             </a>
         </li>
     </ul>
@@ -195,6 +200,16 @@
                 CDColorGrade
             </a>
         </li>
+        <li  title="ChangedReportResult">
+            <a href="changedreportresult.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ChangedReportResult
+            </a>
+        </li>
+        <li  title="ChangedReportResults">
+            <a href="changedreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ChangedReportResults
+            </a>
+        </li>
         <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
@@ -360,6 +375,46 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
     <ul>
+        <li  title="aws_api_key">
+            <a href="aws_api_key.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_api_key
+            </a>
+        </li>
+        <li  title="aws_auth">
+            <a href="aws_auth.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_auth
+            </a>
+        </li>
+        <li  title="aws_cognito_user_pools">
+            <a href="aws_cognito_user_pools.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_cognito_user_pools
+            </a>
+        </li>
+        <li  title="aws_iam">
+            <a href="aws_iam.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_iam
+            </a>
+        </li>
+        <li  title="aws_oidc">
+            <a href="aws_oidc.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_oidc
+            </a>
+        </li>
+        <li  title="aws_publish">
+            <a href="aws_publish.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_publish
+            </a>
+        </li>
+        <li  title="aws_subscribe">
+            <a href="aws_subscribe.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_subscribe
+            </a>
+        </li>
+        <li  title="defer">
+            <a href="defer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                defer
+            </a>
+        </li>
         <li  title="deprecated">
             <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 deprecated
@@ -392,7 +447,7 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">DiamondData</h1>
-        <div class="slds-text-body--regular"><p>Additional data fields in machine-readable format.</p>
+        <div class="slds-text-body--regular"><p>  Additional data fields in machine-readable format.</p>
 </div>
     </div>
 </section>
@@ -404,7 +459,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">DiamondData</span> {</li><li></li><li><span class="tab"><span class="comment line">#   The shape details.</span></span></li><li><span class="tab"><span class="meta">shape</span>: <a class="support type" href="diamondshape.doc.html">DiamondShape</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The measurement details.</span></span></li><li><span class="tab"><span class="meta">measurements</span>: <a class="support type" href="measurements.doc.html">Measurements</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The weight details.</span></span></li><li><span class="tab"><span class="meta">weight</span>: <a class="support type" href="weight.doc.html">Weight</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The color grade.</span></span></li><li><span class="tab"><span class="meta">color</span>: <a class="support type" href="dzcolorgrade.doc.html">DZColorGrade</a> <span class="keyword operator ts">@deprecated</span>( reason: <span class="string">"Please use color_grades field instead." </span> )</span></li><li></li><li><span class="tab"><span class="comment line">#   The colored diamond grading fields</span></span></li><li><span class="tab"><span class="meta">color_grades</span>: <a class="support type" href="colorgrade.doc.html">ColorGrade</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The clarity grade.</span></span></li><li><span class="tab"><span class="meta">clarity</span>: <a class="support type" href="claritygradecode.doc.html">ClarityGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The cut grade.</span></span></li><li><span class="tab"><span class="meta">cut</span>: <a class="support type" href="cutgradecode.doc.html">CutGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The polish grade.</span></span></li><li><span class="tab"><span class="meta">polish</span>: <a class="support type" href="polishgradecode.doc.html">PolishGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   The symmetry grade.</span></span></li><li><span class="tab"><span class="meta">symmetry</span>: <a class="support type" href="symmetrygradecode.doc.html">SymmetryGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Fluorescence.</span></span></li><li><span class="tab"><span class="meta">fluorescence</span>: <a class="support type" href="fluorescence.doc.html">Fluorescence</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle</span>: <a class="support type" href="girdle.doc.html">Girdle</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Culet size.</span></span></li><li><span class="tab"><span class="meta">culet</span>: <a class="support type" href="culet.doc.html">Culet</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Inscription graphics.</span></span></li><li><span class="tab"><span class="meta">inscription_graphics</span>: [<a class="support type" href="inscriptiongraphic.doc.html">InscriptionGraphic</a>] </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">DiamondData</span> {</li><li></li><li><span class="tab"><span class="comment line">#     The shape details.</span></span></li><li><span class="tab"><span class="meta">shape</span>: <a class="support type" href="diamondshape.doc.html">DiamondShape</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The measurement details.</span></span></li><li><span class="tab"><span class="meta">measurements</span>: <a class="support type" href="measurements.doc.html">Measurements</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The weight details.</span></span></li><li><span class="tab"><span class="meta">weight</span>: <a class="support type" href="weight.doc.html">Weight</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The color grade.</span></span></li><li><span class="tab"><span class="meta">color</span>: <a class="support type" href="dzcolorgrade.doc.html">DZColorGrade</a> <span class="keyword operator ts">@deprecated</span>( reason: <span class="string">"Please use color_grades field instead." </span> )</span></li><li></li><li><span class="tab"><span class="comment line">#     The colored diamond grading fields</span></span></li><li><span class="tab"><span class="meta">color_grades</span>: <a class="support type" href="colorgrade.doc.html">ColorGrade</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The clarity grade.</span></span></li><li><span class="tab"><span class="meta">clarity</span>: <a class="support type" href="claritygradecode.doc.html">ClarityGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The cut grade.</span></span></li><li><span class="tab"><span class="meta">cut</span>: <a class="support type" href="cutgradecode.doc.html">CutGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The polish grade.</span></span></li><li><span class="tab"><span class="meta">polish</span>: <a class="support type" href="polishgradecode.doc.html">PolishGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The symmetry grade.</span></span></li><li><span class="tab"><span class="meta">symmetry</span>: <a class="support type" href="symmetrygradecode.doc.html">SymmetryGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Fluorescence.</span></span></li><li><span class="tab"><span class="meta">fluorescence</span>: <a class="support type" href="fluorescence.doc.html">Fluorescence</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle</span>: <a class="support type" href="girdle.doc.html">Girdle</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Culet size.</span></span></li><li><span class="tab"><span class="meta">culet</span>: <a class="support type" href="culet.doc.html">Culet</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Inscription graphics.</span></span></li><li><span class="tab"><span class="meta">inscription_graphics</span>: [<a class="support type" href="inscriptiongraphic.doc.html">InscriptionGraphic</a>] </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -415,7 +470,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="diamondgradingreportresults.doc.html" title="DiamondGradingReportResults - Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.">DiamondGradingReportResults<em>Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.</em></a><li></ul>
+        <ul class="require-by"><li><a href="diamondgradingreportresults.doc.html" title="DiamondGradingReportResults -   Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.">DiamondGradingReportResults<em>  Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.</em></a><li></ul>
     </div>
 </section>
 <footer>

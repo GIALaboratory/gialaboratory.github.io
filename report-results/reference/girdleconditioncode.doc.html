@@ -16,7 +16,7 @@
             <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
                 <i class="material-icons">close</i>
             </button>
-                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
+                <a href="/" style="display:block;padding:1rem 15%"><img src="/static/gia-logo.svg" /></a>
             <div class="slds-p-top--small">
                 <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
             </div>
@@ -28,6 +28,11 @@
         <li  title="Query">
             <a href="query.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Query
+            </a>
+        </li>
+        <li  title="Mutation">
+            <a href="mutation.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Mutation
             </a>
         </li>
     </ul>
@@ -195,6 +200,16 @@
                 CDColorGrade
             </a>
         </li>
+        <li  title="ChangedReportResult">
+            <a href="changedreportresult.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ChangedReportResult
+            </a>
+        </li>
+        <li  title="ChangedReportResults">
+            <a href="changedreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ChangedReportResults
+            </a>
+        </li>
         <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
@@ -360,6 +375,46 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
     <ul>
+        <li  title="aws_api_key">
+            <a href="aws_api_key.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_api_key
+            </a>
+        </li>
+        <li  title="aws_auth">
+            <a href="aws_auth.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_auth
+            </a>
+        </li>
+        <li  title="aws_cognito_user_pools">
+            <a href="aws_cognito_user_pools.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_cognito_user_pools
+            </a>
+        </li>
+        <li  title="aws_iam">
+            <a href="aws_iam.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_iam
+            </a>
+        </li>
+        <li  title="aws_oidc">
+            <a href="aws_oidc.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_oidc
+            </a>
+        </li>
+        <li  title="aws_publish">
+            <a href="aws_publish.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_publish
+            </a>
+        </li>
+        <li  title="aws_subscribe">
+            <a href="aws_subscribe.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                aws_subscribe
+            </a>
+        </li>
+        <li  title="defer">
+            <a href="defer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                defer
+            </a>
+        </li>
         <li  title="deprecated">
             <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 deprecated
@@ -392,7 +447,7 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
         <h1 class="slds-text-heading--large">GirdleConditionCode</h1>
-        <div class="slds-text-body--regular"><p>Girdle condition codes.</p>
+        <div class="slds-text-body--regular"><p>  Girdle condition codes.</p>
 </div>
     </div>
 </section>
@@ -404,7 +459,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">GirdleConditionCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Faceted</span></span></li><li><span class="tab"><span class="meta">F</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Polished</span></span></li><li><span class="tab"><span class="meta">P</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Bruted</span></span></li><li><span class="tab"><span class="meta">B</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Lasered</span></span></li><li><span class="tab"><span class="meta">L</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Not Applicable</span></span></li><li><span class="tab"><span class="meta">NA</span></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">GirdleConditionCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">F</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">P</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">B</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">L</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NA</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -415,7 +470,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="girdle.doc.html" title="Girdle - Thickness of the intersection of the crown and pavilion which defines the perimeter of the diamond.">Girdle<em>Thickness of the intersection of the crown and pavilion which defines the perimeter of the diamond.</em></a><li></ul>
+        <ul class="require-by"><li><a href="girdle.doc.html" title="Girdle -   Thickness of the intersection of the crown and pavilion which defines the perimeter of the diamond.">Girdle<em>  Thickness of the intersection of the crown and pavilion which defines the perimeter of the diamond.</em></a><li></ul>
     </div>
 </section>
 <footer>
