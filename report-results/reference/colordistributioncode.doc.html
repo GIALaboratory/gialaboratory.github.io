@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
+    <title>ColorDistributionCode</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
+</head>
+<body class="slds-scrollable--y">
+    <nav class="slds-grid slds-grid--vertical slds-col--rule-right">
+        <header class="slds-p-around--medium slds-col slds-shrik slds-grow-none">
+            <button class="slds-button slds-button--icon slds-float--right js-toggle-navigation less-than-medium">
+                <i class="material-icons">close</i>
+            </button>
+                <h3 class="slds-text-heading--medium"><a href="./">GraphQL Schema</a></h3>
+            <div class="slds-p-top--small">
+                <input id="type-search" type="text" placeholder="Search a type" autofocus="" class="slds-input" />
+            </div>
+        </header>
+        <div id="navication-scroll" class="slds-scrollable--y slds-col slds-grow">
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Schema</h4>
+    <ul>
+        <li  title="Query">
+            <a href="query.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Query
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Scalars</h4>
+    <ul>
+        <li  title="Boolean">
+            <a href="boolean.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Boolean
+            </a>
+        </li>
+        <li  title="Float">
+            <a href="float.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Float
+            </a>
+        </li>
+        <li  title="Int">
+            <a href="int.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Int
+            </a>
+        </li>
+        <li  title="String">
+            <a href="string.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                String
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Enums</h4>
+    <ul>
+        <li  title="ClarityGradeCode">
+            <a href="claritygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ClarityGradeCode
+            </a>
+        </li>
+        <li class="slds-is-active" title="ColorDistributionCode">
+            <a href="colordistributioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorDistributionCode
+            </a>
+        </li>
+        <li  title="ColoredDiamondColorGradeCode">
+            <a href="coloreddiamondcolorgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColoredDiamondColorGradeCode
+            </a>
+        </li>
+        <li  title="CountryOfOriginCode">
+            <a href="countryoforigincode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CountryOfOriginCode
+            </a>
+        </li>
+        <li  title="CuletCode">
+            <a href="culetcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CuletCode
+            </a>
+        </li>
+        <li  title="CutGradeCode">
+            <a href="cutgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CutGradeCode
+            </a>
+        </li>
+        <li  title="DZColorGradeCode">
+            <a href="dzcolorgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DZColorGradeCode
+            </a>
+        </li>
+        <li  title="FluorescenceColor">
+            <a href="fluorescencecolor.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FluorescenceColor
+            </a>
+        </li>
+        <li  title="FluorescenceIntensityCode">
+            <a href="fluorescenceintensitycode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FluorescenceIntensityCode
+            </a>
+        </li>
+        <li  title="GirdleConditionCode">
+            <a href="girdleconditioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GirdleConditionCode
+            </a>
+        </li>
+        <li  title="GirdleSizeCode">
+            <a href="girdlesizecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GirdleSizeCode
+            </a>
+        </li>
+        <li  title="PolishGradeCode">
+            <a href="polishgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PolishGradeCode
+            </a>
+        </li>
+        <li  title="QuotaBucketStatus">
+            <a href="quotabucketstatus.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QuotaBucketStatus
+            </a>
+        </li>
+        <li  title="ReportTypeCode">
+            <a href="reporttypecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReportTypeCode
+            </a>
+        </li>
+        <li  title="ShapeCategory">
+            <a href="shapecategory.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ShapeCategory
+            </a>
+        </li>
+        <li  title="ShapeCode">
+            <a href="shapecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ShapeCode
+            </a>
+        </li>
+        <li  title="ShapeGroupCode">
+            <a href="shapegroupcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ShapeGroupCode
+            </a>
+        </li>
+        <li  title="SymmetryGradeCode">
+            <a href="symmetrygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                SymmetryGradeCode
+            </a>
+        </li>
+        <li  title="TreatmentCode">
+            <a href="treatmentcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TreatmentCode
+            </a>
+        </li>
+        <li  title="__DirectiveLocation">
+            <a href="directivelocation.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __DirectiveLocation
+            </a>
+        </li>
+        <li  title="__TypeKind">
+            <a href="typekind.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __TypeKind
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Unions</h4>
+    <ul>
+        <li  title="ColorGrade">
+            <a href="colorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ColorGrade
+            </a>
+        </li>
+        <li  title="Measurements">
+            <a href="measurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Measurements
+            </a>
+        </li>
+        <li  title="ReportResults">
+            <a href="reportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReportResults
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
+    <ul>
+        <li  title="CDColorGrade">
+            <a href="cdcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CDColorGrade
+            </a>
+        </li>
+        <li  title="ClarityCharacteristic">
+            <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ClarityCharacteristic
+            </a>
+        </li>
+        <li  title="Culet">
+            <a href="culet.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Culet
+            </a>
+        </li>
+        <li  title="DiamondData">
+            <a href="diamonddata.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DiamondData
+            </a>
+        </li>
+        <li  title="DiamondGradingReportResults">
+            <a href="diamondgradingreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DiamondGradingReportResults
+            </a>
+        </li>
+        <li  title="DiamondProportions">
+            <a href="diamondproportions.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DiamondProportions
+            </a>
+        </li>
+        <li  title="DiamondShape">
+            <a href="diamondshape.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DiamondShape
+            </a>
+        </li>
+        <li  title="DZColorGrade">
+            <a href="dzcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DZColorGrade
+            </a>
+        </li>
+        <li  title="FancyMeasurements">
+            <a href="fancymeasurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                FancyMeasurements
+            </a>
+        </li>
+        <li  title="Fluorescence">
+            <a href="fluorescence.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Fluorescence
+            </a>
+        </li>
+        <li  title="Girdle">
+            <a href="girdle.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Girdle
+            </a>
+        </li>
+        <li  title="GradingReport">
+            <a href="gradingreport.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GradingReport
+            </a>
+        </li>
+        <li  title="IdentificationReportResults">
+            <a href="identificationreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                IdentificationReportResults
+            </a>
+        </li>
+        <li  title="InscriptionGraphic">
+            <a href="inscriptiongraphic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                InscriptionGraphic
+            </a>
+        </li>
+        <li  title="LabGrownDiamondGradingReportResults">
+            <a href="labgrowndiamondgradingreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                LabGrownDiamondGradingReportResults
+            </a>
+        </li>
+        <li  title="Links">
+            <a href="links.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Links
+            </a>
+        </li>
+        <li  title="M2MRoughData">
+            <a href="m2mroughdata.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                M2MRoughData
+            </a>
+        </li>
+        <li  title="MeleeServicePackage">
+            <a href="meleeservicepackage.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                MeleeServicePackage
+            </a>
+        </li>
+        <li  title="MeleeServiceResults">
+            <a href="meleeserviceresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                MeleeServiceResults
+            </a>
+        </li>
+        <li  title="NarrativeReportResults">
+            <a href="narrativereportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                NarrativeReportResults
+            </a>
+        </li>
+        <li  title="PearlIdentReportResults">
+            <a href="pearlidentreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PearlIdentReportResults
+            </a>
+        </li>
+        <li  title="Quota">
+            <a href="quota.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Quota
+            </a>
+        </li>
+        <li  title="QuotaBucket">
+            <a href="quotabucket.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QuotaBucket
+            </a>
+        </li>
+        <li  title="ReportUpdated">
+            <a href="reportupdated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReportUpdated
+            </a>
+        </li>
+        <li  title="RoundMeasurements">
+            <a href="roundmeasurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                RoundMeasurements
+            </a>
+        </li>
+        <li  title="TreatmentCodes">
+            <a href="treatmentcodes.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TreatmentCodes
+            </a>
+        </li>
+        <li  title="Weight">
+            <a href="weight.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Weight
+            </a>
+        </li>
+        <li  title="__Directive">
+            <a href="directive.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Directive
+            </a>
+        </li>
+        <li  title="__EnumValue">
+            <a href="enumvalue.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __EnumValue
+            </a>
+        </li>
+        <li  title="__Field">
+            <a href="field.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Field
+            </a>
+        </li>
+        <li  title="__InputValue">
+            <a href="inputvalue.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __InputValue
+            </a>
+        </li>
+        <li  title="__Schema">
+            <a href="schema.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Schema
+            </a>
+        </li>
+        <li  title="__Type">
+            <a href="type.spec.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                __Type
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
+    <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
+    <ul>
+        <li  title="deprecated">
+            <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                deprecated
+            </a>
+        </li>
+        <li  title="include">
+            <a href="include.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                include
+            </a>
+        </li>
+        <li  title="skip">
+            <a href="skip.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                skip
+            </a>
+        </li>
+    </ul>
+</div>
+        </div>
+    </nav>
+    <main><section class="title slds-theme--inverse">
+    <div class="container slds-grid">
+        <div>
+        <button class="slds-button js-toggle-navigation less-than-medium">
+            <i class="material-icons slds-button__icon slds-button__icon--left">menu</i>
+            <span class="slds-text-title--caps">Types<span>
+        </button>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
+        <h1 class="slds-text-heading--large">ColorDistributionCode</h1>
+        <div class="slds-text-body--regular"><p>Machine readable code indicating the evenness or unevenness of color for colored diamonds. </p>
+</div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2 id="graphql-schema-definition" class="graphdoc-section__title slds-text-heading--medium slds-m-top--small">
+            <a href="#graphql-schema-definition">
+                <i class="material-icons">link</i>
+            </a>
+            GraphQL Schema definition
+        </h2>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ColorDistributionCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Even</span></span></li><li><span class="tab"><span class="meta">E</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Not Applicable</span></span></li><li><span class="tab"><span class="meta">N</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="comment line">#   Uneven</span></span></li><li><span class="tab"><span class="meta">U</span></span></li><li>}</li></ul></code>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2 id="require-by" class="graphdoc-section__title slds-text-heading--medium slds-m-top--small">
+            <a href="#require-by">
+                <i class="material-icons">link</i>
+            </a>
+            Require by
+        </h2>
+        <ul class="require-by"><li><a href="diamondgradingreportresults.doc.html" title="DiamondGradingReportResults - Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.">DiamondGradingReportResults<em>Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.</em></a><li><li><a href="labgrowndiamondgradingreportresults.doc.html" title="LabGrownDiamondGradingReportResults - Results for grading reports on synthetic diamonds.">LabGrownDiamondGradingReportResults<em>Results for grading reports on synthetic diamonds.</em></a><li></ul>
+    </div>
+</section>
+<footer>
+<div class="container slds-p-around--large">
+    <p class="slds-text-align--right slds-text-title--caps">
+        Generated with <a href="https://github.com/2fd/graphdoc#readme" target="_blank">graphdoc 2.4.0</a>
+    </p>
+</div>
+</footer>
+</main>
+    <script src="./scripts/focus-active.js"></script>
+    <script src="./scripts/filter-types.js"></script>
+    <script src="./scripts/toggle-navigation.js"></script>
+</body>
