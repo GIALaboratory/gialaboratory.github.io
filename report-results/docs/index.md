@@ -115,9 +115,9 @@ The `getChangedReports()` query returns a paginated set of report objects that:
 
 The `clearChangedReports()` mutation clears the list of changed reports so that subsequent `getChangedReports()` calls do not list the same updates.
 
-> GIA recommends that you call `getChangedReports()` daily, so that you always have the updated data.
+> Call `getChangedReports()` daily, so that you always have the most recent data.
 
-These sandbox reports are updated hourly. This allows you to test your implementation using `getChangedReports()`.
+Test your implmentation with these sandbox reports. These reports are automatically updated on an hourly basis.
 
 | Report Number | Report Type |
 |------------| --- |
@@ -132,7 +132,7 @@ These sandbox reports are updated hourly. This allows you to test your implement
 
 ###### Example
 
-This example will return the first two changed reports from the queue, plus a cursor to retrieve additional reports in a subsequent request. 
+This example will return the first two updates from the queue and a cursor. The cursor allows you to retrieve additional updates in a subsequent request.
 
 ```graphql
 {
@@ -178,7 +178,7 @@ returns
 
 The `getChangedReports()` query accepts `limit` and `cursor` parameters. These parameters allow you to page through the results, rather than retrieving all results at once. 
 
-If you received a string in `endCursor`, it means you have additional results available. Pass the cursor in your next query in order to obtain the additional results.
+You have additional updates available if you received a string in `endCursor`. Pass the cursor in your next query in order to obtain the additional results.
 
 ```graphql
 {
