@@ -4,6 +4,18 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2020-12-01
+
+#### Added
+
+- Colored diamond color grades are now available as individual fields. See [CDColorGrade](https://gialaboratory.github.io/report-results/reference/cdcolorgrade.doc.html) for more information.
+- You can now receive updates on any report for 18 months from the time of your original lookup. See [Checking for Stale Reports](https://gialaboratory.github.io/report-results/docs/#checking-for-stale-reports) for  implementation details.
+- Various performance improvements and bug fixes.
+
+#### Deprecated
+
+- The `color` field of [DiamondData](https://gialaboratory.github.io/report-results/reference/diamonddata.doc.html) has been deprecated. Use `color_grades` instead. 
+
 ## 2020-08-26
 
 #### Added

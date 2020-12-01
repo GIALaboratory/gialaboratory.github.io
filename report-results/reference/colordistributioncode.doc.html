@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>ClarityCharacteristic</title>
+    <title>ColorDistributionCode</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -70,7 +70,7 @@
                 ClarityGradeCode
             </a>
         </li>
-        <li  title="ColorDistributionCode">
+        <li class="slds-is-active" title="ColorDistributionCode">
             <a href="colordistributioncode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ColorDistributionCode
             </a>
@@ -210,7 +210,7 @@
                 ChangedReportResults
             </a>
         </li>
-        <li class="slds-is-active" title="ClarityCharacteristic">
+        <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
             </a>
@@ -445,9 +445,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">ClarityCharacteristic</h1>
-        <div class="slds-text-body--regular"><p>  A clarity characteristic listed in the key to symbols.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
+        <h1 class="slds-text-heading--large">ColorDistributionCode</h1>
+        <div class="slds-text-body--regular"><p>  Machine readable code indicating the evenness or unevenness of color for colored diamonds. </p>
 </div>
     </div>
 </section>
@@ -459,7 +459,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">ClarityCharacteristic</span> {</li><li></li><li><span class="tab"><span class="comment line">#     The sort order for this characteristic.</span></span></li><li><span class="tab"><span class="meta">order</span>: <a class="support type" href="int.doc.html">Int</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     The clarity characteristic description.</span></span></li><li><span class="tab"><span class="meta">characteristic</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Characteristic image.</span></span></li><li><span class="tab"><span class="meta">image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The location of the clarity characteristic.</span></span></li><li><span class="tab"><span class="meta">location</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ColorDistributionCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">E</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">N</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">U</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>

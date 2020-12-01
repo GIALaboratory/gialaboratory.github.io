@@ -100,11 +100,141 @@ Links are active for 60 minutes from the API call. The API returns an error if y
 
 #### Checking for Stale Reports
 
-Periodically review the status of any reports cached in your systems to avoid presenting outdated information.
+Periodically review the status of any reports cached in your systems to avoid presenting outdated information. 
 
-Pass a report number and date to `isReportUpdated` to determine whether the report was updated after that date. There is no need for you to query `GetReport` for updated data if the response is `false`.
+You are entitled to updates on any report for 18 months from the time of the original lookup at no additional cost. This will assist you in retrieving the most recent report results without incurring any additional charges.
 
-Calling `isReportUpdated` does not incur a lookup.
+##### Consuming Report Update Events
+
+The `getChangedReports()` query returns a paginated set of report objects that:
+
+- were previously fetched by the same API plan within the past 18 months and were updated since last retrieval
+- have not been "flushed" from storage
+- items are automatically flushed from storage after 90 days
+- users are not charged for the request to `getChangedReports()`
+
+The `clearChangedReports()` mutation clears the list of changed reports so that subsequent `getChangedReports()` calls do not list the same updates.
+
+> Call `getChangedReports()` daily, so that you always have the most recent data.
+
+Test your implmentation with these sandbox reports. These reports are automatically updated on an hourly basis.
+
+| Report Number | Report Type |
+|------------| --- |
+| 2141438172 | Diamond Dossier |
+| 2141438169 | Diamond Grading Report |
+| 2141438170 | Diamond Grading Report |
+| 2201609646 | Diamond Origin Report |
+| 6204489200 | Diamond Origin Report |
+| 2141438174 | Colored Diamond Grading Report |
+| 2141438175 | Colored Diamond Identification and Origin Report |
+| 1102019845 | Identification Report |
+
+###### Example
+
+This example will return the first two updates from the queue and a cursor. The cursor allows you to retrieve additional updates in a subsequent request.
+
+```graphql
+{
+  getChangedReports(limit: 2) {
+    results {
+      report {
+        report_number
+        report_type
+      }
+    }
+    endCursor
+  }
+}
+```
+
+returns
+
+```json
+{
+  "data": {
+    "getChangedReports": {
+      "results": [
+        {
+          "report": {
+            "report_number": "10363689",
+            "report_type": "Colored Diamond Grading Report"
+          }
+        },
+        {
+          "report": {
+            "report_number": "1106785034",
+            "report_type": "Diamond Dossier"
+          }
+        }
+      ],
+      "endCursor": "eyJ2ZXJzaW9uIjoyLCJ0b2tlbiI6IkFRSUNBSGkrT0FnPT0ifQ=="
+    }
+  }
+}
+```
+
+###### Pagination
+
+The `getChangedReports()` query accepts `limit` and `cursor` parameters. These parameters allow you to page through the results, rather than retrieving all results at once. 
+
+You have additional updates available if you received a string in `endCursor`. Pass the cursor in your next query in order to obtain the additional results.
+
+```graphql
+{
+  getChangedReports(limit: 2, cursor: "eyJ2ZXJzaW9uIjoyLCJ0b2tlbiI6IkFRSUNBSGkrT0FnPT0ifQ==") {
+    results {
+      report {
+        report_number
+        report_type
+      }
+    }
+    endCursor
+  }
+}
+```
+
+returns 
+
+```json
+{
+  "data": {
+    "getChangedReports": {
+      "results": [
+        {
+          "report": {
+            "report_number": "1112713401",
+            "report_type": "Colored Diamond Grading Report"
+          }
+        },
+        {
+          "report": {
+            "report_number": "1112945921",
+            "report_type": "Diamond Dossier"
+          }
+        }
+      ],
+      "endCursor": "2RVNXB2RXRWTnJ5YlROSjdlbmNDYWsyK3BML3N6dHFGR2pLVFFWK096RUlIR05"
+    }
+  }
+}
+```
+
+Review the [GraphQL Pagination Documentation](https://graphql.org/learn/pagination/) for additional information.
+
+###### Clearing the Queue
+
+Once you have retrieved and saved all the updates, call `clearUpdatedReports()` to empty the queue. 
+
+```graphql
+mutation {
+    clearChangedReports
+}
+```
+
+##### Verify Individual Reports 
+
+Pass a report number and date to `isReportUpdated` to determine whether the report was updated after that date. 
 
 ```graphql
 {
@@ -440,7 +570,7 @@ __Important:__ Subscribe to notifications at [status.gia.edu](https://status.gia
 
 ### Migrating from the Legacy Report Check API
 
-Some fields are coded differently in this API. In most cases, we have provided both the abbreviated and full text fields. 
+Some fields are coded differently in this API. In most cases, we have provided both the abbreviated and full text fields.
 
 Example:
 
@@ -448,44 +578,6 @@ Example:
 |-------|-------------------------|--------------------|
 | Culet | VSM | Very Small |
 | Girdle | STK to THK, F | Slightly Thick to Thick, Faceted |
-
-#### Culet Size 
-
-|     Meaning            |     Code    |
-|------------------------|-------------|
-|     None               |     NON     |
-|     Very Small         |     VSM     |
-|     Small              |     SML     |
-|     Medium             |     MED     |
-|     Slightly Large     |     SLG     |
-|     Large              |     LGE     |
-|     Very Large         |     VLG     |
-|     Extremely Large    |     ELG     |
-|     Not Applicable     |     N/A     |
-
-#### Girdle Thickness
-
-|     Meaning            |     Code    |
-|------------------------|-------------|
-|     Extremely Thin     |     ETN     |
-|     Very Thin          |     VTN     |
-|     Thin               |     THN     |
-|     Medium             |     MED     |
-|     Slightly Thick     |     STK     |
-|     Thick              |     THK     |
-|     Very Thick         |     VTK     |
-|     Extremely Thick    |     ETK     |
-|     Not Applicable     |     N/A     |
-
-#### Girdle Condition
-
-|     Meaning            |     Code    |
-|------------------------|-------------|
-|     Faceted            |     F       |
-|     Polished           |     P       |
-|     Bruted             |     B       |
-|     Lasered            |     L       |
-|     Not Applicable     |     N/A     |
 
 ### Error Conditions
 

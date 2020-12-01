@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>ClarityCharacteristic</title>
+    <title>ChangedReportResults</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -205,12 +205,12 @@
                 ChangedReportResult
             </a>
         </li>
-        <li  title="ChangedReportResults">
+        <li class="slds-is-active" title="ChangedReportResults">
             <a href="changedreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ChangedReportResults
             </a>
         </li>
-        <li class="slds-is-active" title="ClarityCharacteristic">
+        <li  title="ClarityCharacteristic">
             <a href="claritycharacteristic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityCharacteristic
             </a>
@@ -446,9 +446,8 @@
     </div>
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">ClarityCharacteristic</h1>
-        <div class="slds-text-body--regular"><p>  A clarity characteristic listed in the key to symbols.</p>
-</div>
+        <h1 class="slds-text-heading--large">ChangedReportResults</h1>
+        <div class="slds-text-body--regular"></div>
     </div>
 </section>
 <section>
@@ -459,7 +458,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">ClarityCharacteristic</span> {</li><li></li><li><span class="tab"><span class="comment line">#     The sort order for this characteristic.</span></span></li><li><span class="tab"><span class="meta">order</span>: <a class="support type" href="int.doc.html">Int</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     The clarity characteristic description.</span></span></li><li><span class="tab"><span class="meta">characteristic</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Characteristic image.</span></span></li><li><span class="tab"><span class="meta">image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The location of the clarity characteristic.</span></span></li><li><span class="tab"><span class="meta">location</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">ChangedReportResults</span> {</li><li></li><li><span class="tab"><span class="meta">results</span>: [<a class="support type" href="changedreportresult.doc.html">ChangedReportResult</a>]! </span></li><li></li><li><span class="tab"><span class="meta">endCursor</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -470,7 +469,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="diamondgradingreportresults.doc.html" title="DiamondGradingReportResults -   Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.">DiamondGradingReportResults<em>  Results for core grading services such as Dossier, Diamond Grading, and Colored Diamond Grading.</em></a><li><li><a href="labgrowndiamondgradingreportresults.doc.html" title="LabGrownDiamondGradingReportResults -   Results for grading reports on synthetic diamonds.">LabGrownDiamondGradingReportResults<em>  Results for grading reports on synthetic diamonds.</em></a><li></ul>
+        <ul class="require-by"><li><a href="query.doc.html" title="Query -   Query your grading report.">Query<em>  Query your grading report.</em></a><li></ul>
     </div>
 </section>
 <footer>
