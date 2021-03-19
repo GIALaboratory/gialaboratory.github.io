@@ -4,6 +4,32 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2021-03-19
+
+The changes in this release were transparent to the end user, but were very important to ensure we provide "start date" functionality to buckets and minimized defect occurrences in the GraphQL schema and the S3 bucket replication.
+
+#### Added
+- GraphQL schema is now validated during build to ensure there are no defects in the deployed schema.
+- Added an attribute "bucket start date" to buckets generated in Salesforce.
+
+#### Changed
+- GraphQL schema documentation is now automatically generated.  Previously it was a 100% manualy process; now there is only one manual step.
+- We have implemented a tool to minimize latency when data is replicated between S3 buckets in different regions.
+
+#### Fixed
+- Updated unit and smoke tests to improve coverage.
+
+## 2021-01-26
+
+The changes in this release were transparent to the end user, but were very important to ensure we capture usage statistics accurately as well as efficiently create new RR API keys.
+
+#### Changed
+
+- API keys were previously mapped to AWS API Gateway keys, which have a hard limit that we were rapidly approaching.  We have switched to AWS "arbitrary" API keys to decouple our RR API generated API keys from the API Gateway keys.
+
+#### Fixed
+- RR API usage (meaning specifically the number of queries performed by an API key owner) was previously captured incorrectly.  We have corrected the capture of this data, but in that process we had to remove the incorrectly captured usage statistics.  Therefore, clients will only be able to query for their usage beginning from 9:35AM EST of this release date.
+
 ## 2020-12-01
 
 #### Added
