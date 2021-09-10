@@ -33,7 +33,7 @@ jobs:
         
       # Remove existing folder
       - name: Remove existing reference folder
-        run: rm -r /report-results/reference
+        run: rm -r $GITHUB_WORKSPACE/report-results/reference
         
       # Generate new documentation
       - name: Run graphdoc to generate new reference documentation
