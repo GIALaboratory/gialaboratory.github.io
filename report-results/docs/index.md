@@ -40,7 +40,7 @@ The `results` field contains a [union type](https://graphql.org/learn/schema/#un
 
 Use a [conditional fragment](https://graphql.org/learn/queries/#inline-fragments) (such as `... on DiamondGradingReportResults`) to access these fields.
 
-__Pro Tip__: Use the [__typename](https://graphql.org/learn/queries/#meta-fields) meta field to determine how to handle the data on your client.
+__Tip__: Use the [__typename](https://graphql.org/learn/queries/#meta-fields) meta field to determine how to handle the data on your client.
 
 ```graphql
 {
@@ -117,7 +117,7 @@ The `clearChangedReports()` mutation clears the list of changed reports so that 
 
 > Call `getChangedReports()` daily, so that you always have the most recent data.
 
-Test your implmentation with these sandbox reports. These reports are automatically updated on an hourly basis.
+Test your implementation with these sandbox reports. These reports are automatically updated on an hourly basis.
 
 | Report Number | Report Type |
 |------------| --- |
