@@ -7,6 +7,8 @@ This is the source for https://gialaboratory.github.io
 
 ### Generate Reference Documentation
 
+** Reference documentation is now generated automatically by GitHub Actions **
+
 Install graphdoc from https://github.com/2fd/graphdoc
 
 Delete the existing `/report-results/reference` folder.
