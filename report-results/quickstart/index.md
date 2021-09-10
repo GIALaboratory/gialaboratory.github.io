@@ -99,7 +99,7 @@ You may check your quota limit at any time by querying `getQuota`. Checking your
 }
 ```
 
-_Pro Tip:_ You can also obtain your remaining quota with each `getReport` request.
+_Tip:_ You can also obtain your remaining quota with each `getReport` request.
 
 ## Step 6: Explore the API (Bonus!)
 
@@ -109,4 +109,4 @@ In Insomnia, click the __Schema__ icon and __Show Documentation__.
 
 ![Show Schema](insomnia-show-schema.png)
 
-The documentation panel will open, allowing you to expore the API and its fields.
+The documentation panel will open, allowing you to explore the API and its fields.
