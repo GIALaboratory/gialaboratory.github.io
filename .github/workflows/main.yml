@@ -33,7 +33,7 @@ jobs:
         
       # Generate new documentation
       - name: Run graphdoc to generate new reference documentation
-        run: graphdoc -e %REPORT_RESULTS_API_ENDPOINT% -o ./report-results/reference -x "Authorization: %REPORT_RESULTS_API_KEY%"
+        run: 'graphdoc -e ${{ secrets.REPORT_RESULTS_API_ENDPOINT }} -o ./report-results/reference -x "Authorization: ${{ secrets.REPORT_RESULTS_API_KEY }}"'
 
       # Create a pull request
       - name: Create Pull Request
