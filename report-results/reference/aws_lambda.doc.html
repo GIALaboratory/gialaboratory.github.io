@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>Girdle</title>
+    <title>aws_lambda</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -255,7 +255,7 @@
                 Fluorescence
             </a>
         </li>
-        <li class="slds-is-active" title="Girdle">
+        <li  title="Girdle">
             <a href="girdle.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Girdle
             </a>
@@ -395,7 +395,7 @@
                 aws_iam
             </a>
         </li>
-        <li  title="aws_lambda">
+        <li class="slds-is-active" title="aws_lambda">
             <a href="aws_lambda.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 aws_lambda
             </a>
@@ -450,9 +450,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">Girdle</h1>
-        <div class="slds-text-body--regular"><p>  Thickness of the intersection of the crown and pavilion which defines the perimeter of the diamond.</p>
+        <p class="slds-text-title--caps slds-text-color--weak"></p>
+        <h1 class="slds-text-heading--large">aws_lambda</h1>
+        <div class="slds-text-body--regular"><p>Tells the service this field/object has access authorized by a Lambda Authorizer.</p>
 </div>
     </div>
 </section>
@@ -464,7 +464,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Girdle</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle_condition</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Machine-readable code representing girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle_condition_code</span>: <a class="support type" href="girdleconditioncode.doc.html">GirdleConditionCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Girdle thickness (mm) as a percentage of average diameter X 100.</span></span></li><li><span class="tab"><span class="meta">girdle_pct</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Text description of girdle size.</span></span></li><li><span class="tab"><span class="meta">girdle_size</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Machine-readable code representing girdle condition.</span></span></li><li><span class="tab"><span class="meta">girdle_size_code</span>: <a class="support type" href="girdlesizecode.doc.html">GirdleSizeCode</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">directive</span> <span class="keyword operator ts">@aws_lambda</span> on <span class="keyword operator ts">OBJECT</span> | <span class="keyword operator ts">FIELD_DEFINITION</span></li></ul></code>
     </div>
 </section>
 <section>
@@ -475,7 +475,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="diamonddata.doc.html" title="DiamondData -   Additional data fields in machine-readable format.">DiamondData<em>  Additional data fields in machine-readable format.</em></a><li></ul>
+        <div class="require-by anyone">This element is not required by anyone</div>
     </div>
 </section>
 <footer>
