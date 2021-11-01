@@ -4,6 +4,16 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2021-10-31
+
+#### Changed
+
+- The query [`getReport`](https://gialaboratory.github.io/report-results/reference/query.doc.html) now also returns an array of new object [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) to provide list of assets linked to a reoprt. 
+
+#### Added
+
+- The enum `asset_type_code` provides [abbreviations](https://gialaboratory.github.io/report-results/reference/reportassetcode.doc.html) for report asset types, e.g., PDF report, digital image, secondary image, inscription image, or etc.
+
 ## 2020-12-01
 
 #### Added

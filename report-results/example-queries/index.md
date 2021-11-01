@@ -209,6 +209,69 @@ result
 }
 ```
 
+## Query Report Containing Multiple Linked Assets
+
+When a report contains multiple linked assets, you can query a specifc or all asstes in a single request. This query returns all linked assets to a report.
+
+```
+{
+  getReport(report_number: "1216809516") {
+    report_date
+    report_date_iso
+    report_type
+    report_type_code
+    info_message
+    is_digital
+    is_sleeve
+    assets {
+      asset_type_code
+      asset_type_description
+      link
+    }
+  }
+}
+```
+
+result
+
+```
+{
+  "data": {
+    "getReport": {
+      "report_date": "September 13, 2021",
+      "report_date_iso": "2021-09-13",
+      "report_type": "Diamond Dossier",
+      "report_type_code": "DD",
+      "info_message": null,
+      "is_digital": false,
+      "is_sleeve": null,
+      "assets": [
+        {
+          "asset_type_code": "REPORT_FACISMILE_PDF",
+          "asset_type_description": "Report facsimile in PDF format",
+          "link": "https://..."
+        },
+        {
+          "asset_type_code": "PROPORTIONS_DIAGRAM",
+          "asset_type_description": "Graphic profile representation of the diamonds actual proportions",
+          "link": "https://..."
+        },
+        {
+          "asset_type_code": "INSCRIPTION_IMAGE",
+          "asset_type_description": "Inscription image",
+          "link": "https://..."
+        },
+        {
+          "asset_type_code": "INSCRIPTION_THUMBNAIL",
+          "asset_type_description": "Inscription image thumbnail",
+          "link": "https://..."
+        }
+      ]
+    }
+  }
+}
+```
+
 ## Master Query
 
 ```graphql
