@@ -8,7 +8,7 @@ title: What's New
 
 #### Changed
 
-- The query [`getReport`](https://gialaboratory.github.io/report-results/reference/query.doc.html) now also returns an array of new object [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) to provide list of assets linked to a reoprt. 
+- The query [`getReport`](https://gialaboratory.github.io/report-results/reference/query.doc.html) now also returns an array of new object [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) to provide list of assets linked to a report. 
 
 #### Added
 

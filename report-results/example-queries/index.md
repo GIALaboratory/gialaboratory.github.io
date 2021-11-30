@@ -247,7 +247,7 @@ result
       "is_sleeve": null,
       "assets": [
         {
-          "asset_type_code": "REPORT_FACISMILE_PDF",
+          "asset_type_code": "REPORT_FACSIMILE_PDF",
           "asset_type_description": "Report facsimile in PDF format",
           "link": "https://..."
         },
