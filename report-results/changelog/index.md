@@ -4,11 +4,15 @@ title: What's New
 
 # GIA Report Results API Changelog
 
-## 2021-12-03
+## 2021-12-20
 
 #### Added
 
 - The query [`getReport`](https://gialaboratory.github.io/report-results/reference/query.doc.html) now exposes an array of [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html)  linked to a report.
+
+### Changed
+
+- Enhances enum documentaiton. Enum help now provides values with its meaning. 
 
 ## 2020-12-01
 
