@@ -12,7 +12,7 @@ title: What's New
 
 ### Changed
 
-- Enhances enum documentaiton. Enum help now provides values with its meaning. 
+- Meanings for enum values is available in the [Reference Documentation](https://gialaboratory.github.io/report-results/reference/).
 
 ## 2020-12-01
 
