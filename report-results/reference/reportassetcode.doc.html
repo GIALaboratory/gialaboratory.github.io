@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>DZColorGrade</title>
+    <title>ReportAssetCode</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -130,7 +130,7 @@
                 QuotaBucketStatus
             </a>
         </li>
-        <li  title="ReportAssetCode">
+        <li class="slds-is-active" title="ReportAssetCode">
             <a href="reportassetcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ReportAssetCode
             </a>
@@ -245,7 +245,7 @@
                 DiamondShape
             </a>
         </li>
-        <li class="slds-is-active" title="DZColorGrade">
+        <li  title="DZColorGrade">
             <a href="dzcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 DZColorGrade
             </a>
@@ -460,9 +460,24 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">DZColorGrade</h1>
-        <div class="slds-text-body--regular"><p>  Fields on the D-Z scale.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
+        <h1 class="slds-text-heading--large">ReportAssetCode</h1>
+        <div class="slds-text-body--regular"><p>  Report asset types.</p>
+<h2 id="report_facsimile_pdf-report-facsimile-in-pdf-format">REPORT_FACSIMILE_PDF - Report facsimile in PDF format</h2>
+<h2 id="proportions_diagram-graphic-profile-representation-of-the-diamond-s-actual-proportions">PROPORTIONS_DIAGRAM - Graphic profile representation of the diamond&#39;s actual proportions</h2>
+<h2 id="plotting_diagram-plotting-diagram-with-symbols-to-indicate-the-type-or-nature-position-and-the-approximate-size-of-a-clarity-characteristic">PLOTTING_DIAGRAM - Plotting diagram with symbols to indicate the type or nature, position, and the approximate size of a clarity characteristic</h2>
+<h2 id="item_image-digital-image-of-the-item">ITEM_IMAGE - Digital image of the item</h2>
+<h2 id="rough_item_image-digital-image-of-the-rough-item-m2m-">ROUGH_ITEM_IMAGE - Digital image of the rough item (M2M)</h2>
+<h2 id="rough_item_video-digital-video-of-the-rough-item-m2m-">ROUGH_ITEM_VIDEO - Digital video of the rough item (M2M)</h2>
+<h2 id="polished_item_image-digital-image-of-the-polished-item-m2m-">POLISHED_ITEM_IMAGE - Digital image of the polished item (M2M)</h2>
+<h2 id="polished_item_video-digital-video-of-the-polished-item-m2m-">POLISHED_ITEM_VIDEO - Digital video of the polished item (M2M)</h2>
+<h2 id="secondary_image-secondary-image-m2m-">SECONDARY_IMAGE - Secondary image (M2M)</h2>
+<h2 id="dtl_pdf-diamond-type-letter-facsimile-in-pdf-format">DTL_PDF - Diamond type letter facsimile in PDF format</h2>
+<h2 id="dttl_pdf-diamond-type-treatment-letter-facsimile-in-pdf-format">DTTL_PDF - Diamond type treatment letter facsimile in PDF format</h2>
+<h2 id="dtlp_pdf-diamond-type-treatment-letter-facsimile-with-photo-in-pdf-format">DTLP_PDF - Diamond type treatment letter facsimile with photo in PDF format</h2>
+<h2 id="dtlp_image-diamond-type-treatment-letter-photo">DTLP_IMAGE - Diamond type treatment letter photo</h2>
+<h2 id="inscription_image-inscription-image">INSCRIPTION_IMAGE - Inscription image</h2>
+<h2 id="inscription_thumbnail-inscription-image-thumbnail">INSCRIPTION_THUMBNAIL - Inscription image thumbnail</h2>
 </div>
     </div>
 </section>
@@ -474,7 +489,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">DZColorGrade</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Color grade code.</span></span></li><li><span class="tab"><span class="meta">color_grade_code</span>: <a class="support type" href="dzcolorgradecode.doc.html">DZColorGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Color modifier.</span></span></li><li><span class="tab"><span class="meta">color_modifier</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ReportAssetCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">REPORT_FACSIMILE_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PROPORTIONS_DIAGRAM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PLOTTING_DIAGRAM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ITEM_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ROUGH_ITEM_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ROUGH_ITEM_VIDEO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">POLISHED_ITEM_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">POLISHED_ITEM_VIDEO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SECONDARY_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTL_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTTL_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTLP_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTLP_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">INSCRIPTION_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">INSCRIPTION_THUMBNAIL</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -485,7 +500,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="colorgrade.doc.html" title="ColorGrade - ">ColorGrade<em>null</em></a><li><li><a href="diamonddata.doc.html" title="DiamondData -   Additional data fields in machine-readable format.">DiamondData<em>  Additional data fields in machine-readable format.</em></a><li></ul>
+        <ul class="require-by"><li><a href="reportasset.doc.html" title="ReportAsset -   Metadata for report asset along with its download link.">ReportAsset<em>  Metadata for report asset along with its download link.</em></a><li></ul>
     </div>
 </section>
 <footer>
