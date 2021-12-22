@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>DZColorGrade</title>
+    <title>ReportAsset</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -245,7 +245,7 @@
                 DiamondShape
             </a>
         </li>
-        <li class="slds-is-active" title="DZColorGrade">
+        <li  title="DZColorGrade">
             <a href="dzcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 DZColorGrade
             </a>
@@ -325,7 +325,7 @@
                 QuotaBucket
             </a>
         </li>
-        <li  title="ReportAsset">
+        <li class="slds-is-active" title="ReportAsset">
             <a href="reportasset.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ReportAsset
             </a>
@@ -461,8 +461,8 @@
     </div>
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">DZColorGrade</h1>
-        <div class="slds-text-body--regular"><p>  Fields on the D-Z scale.</p>
+        <h1 class="slds-text-heading--large">ReportAsset</h1>
+        <div class="slds-text-body--regular"><p>  Metadata for report asset along with its download link.</p>
 </div>
     </div>
 </section>
@@ -474,7 +474,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">DZColorGrade</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Color grade code.</span></span></li><li><span class="tab"><span class="meta">color_grade_code</span>: <a class="support type" href="dzcolorgradecode.doc.html">DZColorGradeCode</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Color modifier.</span></span></li><li><span class="tab"><span class="meta">color_modifier</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">ReportAsset</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Asset type code</span></span></li><li><span class="tab"><span class="meta">asset_type_code</span>: <a class="support type" href="reportassetcode.doc.html">ReportAssetCode</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Asset type description</span></span></li><li><span class="tab"><span class="meta">asset_type_description</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Presigned S3 resource download URL</span></span></li><li><span class="tab"><span class="meta">link</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -485,7 +485,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="colorgrade.doc.html" title="ColorGrade - ">ColorGrade<em>null</em></a><li><li><a href="diamonddata.doc.html" title="DiamondData -   Additional data fields in machine-readable format.">DiamondData<em>  Additional data fields in machine-readable format.</em></a><li></ul>
+        <ul class="require-by"><li><a href="gradingreport.doc.html" title="GradingReport -   The base grading report object.">GradingReport<em>  The base grading report object.</em></a><li></ul>
     </div>
 </section>
 <footer>
