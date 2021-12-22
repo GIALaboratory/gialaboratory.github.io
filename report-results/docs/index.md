@@ -94,6 +94,8 @@ Concatenated fields are also available individually. For example, measurements f
 
 The [`links`](https://gialaboratory.github.io/report-results/reference/links.doc.html) field holds links to supplementary assets. 
 
+The [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) field also holds links to supplementary assets in an array strcuture format. The array structure format provides additional metadata such as [`asset_type_code`](https://gialaboratory.github.io/report-results/reference/reportassetcode.doc.html) and `asset_type_description`. 
+
 The availability of assets depends on the report type and other factors. Fields are `null` if an asset is not available.
 
 Links are active for 60 minutes from the API call. The API returns an error if you attempt to access assets after this period.
