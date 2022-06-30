@@ -21,4 +21,3 @@ graphdoc -e %REPORT_RESULTS_API_ENDPOINT% -o ./report-results/reference -x "Auth
 
 
 
-
