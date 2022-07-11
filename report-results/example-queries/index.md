@@ -24,6 +24,12 @@ This query returns grading results for diamond reports such as Diamond Dossier, 
     report_number
     report_type
     report_type_code
+    industry_disclosures {
+				disclosed_source{
+						name
+						code
+				}
+		}
     results {
       ... on DiamondGradingReportResults {
         shape_and_cutting_style
@@ -69,6 +75,12 @@ result
       "report_number": "2141438171",
       "report_type": "Diamond Dossier",
       "report_type_code": "DD",
+      "industry_disclosures": {
+				"disclosed_source": {
+					"name": "Hongkong",
+					"code": "COO0006"
+				}
+			},
       "results": {
         "shape_and_cutting_style": "Emerald Cut",
         "measurements": "5.29 x 3.88 x 2.61 mm",
