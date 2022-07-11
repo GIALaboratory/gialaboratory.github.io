@@ -77,8 +77,8 @@ result
       "report_type_code": "DD",
       "industry_disclosures": {
 				"disclosed_source": {
-					"name": "Hongkong",
-					"code": "COO0006"
+					"name": "South Africa",
+					"code": "COO0001"
 				}
 			},
       "results": {
