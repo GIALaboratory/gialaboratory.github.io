@@ -4,6 +4,12 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2022-07-05
+
+#### Added
+
+- The query [`getReport`](https://gialaboratory.github.io/report-results/reference/query.doc.html) now exposes [`industrydisclosures`](https://gialaboratory.github.io/report-results/reference/industrydisclosures.doc.html) to provide diamond's disclosed source of origin.
+
 ## 2021-12-22
 
 #### Added
