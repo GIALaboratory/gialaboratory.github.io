@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>aws_api_key</title>
+    <title>DisclosedSource</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -245,7 +245,7 @@
                 DiamondShape
             </a>
         </li>
-        <li  title="DisclosedSource">
+        <li class="slds-is-active" title="DisclosedSource">
             <a href="disclosedsource.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 DisclosedSource
             </a>
@@ -395,7 +395,7 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
     <ul>
-        <li class="slds-is-active" title="aws_api_key">
+        <li  title="aws_api_key">
             <a href="aws_api_key.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 aws_api_key
             </a>
@@ -470,10 +470,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak"></p>
-        <h1 class="slds-text-heading--large">aws_api_key</h1>
-        <div class="slds-text-body--regular"><p>Tells the service this field/object has access authorized by an API key.</p>
-</div>
+        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
+        <h1 class="slds-text-heading--large">DisclosedSource</h1>
+        <div class="slds-text-body--regular"></div>
     </div>
 </section>
 <section>
@@ -484,7 +483,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">directive</span> <span class="keyword operator ts">@aws_api_key</span> on <span class="keyword operator ts">OBJECT</span> | <span class="keyword operator ts">FIELD_DEFINITION</span></li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">DisclosedSource</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Disclosed source of origin for the stone.</span></span></li><li><span class="tab"><span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Coded values for country of origin. For GIA use only.</span></span></li><li><span class="tab"><span class="meta">code</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -495,7 +494,7 @@
             </a>
             Require by
         </h2>
-        <div class="require-by anyone">This element is not required by anyone</div>
+        <ul class="require-by"><li><a href="industrydisclosures.doc.html" title="IndustryDisclosures - ">IndustryDisclosures<em>null</em></a><li></ul>
     </div>
 </section>
 <footer>
