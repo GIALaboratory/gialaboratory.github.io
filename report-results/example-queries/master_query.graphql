@@ -5,7 +5,7 @@ query ReportQuery($ReportNumber: String!) {
     report_date_iso
     report_type
     report_type_code
-    industry_disclosures{
+    industry_disclosures {
 			...IndustryDisclosureFields
 		}
     results {
@@ -210,8 +210,8 @@ fragment DiamondGradingDataFields on DiamondData {
     culet_code
   }  
 }
-fragment IndustryDisclosureFields on IndustryDisclosures	{
-    disclosed_source	{
+fragment IndustryDisclosureFields on IndustryDisclosures {
+    disclosed_source {
       name
       code
   }
