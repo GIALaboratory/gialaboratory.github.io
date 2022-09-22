@@ -5,6 +5,9 @@ query ReportQuery($ReportNumber: String!) {
     report_date_iso
     report_type
     report_type_code
+    industry_disclosures {
+			...IndustryDisclosureFields
+		}
     results {
       __typename
       ...DiamondGradingResultFields
@@ -141,7 +144,7 @@ fragment LinkFields on Links {
   dtlp_image_filename
 }
 
-fragment AssetFields on Assets {
+fragment AssetFields on ReportAsset {
   asset_type_code
   asset_type_description
   link
@@ -205,6 +208,11 @@ fragment DiamondGradingDataFields on DiamondData {
   }
   culet {
     culet_code
+  }  
+}
+fragment IndustryDisclosureFields on IndustryDisclosures {
+    disclosed_source {
+      name
+      code
   }
-  
 }
