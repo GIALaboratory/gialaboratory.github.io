@@ -142,6 +142,7 @@ fragment LinkFields on Links {
   dttl_pdf_filename
   dtlp_pdf_filename
   dtlp_image_filename
+  digital_card
 }
 
 fragment AssetFields on ReportAsset {

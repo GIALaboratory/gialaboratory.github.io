@@ -4,6 +4,12 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2022-11-10
+
+#### Added
+
+- Digital card is now accessible via [`links`](https://gialaboratory.github.io/report-results/reference/links.doc.html) and [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) fields of [`gradingReport`](https://gialaboratory.github.io/report-results/reference/gradingreport.doc.html).
+
 ## 2022-07-05
 
 #### Added
