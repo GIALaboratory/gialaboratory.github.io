@@ -4,6 +4,13 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2022-11-15
+
+#### Added
+
+- AGS Ideal ® Report PDF and ASET image are now accessible via [`links`](https://gialaboratory.github.io/report-results/reference/links.doc.html) and [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) fields of [`gradingReport`](https://gialaboratory.github.io/report-results/reference/gradingreport.doc.html).
+- AGS Ideal ® Report results are also available as individual fields. Please refer to [`SupplementalReportResults`](https://gialaboratory.github.io/report-results/reference/supplementalreportresults.doc.html) for more information. 
+
 ## 2022-07-05
 
 #### Added

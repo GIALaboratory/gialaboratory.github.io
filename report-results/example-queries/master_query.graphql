@@ -8,6 +8,9 @@ query ReportQuery($ReportNumber: String!) {
     industry_disclosures {
 			...IndustryDisclosureFields
 		}
+    supplemental_report_results {
+			...SupplementalReportResultFields
+		}
     results {
       __typename
       ...DiamondGradingResultFields
@@ -142,6 +145,8 @@ fragment LinkFields on Links {
   dttl_pdf_filename
   dtlp_pdf_filename
   dtlp_image_filename
+  ideal_report_pdf
+	aset_image
 }
 
 fragment AssetFields on ReportAsset {
@@ -215,4 +220,15 @@ fragment IndustryDisclosureFields on IndustryDisclosures {
       name
       code
   }
+}
+fragment SupplementalReportResultFields on SupplementalReportResults {	
+	... on IdealReportResults {
+				shape_and_cutting_style,
+				measurements,
+				carat_weight,
+				light_performance_grade,
+				brightness,
+				fire,
+				contrast
+			}
 }
