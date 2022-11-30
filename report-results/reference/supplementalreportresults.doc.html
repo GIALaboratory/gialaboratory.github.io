@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>CutGradeCode</title>
+    <title>SupplementalReportResults</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -90,7 +90,7 @@
                 CuletCode
             </a>
         </li>
-        <li class="slds-is-active" title="CutGradeCode">
+        <li  title="CutGradeCode">
             <a href="cutgradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CutGradeCode
             </a>
@@ -195,7 +195,7 @@
                 ReportResults
             </a>
         </li>
-        <li  title="SupplementalReportResults">
+        <li class="slds-is-active" title="SupplementalReportResults">
             <a href="supplementalreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 SupplementalReportResults
             </a>
@@ -480,15 +480,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
-        <h1 class="slds-text-heading--large">CutGradeCode</h1>
-        <div class="slds-text-body--regular"><p>  Machine-readable cut grade codes.</p>
-<h2 id="ex-excellent">EX - Excellent</h2>
-<h2 id="vg-very-good">VG - Very Good</h2>
-<h2 id="g-good">G - Good</h2>
-<h2 id="f-fair">F - Fair</h2>
-<h2 id="p-poor">P - Poor</h2>
-</div>
+        <p class="slds-text-title--caps slds-text-color--weak">UNION</p>
+        <h1 class="slds-text-heading--large">SupplementalReportResults</h1>
+        <div class="slds-text-body--regular"></div>
     </div>
 </section>
 <section>
@@ -499,7 +493,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">CutGradeCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EX</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">G</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">F</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">P</span></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">union</span> <span class="identifier">SupplementalReportResults</span> = <a class="support type" href="idealreportresults.doc.html">IdealReportResults</a></li></ul></code>
     </div>
 </section>
 <section>
@@ -510,7 +504,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="diamonddata.doc.html" title="DiamondData -   Additional data fields in machine-readable format.">DiamondData<em>  Additional data fields in machine-readable format.</em></a><li></ul>
+        <ul class="require-by"><li><a href="gradingreport.doc.html" title="GradingReport -   The base grading report object.">GradingReport<em>  The base grading report object.</em></a><li></ul>
     </div>
 </section>
 <footer>
