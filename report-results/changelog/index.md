@@ -9,7 +9,7 @@ title: What's New
 #### Added
 
 - Digital card is now accessible via [`links`](https://gialaboratory.github.io/report-results/reference/links.doc.html) and [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) fields of [`gradingReport`](https://gialaboratory.github.io/report-results/reference/gradingreport.doc.html).
-- Digital card is currently available for below report tyes:
+- Digital card is currently available for below report types:
     - Diamond Grading Report (DG)
     - Diamond Dossier Report (DD)
     - Laboratory-Grown Diamond Grading Report (LGDG)
