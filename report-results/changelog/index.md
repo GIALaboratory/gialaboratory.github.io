@@ -4,7 +4,7 @@ title: What's New
 
 # GIA Report Results API Changelog
 
-## 2022-11-10
+## 2022-12-15
 
 #### Added
 
