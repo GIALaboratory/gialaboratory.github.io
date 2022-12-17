@@ -4,12 +4,13 @@ title: What's New
 
 # GIA Report Results API Changelog
 
-## 2022-12-15
+## 2022-12-19
 
 #### Added
 
 - The Digital Report Access Card is now accessible via [`links`](https://gialaboratory.github.io/report-results/reference/links.doc.html) and [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) fields.
-- The Digital Report Access Card is currently available for below report types:
+
+The Digital Report Access Card is currently available for reports __delivered after 2022-12-19__:
     - Diamond Grading Report (DG)
     - Diamond Dossier Report (DD)
     - Laboratory-Grown Diamond Grading Report (LGDG)
