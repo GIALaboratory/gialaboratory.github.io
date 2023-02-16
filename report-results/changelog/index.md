@@ -4,6 +4,13 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2023-02-17
+
+#### Added
+
+- `getReportEnc` query field
+    - This query supports accessing GIA Report Results by using encrypted report number. 
+
 ## 2022-12-19
 
 #### Added
