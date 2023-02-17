@@ -100,6 +100,50 @@ The availability of assets depends on the report type and other factors. Fields 
 
 Links are active for 60 minutes from the API call. The API returns an error if you attempt to access assets after this period.
 
+#### Report Results for encrypted report number
+
+`getReportEnc` query returns `GradingReport` type representing GIA's report data and services. This endpoint accepts encrypted report number and returns same data as `getReport` endpoint.  
+
+```graphql
+{
+  getReportEnc(report_number_enrypted: "B5590075058B04A2479A66903CE536EE") {
+    report_date
+    report_number
+    report_type
+    results {
+      ... on DiamondGradingReportResults {
+        __typename
+        shape_and_cutting_style
+        carat_weight
+        color_grade
+        clarity_grade
+      }
+    }
+  }
+}
+```
+
+returns
+
+```json
+{
+  "data": {
+    "getReportEnc": {
+      "report_date": "September 01, 2019",
+      "report_number": "2141438171",
+      "report_type": "Diamond Dossier",
+      "results": {
+        "__typename": "DiamondGradingReportResults",
+        "shape_and_cutting_style": "Emerald Cut",
+        "carat_weight": "0.51 carat",
+        "color_grade": "E",
+        "clarity_grade": "VS2"
+      }
+    }
+  }
+}
+```
+
 #### Checking for Stale Reports
 
 Periodically review the status of any reports cached in your systems to avoid presenting outdated information. 
@@ -779,6 +823,40 @@ Asset links expire 60 minutes from the time you query the API. Requesting an ass
 | --- | ----------- |
 | JSON is invalid. | Ensure the JSON you submit is well-formed. |
 | Improper nesting of escape characters. | Avoid using string concatenation and check that you are escaping properly for your language. |
+
+#### Invalid encrypted report number value
+
+The API returns an HTTP 200 OK response if the provided report number cannot be decrypted and the errors object includes an appropriate message.
+
+```json
+{
+	"data": {
+		"getReportEnc": null
+	},
+	"errors": [
+		{
+			"path": [
+				"getReportEnc"
+			],
+			"data": null,
+			"errorType": "ARGUMENT ERROR",
+			"errorInfo": "report_number_enrypted invalid value",
+			"locations": [
+				{
+					"line": 2,
+					"column": 3,
+					"sourceName": null
+				}
+			],
+			"message": "A report_number_enrypted contains invalid value that cannot be decrypted properly."
+		}
+	]
+}
+```
+
+| Possible Cause | Solution |
+| --- | ----------- |
+| The encrypted report number cannot be decrypted. | Check your entries and try again. |
 
 ## Providing Feedback
 
