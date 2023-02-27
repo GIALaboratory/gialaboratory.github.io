@@ -260,22 +260,12 @@ result
       "assets": [
         {
           "asset_type_code": "REPORT_FACSIMILE_PDF",
-          "asset_type_description": "Report facsimile in PDF format",
+          "asset_type_description": "Report PDF",
           "link": "https://..."
         },
         {
           "asset_type_code": "PROPORTIONS_DIAGRAM",
-          "asset_type_description": "Graphic profile representation of the diamonds actual proportions",
-          "link": "https://..."
-        },
-        {
-          "asset_type_code": "INSCRIPTION_IMAGE",
-          "asset_type_description": "Inscription image",
-          "link": "https://..."
-        },
-        {
-          "asset_type_code": "INSCRIPTION_THUMBNAIL",
-          "asset_type_description": "Inscription image thumbnail",
+          "asset_type_description": "Proportions Diagram",
           "link": "https://..."
         }
       ]
