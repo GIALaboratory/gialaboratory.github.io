@@ -11,6 +11,9 @@ query ReportQuery($ReportNumber: String!) {
     supplemental_report_results {
 			...SupplementalReportResultFields
 		}
+    associated_references {
+			...AssociatedReferencesResultFields
+		}
     results {
       __typename
       ...DiamondGradingResultFields
@@ -231,5 +234,12 @@ fragment SupplementalReportResultFields on SupplementalReportResults {
 				brightness,
 				fire,
 				contrast
+			}
+}
+fragment AssociatedReferencesResultFields on AssociatedReference {	
+	... on AssociatedReference {
+				reference_type_code,
+				reference_type_description,
+		    reference_id
 			}
 }
