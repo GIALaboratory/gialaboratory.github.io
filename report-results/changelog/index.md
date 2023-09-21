@@ -8,8 +8,7 @@ title: What's New
 
 #### Added
 
-- GIA has joined Tracr - the distributed diamond blockchain platform. Consumers purchasing a diamond, traced from the source by Tracr and graded by GIA, will receive a GIA diamond grading report with enhanced information about the provenance of their diamond.
-- Report Results API is updated to include Tracr's Diamond ID. The field and associated value is accessible via [`associated_references`](https://gialaboratory.github.io/report-results/reference/associatedreference.doc.html).
+- Report Results API is updated to include Tracr's Diamond ID, when available. The field and associated value is accessible via [`associated_references`](https://gialaboratory.github.io/report-results/reference/associatedreference.doc.html).
 
 
 ## 2023-02-17
