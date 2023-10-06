@@ -148,13 +148,13 @@ returns
 
 Periodically review the status of any reports cached in your systems to avoid presenting outdated information. 
 
-You are entitled to updates on any report for 18 months from the time of the original lookup at no additional cost. This will assist you in retrieving the most recent report results without incurring any additional charges.
+You are entitled to updates on any report for 24 months from the time of the original lookup at no additional cost. This will assist you in retrieving the most recent report results without incurring any additional charges.
 
 ##### Consuming Report Update Events
 
 The `getChangedReports()` query returns a paginated set of report objects that:
 
-- were previously fetched by the same API plan within the past 18 months and were updated since last retrieval
+- were previously fetched by the same API plan within the past 24 months and were updated since last retrieval
 - have not been "flushed" from storage
 - items are automatically flushed from storage after 90 days
 - users are not charged for the request to `getChangedReports()`
