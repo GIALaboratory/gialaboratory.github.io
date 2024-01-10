@@ -4,6 +4,13 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2023-11-06
+
+#### Added
+
+- Custom inscription image is now accessible via [`links`](https://gialaboratory.github.io/report-results/reference/links.doc.html) and [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) fields of [`gradingReport`](https://gialaboratory.github.io/report-results/reference/gradingreport.doc.html).
+- The `fei_cui_type` field is added to [`IdentificationReportResults`](https://gialaboratory.github.io/report-results/reference/identificationreportresults.doc.html).
+
 ## 2023-02-17
 
 #### Added

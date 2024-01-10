@@ -116,6 +116,7 @@ fragment IdentificationResultFields on IdentificationReportResults {
   phenomenon
   treatment
   report_comments
+  fei_cui_type
 }
 
 fragment MeleeResultFields on MeleeServiceResults {
@@ -148,6 +149,7 @@ fragment LinkFields on Links {
   ideal_report_pdf
   aset_image
   digital_card
+  custom_inscription_image
 }
 
 fragment AssetFields on ReportAsset {
