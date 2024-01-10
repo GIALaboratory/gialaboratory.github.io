@@ -284,7 +284,7 @@ Pass a report number and date to `isReportUpdated` to determine whether the repo
 
 ```graphql
 {
-  isReportUpdated(report_number: "6203489265", report_date: "2020-01-01") {
+  isReportUpdated(report_number: "6203489265", date: "2020-01-01") {
     report_updated
   }
 }
