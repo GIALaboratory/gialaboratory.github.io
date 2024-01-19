@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>TreatmentCodes</title>
+    <title>AssociatedReference</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -210,7 +210,7 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
-        <li  title="AssociatedReference">
+        <li class="slds-is-active" title="AssociatedReference">
             <a href="associatedreference.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 AssociatedReference
             </a>
@@ -370,7 +370,7 @@
                 RoundMeasurements
             </a>
         </li>
-        <li class="slds-is-active" title="TreatmentCodes">
+        <li  title="TreatmentCodes">
             <a href="treatmentcodes.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 TreatmentCodes
             </a>
@@ -491,8 +491,8 @@
     </div>
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">TreatmentCodes</h1>
-        <div class="slds-text-body--regular"><p>  Machine-readable values for treatments. For GIA use only.</p>
+        <h1 class="slds-text-heading--large">AssociatedReference</h1>
+        <div class="slds-text-body--regular"><p>  Associated external reference of the report</p>
 </div>
     </div>
 </section>
@@ -504,7 +504,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">TreatmentCodes</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Coded value for treatment.</span></span></li><li><span class="tab"><span class="meta">treatment_code</span>: <a class="support type" href="treatmentcode.doc.html">TreatmentCode</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">AssociatedReference</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Code of the associated reference type.</span></span></li><li><span class="tab"><span class="meta">reference_type_code</span>: <a class="support type" href="associatedreferencetypecode.doc.html">AssociatedReferenceTypeCode</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Description of the associated reference type code.</span></span></li><li><span class="tab"><span class="meta">reference_type_description</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Actual reference ID value.</span></span></li><li><span class="tab"><span class="meta">reference_id</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -515,7 +515,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="identificationreportresults.doc.html" title="IdentificationReportResults -   The tabular report format is used on most gem identification reports.">IdentificationReportResults<em>  The tabular report format is used on most gem identification reports.</em></a><li><li><a href="narrativereportresults.doc.html" title="NarrativeReportResults -   The narrative report format is used on some gem identification reports.">NarrativeReportResults<em>  The narrative report format is used on some gem identification reports.</em></a><li></ul>
+        <ul class="require-by"><li><a href="gradingreport.doc.html" title="GradingReport -   The base grading report object.">GradingReport<em>  The base grading report object.</em></a><li></ul>
     </div>
 </section>
 <footer>
