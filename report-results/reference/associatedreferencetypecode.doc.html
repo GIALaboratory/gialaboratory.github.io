@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>TreatmentCodes</title>
+    <title>AssociatedReferenceTypeCode</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -65,7 +65,7 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Enums</h4>
     <ul>
-        <li  title="AssociatedReferenceTypeCode">
+        <li class="slds-is-active" title="AssociatedReferenceTypeCode">
             <a href="associatedreferencetypecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 AssociatedReferenceTypeCode
             </a>
@@ -370,7 +370,7 @@
                 RoundMeasurements
             </a>
         </li>
-        <li class="slds-is-active" title="TreatmentCodes">
+        <li  title="TreatmentCodes">
             <a href="treatmentcodes.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 TreatmentCodes
             </a>
@@ -490,9 +490,10 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">TreatmentCodes</h1>
-        <div class="slds-text-body--regular"><p>  Machine-readable values for treatments. For GIA use only.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
+        <h1 class="slds-text-heading--large">AssociatedReferenceTypeCode</h1>
+        <div class="slds-text-body--regular"><p>  Machine-readable type codes of associated reference.</p>
+<h2 id="tracr-tracr-reference">TRACR - Tracr reference</h2>
 </div>
     </div>
 </section>
@@ -504,7 +505,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">TreatmentCodes</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Coded value for treatment.</span></span></li><li><span class="tab"><span class="meta">treatment_code</span>: <a class="support type" href="treatmentcode.doc.html">TreatmentCode</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">enum</span> <span class="identifier">AssociatedReferenceTypeCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TRACR</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -515,7 +516,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="identificationreportresults.doc.html" title="IdentificationReportResults -   The tabular report format is used on most gem identification reports.">IdentificationReportResults<em>  The tabular report format is used on most gem identification reports.</em></a><li><li><a href="narrativereportresults.doc.html" title="NarrativeReportResults -   The narrative report format is used on some gem identification reports.">NarrativeReportResults<em>  The narrative report format is used on some gem identification reports.</em></a><li></ul>
+        <ul class="require-by"><li><a href="associatedreference.doc.html" title="AssociatedReference -   Associated external reference of the report">AssociatedReference<em>  Associated external reference of the report</em></a><li></ul>
     </div>
 </section>
 <footer>
