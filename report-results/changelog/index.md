@@ -4,6 +4,12 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2024-08-05
+
+#### Added
+
+- GIA Report QR Code is now accessible via [`links`](https://gialaboratory.github.io/report-results/reference/links.doc.html) and [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) fields.
+
 ## 2023-11-06
 
 #### Added
