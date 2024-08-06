@@ -150,6 +150,7 @@ fragment LinkFields on Links {
   aset_image
   digital_card
   custom_inscription_image
+  qr_code_image
 }
 
 fragment AssetFields on ReportAsset {
