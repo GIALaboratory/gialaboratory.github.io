@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>Measurements</title>
+    <title>GIAReportResults</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -195,7 +195,7 @@
                 ColorGrade
             </a>
         </li>
-        <li class="slds-is-active" title="Measurements">
+        <li  title="Measurements">
             <a href="measurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Measurements
             </a>
@@ -290,7 +290,7 @@
                 Fluorescence
             </a>
         </li>
-        <li  title="GIAReportResults">
+        <li class="slds-is-active" title="GIAReportResults">
             <a href="giareportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 GIAReportResults
             </a>
@@ -515,10 +515,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">UNION</p>
-        <h1 class="slds-text-heading--large">Measurements</h1>
-        <div class="slds-text-body--regular"><p>  Detailed measurements fields.</p>
-</div>
+        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
+        <h1 class="slds-text-heading--large">GIAReportResults</h1>
+        <div class="slds-text-body--regular"></div>
     </div>
 </section>
 <section>
@@ -529,7 +528,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">union</span> <span class="identifier">Measurements</span> = <a class="support type" href="roundmeasurements.doc.html">RoundMeasurements</a> | <a class="support type" href="fancymeasurements.doc.html">FancyMeasurements</a></li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">GIAReportResults</span> {</li><li></li><li><span class="tab"><span class="comment line">#     The grading results as shown on the GIA report.</span></span></li><li><span class="tab"><span class="meta">report_results</span>: <a class="support type" href="associatedreportresults.doc.html">AssociatedReportResults</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Unique GIA report number registered in GIA's database.</span></span></li><li><span class="tab"><span class="meta">report_number</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The type of GIA report, in machine-readable format.</span></span></li><li><span class="tab"><span class="meta">report_type_code</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -540,7 +539,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="diamonddata.doc.html" title="DiamondData -   Additional data fields in machine-readable format.">DiamondData<em>  Additional data fields in machine-readable format.</em></a><li></ul>
+        <ul class="require-by"><li><a href="jewelrygradingreportresults.doc.html" title="JewelryGradingReportResults -   Results for jewelry grading report">JewelryGradingReportResults<em>  Results for jewelry grading report</em></a><li></ul>
     </div>
 </section>
 <footer>

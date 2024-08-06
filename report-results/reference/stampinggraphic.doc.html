@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>Measurements</title>
+    <title>StampingGraphic</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -195,7 +195,7 @@
                 ColorGrade
             </a>
         </li>
-        <li class="slds-is-active" title="Measurements">
+        <li  title="Measurements">
             <a href="measurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Measurements
             </a>
@@ -390,7 +390,7 @@
                 RoundMeasurements
             </a>
         </li>
-        <li  title="StampingGraphic">
+        <li class="slds-is-active" title="StampingGraphic">
             <a href="stampinggraphic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 StampingGraphic
             </a>
@@ -515,9 +515,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">UNION</p>
-        <h1 class="slds-text-heading--large">Measurements</h1>
-        <div class="slds-text-body--regular"><p>  Detailed measurements fields.</p>
+        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
+        <h1 class="slds-text-heading--large">StampingGraphic</h1>
+        <div class="slds-text-body--regular"><p>  Stamping graphics.</p>
 </div>
     </div>
 </section>
@@ -529,7 +529,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">union</span> <span class="identifier">Measurements</span> = <a class="support type" href="roundmeasurements.doc.html">RoundMeasurements</a> | <a class="support type" href="fancymeasurements.doc.html">FancyMeasurements</a></li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">StampingGraphic</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Description of the stamped graphic.</span></span></li><li><span class="tab"><span class="meta">description</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     The stamping graphic's filename.</span></span></li><li><span class="tab"><span class="meta">image</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -540,7 +540,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="diamonddata.doc.html" title="DiamondData -   Additional data fields in machine-readable format.">DiamondData<em>  Additional data fields in machine-readable format.</em></a><li></ul>
+        <ul class="require-by"><li><a href="jewelrygradingreportresults.doc.html" title="JewelryGradingReportResults -   Results for jewelry grading report">JewelryGradingReportResults<em>  Results for jewelry grading report</em></a><li></ul>
     </div>
 </section>
 <footer>

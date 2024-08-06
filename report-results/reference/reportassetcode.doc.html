@@ -65,6 +65,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Enums</h4>
     <ul>
+        <li  title="AssociatedReferenceTypeCode">
+            <a href="associatedreferencetypecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AssociatedReferenceTypeCode
+            </a>
+        </li>
         <li  title="ClarityGradeCode">
             <a href="claritygradecode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ClarityGradeCode
@@ -180,6 +185,11 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Unions</h4>
     <ul>
+        <li  title="AssociatedReportResults">
+            <a href="associatedreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AssociatedReportResults
+            </a>
+        </li>
         <li  title="ColorGrade">
             <a href="colorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ColorGrade
@@ -205,6 +215,16 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
+        <li  title="AdditionalStonesData">
+            <a href="additionalstonesdata.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AdditionalStonesData
+            </a>
+        </li>
+        <li  title="AssociatedReference">
+            <a href="associatedreference.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                AssociatedReference
+            </a>
+        </li>
         <li  title="CDColorGrade">
             <a href="cdcolorgrade.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CDColorGrade
@@ -270,6 +290,11 @@
                 Fluorescence
             </a>
         </li>
+        <li  title="GIAReportResults">
+            <a href="giareportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                GIAReportResults
+            </a>
+        </li>
         <li  title="Girdle">
             <a href="girdle.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Girdle
@@ -298,6 +323,11 @@
         <li  title="InscriptionGraphic">
             <a href="inscriptiongraphic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 InscriptionGraphic
+            </a>
+        </li>
+        <li  title="JewelryGradingReportResults">
+            <a href="jewelrygradingreportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                JewelryGradingReportResults
             </a>
         </li>
         <li  title="LabGrownDiamondGradingReportResults">
@@ -358,6 +388,11 @@
         <li  title="RoundMeasurements">
             <a href="roundmeasurements.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 RoundMeasurements
+            </a>
+        </li>
+        <li  title="StampingGraphic">
+            <a href="stampinggraphic.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                StampingGraphic
             </a>
         </li>
         <li  title="TreatmentCodes">
@@ -499,6 +534,11 @@
 <h2 id="aset_image-light-performance-analysis-image">ASET_IMAGE - Light performance analysis image</h2>
 <h2 id="ideal_report_pdf-ags-ideal-report-in-pdf-format">IDEAL_REPORT_PDF - AGS Ideal report in PDF format</h2>
 <h2 id="digital_card-report-digital-card-in-png-format">DIGITAL_CARD - Report digital card in PNG format</h2>
+<h2 id="qr_code_image-qr-code-from-digital-card-in-png-format">QR_CODE_IMAGE - QR code from digital card in PNG format</h2>
+<h2 id="custom_inscription_image-digital-image-of-the-custom-inscription">CUSTOM_INSCRIPTION_IMAGE - Digital image of the custom inscription</h2>
+<h2 id="jewelry_video-jewelry-video">JEWELRY_VIDEO - Jewelry video</h2>
+<h2 id="jewelry_top_view_image-jewelry-top-view-image">JEWELRY_TOP_VIEW_IMAGE - Jewelry top view image</h2>
+<h2 id="jewelry_side_view_image-jewelry-side-view-image">JEWELRY_SIDE_VIEW_IMAGE - Jewelry side view image</h2>
 </div>
     </div>
 </section>
@@ -510,7 +550,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ReportAssetCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">REPORT_FACSIMILE_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PROPORTIONS_DIAGRAM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PLOTTING_DIAGRAM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ITEM_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ROUGH_ITEM_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ROUGH_ITEM_VIDEO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">POLISHED_ITEM_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">POLISHED_ITEM_VIDEO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SECONDARY_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTL_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTTL_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTLP_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTLP_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ASET_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IDEAL_REPORT_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DIGITAL_CARD</span></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ReportAssetCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">REPORT_FACSIMILE_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PROPORTIONS_DIAGRAM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PLOTTING_DIAGRAM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ITEM_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ROUGH_ITEM_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ROUGH_ITEM_VIDEO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">POLISHED_ITEM_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">POLISHED_ITEM_VIDEO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SECONDARY_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTL_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTTL_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTLP_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DTLP_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ASET_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IDEAL_REPORT_PDF</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DIGITAL_CARD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">QR_CODE_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CUSTOM_INSCRIPTION_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JEWELRY_VIDEO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JEWELRY_TOP_VIEW_IMAGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JEWELRY_SIDE_VIEW_IMAGE</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
