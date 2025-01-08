@@ -11,9 +11,9 @@ query ReportQuery($ReportNumber: String!) {
     supplemental_report_results {
       ...SupplementalReportResultFields
     }
-		associated_references {
-			...AssociatedReferencesResultFields
-		}
+    associated_references {
+      ...AssociatedReferencesResultFields
+    }
     results {
       __typename
       ...DiamondGradingResultFields
@@ -29,7 +29,7 @@ query ReportQuery($ReportNumber: String!) {
     }
     assets {
       ...AssetFields
-    }		
+    }
   }
 }
 
@@ -139,7 +139,7 @@ fragment JewelryGradingRessultFields on JewelryGradingReportResults {
       ...LabGrownResultFields
     }
     report_number
-    report_type_code		
+    report_type_code
   }
   additional_stones {
     total_stones
@@ -301,9 +301,8 @@ fragment SupplementalReportResultFields on SupplementalReportResults {
     contrast
   }
 }
-fragment AssociatedReferencesResultFields on AssociatedReference
-{
-	reference_type_code
-	reference_type_description
-	reference_id
+fragment AssociatedReferencesResultFields on AssociatedReference {
+  reference_type_code
+  reference_type_description
+  reference_id
 }
