@@ -6,10 +6,13 @@ query ReportQuery($ReportNumber: String!) {
     report_type
     report_type_code
     industry_disclosures {
-			...IndustryDisclosureFields
-		}
+      ...IndustryDisclosureFields
+    }
     supplemental_report_results {
-			...SupplementalReportResultFields
+      ...SupplementalReportResultFields
+    }
+		associated_references {
+			...AssociatedReferencesResultFields
 		}
     results {
       __typename
@@ -19,13 +22,14 @@ query ReportQuery($ReportNumber: String!) {
       ...LabGrownResultFields
       ...IdentificationResultFields
       ...MeleeResultFields
+      ...JewelryGradingRessultFields
     }
     links {
       ...LinkFields
     }
     assets {
-        ...AssetFields
-      }
+      ...AssetFields
+    }		
   }
 }
 
@@ -38,6 +42,12 @@ fragment DiamondGradingResultFields on DiamondGradingReportResults {
   color_distribution
   clarity_grade
   cut_grade
+  key_to_symbols {
+    order
+    characteristic
+    image
+    location
+  }
   polish
   symmetry
   fluorescence
@@ -72,6 +82,8 @@ fragment PearlIdentResultFields on PearlIdentReportResults {
   drilling
   treatment
   report_comments
+  duplicate_comments
+  nacre
 }
 
 fragment NarrativeResultFields on NarrativeReportResults {
@@ -81,6 +93,12 @@ fragment NarrativeResultFields on NarrativeReportResults {
   report_comments
   inscriptions
   pearl_identification
+  duplicate_comments
+  country_of_origin_code
+  treatment_codes {
+    treatment_code
+  }
+  diamond_type
 }
 
 fragment LabGrownResultFields on LabGrownDiamondGradingReportResults {
@@ -91,6 +109,8 @@ fragment LabGrownResultFields on LabGrownDiamondGradingReportResults {
   color_grade
   color_origin
   color_distribution
+  color_distribution_code
+  clarity_characteristics
   clarity_grade
   cut_grade
   polish
@@ -98,8 +118,53 @@ fragment LabGrownResultFields on LabGrownDiamondGradingReportResults {
   fluorescence
   inscriptions
   report_comments
+  key_to_symbols {
+    order
+    characteristic
+    image
+    location
+  }
+  duplicate_comments
+  proportions {
+    ...DiamondProportionFields
+  }
+  data {
+    ...DiamondGradingDataFields
+  }
 }
-
+fragment JewelryGradingRessultFields on JewelryGradingReportResults {
+  gia_report_results {
+    report_results {
+      ...DiamondGradingResultFields
+      ...LabGrownResultFields
+    }
+    report_number
+    report_type_code		
+  }
+  additional_stones {
+    total_stones
+    stone_type
+    estimated_clarity_range
+    estimated_color_range
+    estimated_total_carat_weight
+    shape_and_cutting_style
+  }
+  image_comments
+  item_description
+  metal_tested_as
+  item_weight
+  inscriptions
+  inscription_graphics {
+    description
+    image
+  }
+  stampings
+  stamping_graphics {
+    description
+    image
+  }
+  center_stone
+}
 fragment IdentificationResultFields on IdentificationReportResults {
   weight
   measurements
@@ -217,22 +282,28 @@ fragment DiamondGradingDataFields on DiamondData {
   }
   culet {
     culet_code
-  }  
-}
-fragment IndustryDisclosureFields on IndustryDisclosures {
-    disclosed_source {
-      name
-      code
   }
 }
-fragment SupplementalReportResultFields on SupplementalReportResults {	
-	... on IdealReportResults {
-				shape_and_cutting_style,
-				measurements,
-				carat_weight,
-				light_performance_grade,
-				brightness,
-				fire,
-				contrast
-			}
+fragment IndustryDisclosureFields on IndustryDisclosures {
+  disclosed_source {
+    name
+    code
+  }
+}
+fragment SupplementalReportResultFields on SupplementalReportResults {
+  ... on IdealReportResults {
+    shape_and_cutting_style
+    measurements
+    carat_weight
+    light_performance_grade
+    brightness
+    fire
+    contrast
+  }
+}
+fragment AssociatedReferencesResultFields on AssociatedReference
+{
+	reference_type_code
+	reference_type_description
+	reference_id
 }
