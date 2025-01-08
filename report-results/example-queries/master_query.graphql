@@ -22,7 +22,7 @@ query ReportQuery($ReportNumber: String!) {
       ...LabGrownResultFields
       ...IdentificationResultFields
       ...MeleeResultFields
-      ...JewelryGradingRessultFields
+      ...JewelryGradingResultFields
     }
     links {
       ...LinkFields
@@ -132,7 +132,7 @@ fragment LabGrownResultFields on LabGrownDiamondGradingReportResults {
     ...DiamondGradingDataFields
   }
 }
-fragment JewelryGradingRessultFields on JewelryGradingReportResults {
+fragment JewelryGradingResultFields on JewelryGradingReportResults {
   gia_report_results {
     report_results {
       ...DiamondGradingResultFields
