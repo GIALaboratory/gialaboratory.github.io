@@ -4,6 +4,14 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2025-06-17
+
+#### Added
+
+- GIA is excited to announce the Jewelry Report Services. The Jewelry Report and Card Information is available via [`JewelryGradingReportResults`](https://gialaboratory.github.io/report-results/reference/jewelrygradingreportresults.doc.html)
+    
+- For more information, please view the [Jewelry Reports & Services Details](https://www.gia.edu/gem-lab-service/jewelry-report-service) page.
+ 
 ## 2024-08-05
 
 #### Added
