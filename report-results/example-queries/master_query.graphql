@@ -23,6 +23,7 @@ query ReportQuery($ReportNumber: String!) {
       ...IdentificationResultFields
       ...MeleeResultFields
       ...JewelryGradingResultFields
+      ...LabGrownQualityAssessmentResultFields
     }
     links {
       ...LinkFields
@@ -199,7 +200,18 @@ fragment MeleeResultFields on MeleeServiceResults {
     comments
   }
 }
-
+fragment LabGrownQualityAssessmentResultFields on LabGrownQualityAssessmentResults {
+	assessment_result
+	carat_weight
+	inscriptions
+	inscription_reference_id
+	measurements
+	shape_and_cutting_style
+	inscription_graphics {
+		description
+		image
+	}
+}
 fragment LinkFields on Links {
   pdf
   proportions_diagram
