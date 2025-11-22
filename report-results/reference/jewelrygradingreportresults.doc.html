@@ -335,6 +335,11 @@
                 LabGrownDiamondGradingReportResults
             </a>
         </li>
+        <li  title="LabGrownQualityAssessmentResults">
+            <a href="labgrownqualityassessmentresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                LabGrownQualityAssessmentResults
+            </a>
+        </li>
         <li  title="Links">
             <a href="links.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Links
@@ -365,6 +370,11 @@
                 PearlIdentReportResults
             </a>
         </li>
+        <li  title="QualityAssuranceReportResults">
+            <a href="qualityassurancereportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QualityAssuranceReportResults
+            </a>
+        </li>
         <li  title="Quota">
             <a href="quota.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Quota
@@ -378,6 +388,11 @@
         <li  title="ReportAsset">
             <a href="reportasset.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ReportAsset
+            </a>
+        </li>
+        <li  title="ReportDisclaimer">
+            <a href="reportdisclaimer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReportDisclaimer
             </a>
         </li>
         <li  title="ReportUpdated">
@@ -529,7 +544,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">JewelryGradingReportResults</span> {</li><li></li><li><span class="tab"><span class="comment line">#     GIA report results</span></span></li><li><span class="tab"><span class="meta">gia_report_results</span>: [<a class="support type" href="giareportresults.doc.html">GIAReportResults</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#     Additional stones information</span></span></li><li><span class="tab"><span class="meta">additional_stones</span>: [<a class="support type" href="additionalstonesdata.doc.html">AdditionalStonesData</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#     Image comments</span></span></li><li><span class="tab"><span class="meta">image_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Jewelry description</span></span></li><li><span class="tab"><span class="meta">item_description</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Metal information</span></span></li><li><span class="tab"><span class="meta">metal_tested_as</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Jewelry weight</span></span></li><li><span class="tab"><span class="meta">item_weight</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Inscriptions</span></span></li><li><span class="tab"><span class="meta">inscriptions</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Inscription graphics</span></span></li><li><span class="tab"><span class="meta">inscription_graphics</span>: [<a class="support type" href="inscriptiongraphic.doc.html">InscriptionGraphic</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#     Stampings</span></span></li><li><span class="tab"><span class="meta">stampings</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Stamping graphics</span></span></li><li><span class="tab"><span class="meta">stamping_graphics</span>: [<a class="support type" href="stampinggraphic.doc.html">StampingGraphic</a>] </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">JewelryGradingReportResults</span> {</li><li></li><li><span class="tab"><span class="comment line">#     GIA report results</span></span></li><li><span class="tab"><span class="meta">gia_report_results</span>: [<a class="support type" href="giareportresults.doc.html">GIAReportResults</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#     Additional stones information</span></span></li><li><span class="tab"><span class="meta">additional_stones</span>: [<a class="support type" href="additionalstonesdata.doc.html">AdditionalStonesData</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#     Image comments</span></span></li><li><span class="tab"><span class="meta">image_comments</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Jewelry description</span></span></li><li><span class="tab"><span class="meta">item_description</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Metal information</span></span></li><li><span class="tab"><span class="meta">metal_tested_as</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Jewelry weight</span></span></li><li><span class="tab"><span class="meta">item_weight</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Inscriptions</span></span></li><li><span class="tab"><span class="meta">inscriptions</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Inscription graphics</span></span></li><li><span class="tab"><span class="meta">inscription_graphics</span>: [<a class="support type" href="inscriptiongraphic.doc.html">InscriptionGraphic</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#     Stampings</span></span></li><li><span class="tab"><span class="meta">stampings</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Stamping graphics</span></span></li><li><span class="tab"><span class="meta">stamping_graphics</span>: [<a class="support type" href="stampinggraphic.doc.html">StampingGraphic</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#     Center stone</span></span></li><li><span class="tab"><span class="meta">center_stone</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
