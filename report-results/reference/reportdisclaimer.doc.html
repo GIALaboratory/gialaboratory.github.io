@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>CuletCode</title>
+    <title>ReportDisclaimer</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -90,7 +90,7 @@
                 CountryOfOriginCode
             </a>
         </li>
-        <li class="slds-is-active" title="CuletCode">
+        <li  title="CuletCode">
             <a href="culetcode.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 CuletCode
             </a>
@@ -390,7 +390,7 @@
                 ReportAsset
             </a>
         </li>
-        <li  title="ReportDisclaimer">
+        <li class="slds-is-active" title="ReportDisclaimer">
             <a href="reportdisclaimer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ReportDisclaimer
             </a>
@@ -530,18 +530,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">ENUM</p>
-        <h1 class="slds-text-heading--large">CuletCode</h1>
-        <div class="slds-text-body--regular"><p>  Culet size codes.</p>
-<h2 id="non-none">NON - None</h2>
-<h2 id="vsm-very-small">VSM - Very Small</h2>
-<h2 id="sml-small">SML - Small</h2>
-<h2 id="med-medium">MED - Medium</h2>
-<h2 id="slg-slightly-large">SLG - Slightly Large</h2>
-<h2 id="lge-large">LGE - Large</h2>
-<h2 id="vlg-very-large">VLG - Very Large</h2>
-<h2 id="elg-extremely-large">ELG - Extremely Large</h2>
-<h2 id="na-not-applicable">NA - Not Applicable</h2>
+        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
+        <h1 class="slds-text-heading--large">ReportDisclaimer</h1>
+        <div class="slds-text-body--regular"><p>  Report Disclaimer</p>
 </div>
     </div>
 </section>
@@ -553,7 +544,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">CuletCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NON</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VSM</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SML</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MED</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SLG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">VLG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ELG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">NA</span></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">ReportDisclaimer</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Disclaimer text.</span></span></li><li><span class="tab"><span class="meta">disclaimer_text</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#     Disclaimer symbol.</span></span></li><li><span class="tab"><span class="meta">disclaimer_symbol</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Field name for which disclaimer is applicable to.</span></span></li><li><span class="tab"><span class="meta">disclaimer_field</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -564,7 +555,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="culet.doc.html" title="Culet -   Contains machine-readable abbreviations for culet.">Culet<em>  Contains machine-readable abbreviations for culet.</em></a><li></ul>
+        <ul class="require-by"><li><a href="gradingreport.doc.html" title="GradingReport -   The base grading report object.">GradingReport<em>  The base grading report object.</em></a><li></ul>
     </div>
 </section>
 <footer>

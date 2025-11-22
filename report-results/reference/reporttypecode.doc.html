@@ -335,6 +335,11 @@
                 LabGrownDiamondGradingReportResults
             </a>
         </li>
+        <li  title="LabGrownQualityAssessmentResults">
+            <a href="labgrownqualityassessmentresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                LabGrownQualityAssessmentResults
+            </a>
+        </li>
         <li  title="Links">
             <a href="links.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Links
@@ -365,6 +370,11 @@
                 PearlIdentReportResults
             </a>
         </li>
+        <li  title="QualityAssuranceReportResults">
+            <a href="qualityassurancereportresults.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                QualityAssuranceReportResults
+            </a>
+        </li>
         <li  title="Quota">
             <a href="quota.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Quota
@@ -378,6 +388,11 @@
         <li  title="ReportAsset">
             <a href="reportasset.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ReportAsset
+            </a>
+        </li>
+        <li  title="ReportDisclaimer">
+            <a href="reportdisclaimer.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ReportDisclaimer
             </a>
         </li>
         <li  title="ReportUpdated">
@@ -530,6 +545,8 @@
 <h2 id="ddo-diamond-dossier-with-origin-report">DDO - Diamond Dossier with Origin Report</h2>
 <h2 id="der-diamond-ereport-diamond-e-report">DER - Diamond eReport, Diamond e-Report</h2>
 <h2 id="dg-diamond-grading-report">DG - Diamond Grading Report</h2>
+<h2 id="dmr-demantoid-report">DMR - Demantoid Report</h2>
+<h2 id="dmor-demantoid-origin-report">DMOR - Demantoid Origin Report</h2>
 <h2 id="dor-diamond-grading-with-origin-report">DOR - Diamond Grading with Origin Report</h2>
 <h2 id="eo-emerald-origin-report">EO - Emerald Origin Report</h2>
 <h2 id="eotr-emerald-origin-traceability-report">EOTR - Emerald Origin &amp; Traceability Report</h2>
@@ -540,11 +557,17 @@
 <h2 id="idtt-identification-origin-traceability-report">IDTT - Identification Origin &amp; Traceability Report</h2>
 <h2 id="jg-jewelry-grading-report">JG - Jewelry Grading Report</h2>
 <h2 id="jr-jade-report">JR - Jade Report</h2>
+<h2 id="jo-jade-origin-report">JO - Jade Origin Report</h2>
 <h2 id="lgcd-laboratory-grown-colored-diamond-grading-report-laboratory-grown-colored-diamond-report">LGCD - Laboratory-Grown Colored Diamond Grading Report, Laboratory-Grown Colored Diamond Report</h2>
 <h2 id="lgci-laboratory-grown-colored-diamond-report-color-identification">LGCI - Laboratory-Grown Colored Diamond Report - Color Identification</h2>
 <h2 id="lgdg-laboratory-grown-diamond-grading-report-laboratory-grown-diamond-report">LGDG - Laboratory-Grown Diamond Grading Report, Laboratory-Grown Diamond Report</h2>
 <h2 id="lgdoss-laboratory-grown-diamond-report-dossier">LGDOSS - Laboratory-Grown Diamond Report - Dossier</h2>
+<h2 id="lgqa-laboratory-grown-quality-assessment">LGQA - Laboratory-Grown Quality Assessment</h2>
 <h2 id="mle-melee-analysis-service">MLE - Melee Analysis Service</h2>
+<h2 id="opr-opal-report">OPR - Opal Report</h2>
+<h2 id="opor-opal-origin-report">OPOR - Opal Origin Report</h2>
+<h2 id="pdr-peridot-report">PDR - Peridot Report</h2>
+<h2 id="pdor-peridot-origin-report">PDOR - Peridot Origin Report</h2>
 <h2 id="pg-pearl-identification-and-classification-report">PG - Pearl Identification and Classification Report</h2>
 <h2 id="pi-pearl-identification-report-pearl-classification-report">PI - Pearl Identification Report, Pearl Classification Report</h2>
 <h2 id="rg-ruby-report">RG - Ruby Report</h2>
@@ -562,6 +585,8 @@
 <h2 id="tor-tourmaline-origin-report">TOR - Tourmaline Origin Report</h2>
 <h2 id="totr-tourmaline-origin-traceability-report">TOTR - Tourmaline Origin &amp; Traceability Report</h2>
 <h2 id="tr-tourmaline-report">TR - Tourmaline Report</h2>
+<h2 id="qad-quality-assurance-diamond-report">QAD - Quality Assurance Diamond Report</h2>
+<h2 id="qadlg-quality-verification-laboratory-grown-diamond">QADLG - Quality Verification - Laboratory-Grown Diamond</h2>
 </div>
     </div>
 </section>
@@ -573,7 +598,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ReportTypeCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">AL</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ALO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ALOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CCR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CDOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DDO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DER</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ER</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ID</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IDTO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IDTT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGCD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGCI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGDG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGDOSS</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ROTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SCD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SCI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SDG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TR</span></span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:56px"><li><span class="keyword operator ts">enum</span> <span class="identifier">ReportTypeCode</span> {</li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">AL</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ALO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ALOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CCR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CDOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">CPC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DDO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DER</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DMR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DMOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">DOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">EOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ER</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">FC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ID</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IDTO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">IDTT</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JGC</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">JR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGCD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGCI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGDG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGDOSS</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">MLE</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OPR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">OPOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PDR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PDOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">PI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">RO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">ROTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SO</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SPR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SCD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SCI</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">SDG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TOR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TOTR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">TR</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">QAD</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">QADLG</span></span></li><li><span class="tab"></span></li><li><span class="tab"><span class="meta">LGQA</span></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
