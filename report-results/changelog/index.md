@@ -4,6 +4,14 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2025-10-01
+
+#### Added
+
+- GIA Launches Updated Laboratory-Grown Diamond Services. The GIA Laboratory-Grown Diamond Quality Assessment is available via [`LabGrownQualityAssessmentResults`](https://gialaboratory.github.io/report-results/reference/labgrownqualityassessmentresults.doc.html)
+    
+- For more information, please view the [Updated Laboratory-Grown Diamond Services](https://www.gia.edu/gia-news-press/updated-laboratory-grown-diamond-services-to-launch-october-1) page.
+
 ## 2025-06-17
 
 #### Added
