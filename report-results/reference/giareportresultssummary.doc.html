@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>ChangedReportResult</title>
+    <title>GIAReportResultsSummary</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -230,7 +230,7 @@
                 CDColorGrade
             </a>
         </li>
-        <li class="slds-is-active" title="ChangedReportResult">
+        <li  title="ChangedReportResult">
             <a href="changedreportresult.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ChangedReportResult
             </a>
@@ -295,7 +295,7 @@
                 GIAReportResults
             </a>
         </li>
-        <li  title="GIAReportResultsSummary">
+        <li class="slds-is-active" title="GIAReportResultsSummary">
             <a href="giareportresultssummary.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 GIAReportResultsSummary
             </a>
@@ -536,8 +536,9 @@
     </div>
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">ChangedReportResult</h1>
-        <div class="slds-text-body--regular"></div>
+        <h1 class="slds-text-heading--large">GIAReportResultsSummary</h1>
+        <div class="slds-text-body--regular"><p> GIA Report Results Summary</p>
+</div>
     </div>
 </section>
 <section>
@@ -548,7 +549,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">ChangedReportResult</span> {</li><li></li><li><span class="tab"><span class="meta">report</span>: <a class="support type" href="gradingreport.doc.html">GradingReport</a>! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">GIAReportResultsSummary</span> {</li><li></li><li><span class="tab"><span class="comment line">#     Total number of stones</span></span></li><li><span class="tab"><span class="meta">total_stones</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Shape and cutting style</span></span></li><li><span class="tab"><span class="meta">shape_and_cutting_style</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Total carat weight</span></span></li><li><span class="tab"><span class="meta">carat_weight</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Color</span></span></li><li><span class="tab"><span class="meta">color</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Clarity</span></span></li><li><span class="tab"><span class="meta">clarity</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Cut</span></span></li><li><span class="tab"><span class="meta">cut</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Measurement</span></span></li><li><span class="tab"><span class="meta">measurements</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Inscriptions</span></span></li><li><span class="tab"><span class="meta">inscriptions</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#     Inscription graphics</span></span></li><li><span class="tab"><span class="meta">inscription_graphics</span>: [<a class="support type" href="inscriptiongraphic.doc.html">InscriptionGraphic</a>] </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -559,7 +560,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="changedreportresults.doc.html" title="ChangedReportResults - ">ChangedReportResults<em>null</em></a><li></ul>
+        <ul class="require-by"><li><a href="jewelrygradingreportresults.doc.html" title="JewelryGradingReportResults -   Results for jewelry grading report">JewelryGradingReportResults<em>  Results for jewelry grading report</em></a><li></ul>
     </div>
 </section>
 <footer>
