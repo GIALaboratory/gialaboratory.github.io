@@ -177,6 +177,12 @@ fragment IdentificationResultFields on IdentificationReportResults {
   cutting_style_pavilion
   transparency
   color
+  inscriptions
+	inscription_graphics {
+		description
+		image
+	}
+	inscription_reference_id
   item_description
   species
   geographic_origin
@@ -283,6 +289,19 @@ fragment DiamondGradingDataFields on DiamondData {
     color_grade_code
     color_modifier
   }
+  color_grades {
+		... on CDColorGrade {
+			colored_diamond_color_grade
+			colored_diamond_color_grade_code
+			colored_diamond_color_description
+			colored_diamond_color_description_code
+			
+		}
+		... on DZColorGrade {
+			color_grade_code
+			color_modifier
+		}
+	}
   clarity
   cut
   polish
