@@ -191,6 +191,10 @@ fragment IdentificationResultFields on IdentificationReportResults {
   treatment
   report_comments
   fei_cui_type
+  treatment_codes	{
+		treatment_code
+	}
+	trade_name
 }
 
 fragment MeleeResultFields on MeleeServiceResults {
