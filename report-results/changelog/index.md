@@ -4,6 +4,12 @@ title: What's New
 
 # GIA Report Results API Changelog
 
+## 2026-08-11
+
+#### Added
+
+- The Point Of Sale (POS) Case Label is now accessible via [`links`](https://gialaboratory.github.io/report-results/reference/links.doc.html) and [`assets`](https://gialaboratory.github.io/report-results/reference/reportasset.doc.html) fields.
+
 ## 2025-10-01
 
 #### Added

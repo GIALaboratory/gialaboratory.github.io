@@ -240,6 +240,7 @@ fragment LinkFields on Links {
   digital_card
   custom_inscription_image
   qr_code_image
+  pos_case_label
 }
 
 fragment AssetFields on ReportAsset {
